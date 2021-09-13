@@ -1,4 +1,4 @@
-package com.example.knowledge_android.recyclerview1.bean;
+package com.example.knowledge_android.recyclerview1.adapter;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.knowledge_android.R;
+import com.example.knowledge_android.recyclerview1.bean.Fruit;
 
 import java.util.List;
 
