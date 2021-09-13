@@ -44,4 +44,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    /*解决65535问题*/
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
