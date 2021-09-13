@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">knowledge-android</string>
+    <string name="license_code">授权码</string>
+    <string name="check_license_code">检查授权</string>
 </resources>

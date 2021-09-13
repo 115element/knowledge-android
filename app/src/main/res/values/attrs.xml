@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PluButtonView">
+        <attr name="buttonColor" format="color" />
+        <attr name="userFont">
+            <enum name="number" value="1" />
+        </attr>
+        <attr name="buttonFontStyle">
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ZTButton">
+        <attr name="bgColor" format="color" /><!--背景颜色-->
+        <attr name="borderWidth" format="dimension" /><!--边框宽度-->
+        <attr name="borderColor" format="color" /><!--边框颜色-->
+        <attr name="radius" format="float" /><!--圆角-->
+        <attr name="topLeftRadius" format="float" /><!--圆角左上-->
+        <attr name="topRightRadius" format="float" /><!--圆角右上-->
+        <attr name="bottomLeftRadius" format="float" /><!--圆角左下-->
+        <attr name="bottomRightRadius" format="float" /><!--圆角右下-->
+        <attr name="shape">
+            <enum name="rectangle" value="0" /><!--矩形（圆角矩形）-->
+            <enum name="oval" value="1" /><!--椭圆，圆-->
+            <enum name="line" value="2" /><!--线-->
+            <enum name="ring" value="3" /><!--圆环-->
+        </attr>
+    </declare-styleable>
+
+    <!-- For AndroidSVG. -->
+    <declare-styleable name="SVGImageView">
+        <!-- Location of the SVG document. -->
+        <attr name="svg" format="reference|string" />
+    </declare-styleable>
+
+    <!-- For PagerSlidingTabStrip. -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsTwoLines" format="boolean" />
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsTabTextColor" format="reference" />
+        <attr name="pstsTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTabTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextAlpha" format="integer" />
+        <attr name="pstsTabTextFontFamily" format="string" />
+    </declare-styleable>
+    -
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color" />
+        <attr name="laser_color" format="color" />
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color" />
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color" />
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="float" />
+    </declare-styleable>
+
+
+</resources>

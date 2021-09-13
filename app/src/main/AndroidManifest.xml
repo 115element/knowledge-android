@@ -2,6 +2,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.knowledge_android">
 
+    <!--  权限配置  -->
+    <uses-permission android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.permission.WRITE_SETTINGS" />
+    <!--    Android9.0 USB权限-->
+    <uses-permission android:name="com.android.hardware.USB_PERMISSION" />
+    <uses-permission android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+    <uses-permission android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <!--   Android9.0 安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,16 +51,67 @@
 
         <activity
             android:name=".activity2.FoldActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity2.NoFoldActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity2.JumpAvtivity"
+            android:exported="true" />
+
+
+
+        <!--安卓9.0以上应用自动安装权限-authorities 为apk的包名.fileprovider->-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.knowledge_android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:usesCleartextTraffic="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
+
+        <!--
+          这个元素用于声明一个广播接收器（一个BroadcastReceiver 子类），作为应用程序的组件之一。
+          广播接收器能够让应用程序接收那些由系统或其他应用程序发出的广播Intent对象，即使是在该应用程序的其他组件没有运行的时候，也能够接收来自系统或其他应用程序的广播消息。
+          -->
+        <receiver
+            android:name="com.example.knowledge_android.receiver.BootBroadCastReceiver"
             android:exported="true">
-        </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+
+
+        <!--
+        声明一个service（Service的子类）作为应用程序的组件。 与activities不同，services没有用户界面。
+        它们被用来实现了后台长期运行操作或者提供一个丰富的交互API供其它应用程序使用。
+        所有的service在manifest文件中用<service>标签代表。android系统不能发现没有声明在manifest文件中的service，service将不能运行。-->
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+
+
+
+        <!--
+         android:required
+         (默认值是true。这个属性在API Level 7中被引入)
+         这个属性用于指定应用程序是否需要有android:name属性所指定的类库：
+         ====
+         true：没有这个库应用程序无法工作。如果用户设备设备上没有这个类库，系统不允许该应用程序安装在这个设备上。
+         ====
+         false：如果该类库存在，则应用程序能够使用这个类库，但是如果有必要，也可以设计成没有该类库，应用程序也能够工作。系统会允许应用程序安装，即使该类库不存在。如果使用false，就要在运行时对类库的有效性进行必要的检查。对于类库的检查，可以使用反射机制来判断一个具体的类是否有效。-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
 
     </application>
 

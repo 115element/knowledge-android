@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="935px"
+	 height="1263px" viewBox="0 0 935 1263" enable-background="new 0 0 935 1263" xml:space="preserve">
+<g id="images">
+
+	<g id="dining-table">
+		<path fill="#FF6A83" d="M281.617,632.801h14.075l1.899,17.668h1.768v-23.555h-17.399l-1.685-31.414h-3.11v54.969h3.11
+			L281.617,632.801z M281.617,632.801"/>
+		<path fill="#FF6A83" d="M283.143,624.949h15.366c0.476,0,0.85-0.441,0.85-0.979c0-0.545-0.374-0.986-0.85-0.986h-15.366
+			c-0.475,0-0.86,0.441-0.86,0.986C282.283,624.508,282.667,624.949,283.143,624.949L283.143,624.949z M283.143,624.949"/>
+		<path fill="#FF6A83" d="M369.279,626.914h-18.693v23.555h3.06l1.901-17.668h14.074l1.342,17.668h3.535V595.5h-3.535
+			L369.279,626.914z M369.279,626.914"/>
+		<path fill="#FF6A83" d="M350.586,623.971c0,0.537,0.383,0.979,0.858,0.979h15.367c0.475,0,0.85-0.441,0.85-0.979
+			c0-0.545-0.375-0.986-0.85-0.986h-15.367C350.969,622.984,350.586,623.426,350.586,623.971L350.586,623.971z M350.586,623.971"/>
+		<path fill="#FF6A83" d="M292.33,609.247h13.868v41.222h2.633l2.051-33.371h28.356l2.051,33.371h2.468v-41.222h15.575
+			c0.833,0,1.501-0.776,1.501-1.735v-0.47c0-0.949-0.667-1.726-1.501-1.726H292.33c-0.833,0-1.509,0.776-1.509,1.726v0.47
+			C290.821,608.471,291.497,609.247,292.33,609.247L292.33,609.247z M338.755,609.247l0.242,3.921h-27.873l0.241-3.921H338.755z
+			 M338.755,609.247"/>
+	</g>
+</g>
+<g id="area-free-2f">
+	<g id="table-01">
+
+			<rect id="table02" x="448" y="689.168" transform="matrix(0.7131 -0.701 0.701 0.7131 -365.1251 534.0725)" opacity="0.7" fill="#6DBA49" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="43.999" height="48.001"/>
+
+			<text transform="matrix(0.8085 -0.7948 0.701 0.7131 463.1768 733.4844)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="30.6391">01</text>
+	</g>
+	<g id="table-02_1_">
+
+			<rect id="table01_1_" x="541.333" y="689.168" transform="matrix(0.7131 -0.701 0.701 0.7131 -338.3506 599.5022)" opacity="0.7" fill="#6DBA49" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="43.999" height="48.001"/>
+
+			<text transform="matrix(0.8085 -0.7948 0.701 0.7131 556.5098 733.4844)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="30.6391">02</text>
+	</g>
+</g>
+<g id="area-busy-2f">
+	<g id="table-01_1_">
+
+			<rect id="table02_1_" x="449" y="689.168" transform="matrix(0.7131 -0.701 0.701 0.7131 -364.8383 534.7736)" opacity="0.7" fill="#FF1579" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="43.999" height="48.001"/>
+
+			<text transform="matrix(0.8085 -0.7948 0.701 0.7131 464.1768 733.4844)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="30.6391">01</text>
+	</g>
+	<g id="table-02_2_">
+
+			<rect id="table01_2_" x="542.333" y="689.168" transform="matrix(0.7131 -0.701 0.701 0.7131 -338.0637 600.2032)" opacity="0.7" fill="#F40037" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="43.999" height="48.001"/>
+
+			<text transform="matrix(0.8085 -0.7948 0.701 0.7131 557.5098 733.4844)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="30.6391">02</text>
+	</g>
+</g>
+</svg>
+

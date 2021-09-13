@@ -1,0 +1,249 @@
+<resources>
+
+    <style name="Base.Theme.MobilePOSApp" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/beiruired</item>
+
+        <!-- darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/beiruired</item>
+
+        <!-- theme UI controls like checkboxes and text fields e.g. FloatActionButton -->
+
+        <item name="colorAccent">@color/berruibe</item>
+
+        <!-- Title Text Color -->
+        <item name="android:textColorPrimary">@color/my_primary_text</item>
+
+        <!-- color of the menu overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/my_secondary_text</item>
+
+        <item name="android:windowBackground">@color/berruibe</item>
+
+        <item name="android:editTextColor">@color/my_dark_primary_text</item>
+
+        <item name="colorButtonNormal">@color/my_button_color</item>
+    </style>
+
+    <style name="MessageDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊 / 2021/9/3 true会影响背景颜色-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--列表弹出框-->
+    <style name="ListDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="AppEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edittext_frame_border</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <!--<item name="android:layout_height">45dip</item>-->
+    </style>
+    <!--
+       Base application theme, dependent on API level. This theme is replaced
+       by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+   -->
+    <style name="AppBaseTheme" parent="Base.Theme.MobilePOSApp">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="AppFormTheme" parent="AppBaseTheme">
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <item name="android:editTextStyle">@style/AppEditTextStyle</item>
+    </style>
+
+    <!--<style name="PreferenceTheme.textAppearanceListItem">-->
+    <!--<item name="android:textSize">24sp</item>-->
+    <!--<item name="android:textColor">@color/my_dark_text</item>-->
+    <!--</style>-->
+
+    <!--<style name="PreferenceTheme" parent="Base.Theme.MobilePOSApp">-->
+    <!--<item name="colorPrimary">#00FF00</item>-->
+    <!--<item name="android:textColor">@color/my_dark_primary_text</item>-->
+    <!--<item name="android:textColorPrimary">#00FF00</item>-->
+    <!--<item name="android:textColorSecondary">@color/my_dark_secondary_text</item>-->
+
+    <!--<item name="textAppearanceListItem">@style/PreferenceTheme.textAppearanceListItem</item>-->
+    <!--<item name="textAppearanceListItemSmall">@style/PreferenceTheme.textAppearanceListItem</item>-->
+
+    <!--<item name="android:background">#ffff0000</item>-->
+    <!--</style>-->
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!--Style for Splash Screen-->
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+    </style>
+
+    <style name="DrawerMenuTextAppearance">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="BigActionButtonStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:background">@drawable/ic_button_apple_white</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+        <!--<item name="app:buttonColor">#ff888888</item>-->
+    </style>
+
+    <style name="SmallActionButtonStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:background">@drawable/ic_button_apple_white</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="MediumActionButtonStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:background">@drawable/ic_button_apple_white</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="LargeDarkTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+    </style>
+
+    <style name="MediumDarkTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+    </style>
+
+    <style name="SmallDarkTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+    </style>
+
+    <style name="LargeTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="MediumTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="SmallTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="ItemListTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="MediumItemListTextViewStyle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="PreferenceTheme" parent="AppBaseTheme">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <item name="android:textColorSecondary">@color/my_dark_secondary_text</item>
+    </style>
+
+    <style name="num_pad_button">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ic_button_apple_white</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textColor">@color/my_primary_text</item>
+    </style>
+
+    <style name="payment_control_container">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@drawable/view_border</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="payment_label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+    </style>
+
+    <style name="payment_switch">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableRight">@drawable/toggle_button_selector</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:checked">true</item>
+        <item name="android:textOff"></item>
+        <item name="android:textOn"></item>
+    </style>
+
+    <style name="payment_input_field">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:ems">5</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@color/my_dark_primary_text</item>
+        <!--<item name="android:hint">@string/input_amount</item>-->
+        <item name="android:textColorHint">@color/edittext_hint_color</item>
+    </style>
+
+    <style name="num_pad_big_button" parent="num_pad_button">
+        <!--<item name="android:background">@drawable/ic_button_apple_green</item>-->
+        <item name="android:textSize">28sp</item>
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:padding">0dp</item>-->
+    </style>
+
+    <style name="popup_window_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>

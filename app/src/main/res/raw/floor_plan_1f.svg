@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="580.928px" height="981.877px" viewBox="0 0 580.928 981.877" enable-background="new 0 0 580.928 981.877"
+	 xml:space="preserve">
+<g id="area-busy-1F">
+	<g id="table-04_1_">
+		
+			<ellipse id="tableellipse_1_" opacity="0.7" fill="#D14937" stroke="#E9F4F3" stroke-miterlimit="10" cx="551.667" cy="150.333" rx="14.333" ry="18"/>
+		
+			<text transform="matrix(1 0 0 1 541.667 158.001)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">04</text>
+	</g>
+	<g id="table-polygon_1_">
+		<linearGradient id="tablepolygon_2_" gradientUnits="userSpaceOnUse" x1="432.6533" y1="185.6665" x2="472.0127" y2="185.6665">
+			<stop  offset="0.2661" style="stop-color:#FFFFFF"/>
+			<stop  offset="0.8301" style="stop-color:#000000"/>
+		</linearGradient>
+		<polygon id="tablepolygon_1_" opacity="0.7" fill="#D14936" stroke="url(#tablepolygon_2_)" stroke-miterlimit="10" points="
+			442.782,202.21 433.23,185.667 442.782,169.123 461.884,169.123 471.436,185.667 461.884,202.21 		"/>
+		
+			<text transform="matrix(1 0 0 1 370.8975 182.666)" fill="#DBEF22" stroke="#000000" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="16">Polygon</text>
+	</g>
+	<g id="table-star_1_">
+		<polygon id="tablestar_1_" opacity="0.7" fill="#D14937" stroke="#B8C422" stroke-miterlimit="10" points="468.29,322.138 
+			454.861,320.575 445.961,330.751 443.298,317.497 430.869,312.177 442.651,305.548 443.87,292.084 453.816,301.242 
+			466.998,298.24 461.361,310.529 		"/>
+		<text transform="matrix(1 0 0 1 416.8975 306.75)"><tspan x="0" y="0" fill="#78C4A5" font-family="'STHeitiSC-Light'" font-size="18">星</tspan><tspan x="0" y="21.6" fill="#78C4A5" font-family="'STHeitiSC-Light'" font-size="18">星</tspan></text>
+	</g>
+	<g id="table-01_1_">
+		<radialGradient id="table01_2_" cx="411.334" cy="45" r="14.2459" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#DDFF15"/>
+			<stop  offset="0.4807" style="stop-color:#FB8C02"/>
+			<stop  offset="0.8301" style="stop-color:#BF0020"/>
+		</radialGradient>
+		
+			<rect id="table01_1_" x="398.667" y="29.333" fill="url(#table01_2_)" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="25.334" height="31.333"/>
+		
+			<text transform="matrix(1 0 0 1 400.333 51.334)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">01</text>
+	</g>
+	<g id="table-02_1_">
+		
+			<rect id="table02_1_" x="255.561" y="396.663" transform="matrix(0.6956 0.7185 -0.7185 0.6956 379.1843 -70.0831)" opacity="0.7" fill="#D14937" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="33.461" height="31.476"/>
+		
+			<text transform="matrix(1 0 0 1 261.3335 418.334)" fill="#E5E432" stroke="#000000" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">02</text>
+	</g>
+	<g id="table-03_1_">
+		<path id="table03_1_" opacity="0.7" fill="#E3374E" stroke="#000000" stroke-miterlimit="10" d="M508.333,45
+			c0,8.836-7.163,16-16,16l0,0c-8.837,0-16-7.164-16-16l0,0c0-8.836,7.163-16,16-16l0,0C501.17,29,508.333,36.164,508.333,45
+			L508.333,45z"/>
+		<text transform="matrix(1 0 0 1 481.333 52.334)" fill="#E5E432" font-family="'MyriadPro-Bold'" font-size="20">03</text>
+	</g>
+</g>
+<g id="area-free-1F">
+	<g id="table-04">
+		<ellipse id="tableellipse" fill="#44B14D" cx="551.667" cy="150.333" rx="14.333" ry="18"/>
+		
+			<text transform="matrix(1 0 0 1 541.667 158.001)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">04</text>
+	</g>
+	<g id="table-polygon">
+		<polygon id="tablepolygon" fill="#44B14D" points="442.782,202.21 433.23,185.667 442.782,169.123 461.884,169.123 
+			471.436,185.667 461.884,202.21 		"/>
+		
+			<text transform="matrix(1 0 0 1 370.8975 182.666)" fill="#DBEF22" stroke="#000000" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="16">Polygon</text>
+	</g>
+	<g id="table-star">
+		<polygon id="tablestar" fill="#44B14D" points="468.29,322.138 454.861,320.575 445.961,330.751 443.298,317.497 430.869,312.177 
+			442.651,305.548 443.87,292.084 453.816,301.242 466.998,298.24 461.361,310.529 		"/>
+		<text transform="matrix(1 0 0 1 416.8975 306.75)"><tspan x="0" y="0" fill="#78C4A5" font-family="'STHeitiSC-Light'" font-size="18">星</tspan><tspan x="0" y="21.6" fill="#78C4A5" font-family="'STHeitiSC-Light'" font-size="18">星</tspan></text>
+	</g>
+	<g id="table-01">
+		
+			<rect id="table01" x="398.667" y="29.333" fill="#6DBA49" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="25.334" height="31.333"/>
+		
+			<text transform="matrix(1 0 0 1 400.333 51.334)" fill="#E5E432" stroke="#0E32E5" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">01</text>
+	</g>
+	<g id="table-02">
+		
+			<rect id="table02" x="255.561" y="396.663" transform="matrix(0.6956 0.7185 -0.7185 0.6956 379.1843 -70.0831)" fill="#6DBA49" stroke="#D60D0D" stroke-width="2" stroke-miterlimit="10" width="33.461" height="31.476"/>
+		
+			<text transform="matrix(1 0 0 1 261.3335 418.334)" fill="#E5E432" stroke="#000000" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="20">02</text>
+	</g>
+	<g id="table-03">
+		<path id="table03" opacity="0.7" fill="#44B14D" stroke="#000000" stroke-miterlimit="10" d="M505.333,44.833
+			c0,8.745-6.491,15.833-14.5,15.833l0,0c-8.009,0-14.5-7.089-14.5-15.833l0,0c0-8.744,6.491-15.833,14.5-15.833l0,0
+			C498.842,29,505.333,36.089,505.333,44.833L505.333,44.833z"/>
+		<text transform="matrix(1 0 0 1 481.333 52.334)" fill="#E5E432" font-family="'MyriadPro-Bold'" font-size="20">03</text>
+	</g>
+</g>
+</svg>
+
