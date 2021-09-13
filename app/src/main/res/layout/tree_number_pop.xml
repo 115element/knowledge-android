@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_ellipse_button_red">
+
+
+    <!--数字键盘布局-->
+    <!-- 已7作为长兄组件-->
+
+    <TextView
+            android:id="@+id/already_input"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_ellipse_button_grey"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="请输入手机号" />
+
+    <Button
+            android:id="@+id/btn_7"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/already_input"
+            android:layout_marginLeft="-235dp"
+            android:layout_marginTop="58dp"
+            android:layout_toRightOf="@id/already_input"
+            android:background="@drawable/shape_button"
+            android:text="7"
+            android:textAppearance="@android:style/TextAppearance.Large"
+             android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_7"
+        android:layout_toRightOf="@id/btn_7"
+        android:background="@drawable/shape_button"
+        android:text="8"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+            android:id="@+id/btn_9"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/btn_7"
+            android:layout_toRightOf="@id/btn_8"
+            android:background="@drawable/shape_button"
+            android:text="9"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#ff333333" />
+
+    <!-- 在9的右边alignTop两空间上边缘对齐 -->
+    <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@id/btn_9"
+            android:layout_toRightOf="@id/btn_9"
+            android:background="@drawable/shape_button"
+            android:text="清\n空"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#ff333333" />
+
+    <Button
+            android:id="@+id/btn_4"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/btn_7"
+            android:layout_alignLeft="@id/btn_7"
+            android:layout_marginTop="-0dp"
+            android:background="@drawable/shape_button"
+            android:text="4"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_4"
+        android:layout_toRightOf="@id/btn_4"
+        android:background="@drawable/shape_button"
+        android:text="5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_4"
+        android:layout_toRightOf="@id/btn_5"
+        android:background="@drawable/shape_button"
+        android:text="6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btn_4"
+        android:layout_alignLeft="@id/btn_7"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:text="1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_1"
+        android:layout_toRightOf="@id/btn_1"
+        android:background="@drawable/shape_button"
+        android:text="2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_1"
+        android:layout_toRightOf="@id/btn_2"
+        android:background="@drawable/shape_button"
+        android:text="3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btn_1"
+        android:layout_alignLeft="@id/btn_7"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_dot"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_0"
+        android:layout_toRightOf="@id/btn_0"
+        android:background="@drawable/shape_button"
+        android:text="."
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/btn_dot"
+        android:layout_toRightOf="@id/btn_dot"
+        android:background="@drawable/shape_button"
+        android:text="⃖"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        android:textSize="50dp" />
+
+    <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@id/btn_3"
+            android:layout_marginTop="-0dp"
+            android:layout_toRightOf="@id/btn_3"
+            android:background="#F5663D"
+            android:text="确\n定"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#ff333333" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/btn_enter"
+        android:layout_marginTop="30dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/btn_enter" />
+
+
+</RelativeLayout>

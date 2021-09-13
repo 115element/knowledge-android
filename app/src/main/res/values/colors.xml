@@ -5,6 +5,63 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="window_background">#fffffeee</color>
+    <color name="dark_window_background">#dd333333</color>
+
+    <!--<color name="my_primary">#ED1C24</color>-->
+    <color name="my_primary">#ffc7b497</color>
+    <color name="my_primary_dark">#ffc1af92</color>
+    <color name="my_primary_light">#ffd1bd9f</color>
+    <color name="my_button_color">#ff0d9f67</color>
+    <color name="my_accent">#ffb89c66</color>
+    <color name="my_primary_text">#ffffffff</color>
+    <color name="my_dark_primary_text">#ff555555</color>
+    <color name="my_dark_secondary_text">#ff777777</color>
+    <color name="my_secondary_text">#ffeeeeee</color>
+    <color name="my_icons">#ffffffff</color>
+    <color name="my_tab_background">#fffffeee</color>
+    <color name="my_tab_divider">#ffd4d4cb</color>
+    <color name="my_item_listview_background">#fffffeee</color>
+    <color name="my_gridview_background">#fffffeee</color>
+
+    <color name="edittext_text_color">#ff818181</color>
+    <color name="edittext_hint_color">#ffaaaaaa</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!--PagerSlidingTabStrip-->
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+    <color name="tabstrip_background">#FF00314D</color>
+
+
+    <color name="dkgray">#80808FF0</color>
+    <color name="yello">#F8F8FF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkgray">#938192</color>
+    <color name="lightgreen">#7cd12e</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="gray">#ff888888</color>
+    <color name="green">#ff00ff00</color>
+    <color name="ltgray">#ffcccccc</color>
+    <color name="magenta">#ffff00ff</color>
+    <color name="red">#ffff0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="beiruired">#C25348</color>
+    <color name="berruibe">#FAF0F0</color>
+
+    <color name="colorAccent">#ff4081</color>
+
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60f4f1f7</color>
+    <color name="result_view">#b0e23232</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#c0000dff</color>
+    <color name="laser_color">#ff002b</color>
+    <color name="corner_color">#1e00ff</color>
+    <!-- QRCode scanner color end -->
 </resources>

@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/circular_shape.xml" value="0.38229166666666664" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/dashed_style_view.xml" value="0.22083333333333333" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/rectangle_ellipse_button_grey.xml" value="0.38229166666666664" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_button.xml" value="0.22083333333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_1.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_2.xml" value="0.36614583333333334" />
@@ -13,6 +17,10 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/nofold_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/parent_caption.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/recycler_view_1.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_activity_order.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_number_pop.xml" value="0.2046875" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_parent.xml" value="0.2046875" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_phone.xml" value="0.2046875" />
       </map>
     </option>
   </component>

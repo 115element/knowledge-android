@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00EAFF"
+        android:orientation="vertical">
+
+    <!--LinearLayout嵌套-->
+    <LinearLayout
+            android:id="@+id/child_layout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal">
+
+
+        <!--商品序号-->
+        <TextView
+                android:id="@+id/pluId"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="18sp" />
+
+        <!--设置距离左边组件距离-->
+        <!--android:layout_marginLeft="30dp"-->
+
+        <!--商品名-->
+        <TextView
+                android:id="@+id/pluName"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--规格字符串固定-->
+        <TextView
+                android:id="@+id/fixName1"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--规格-->
+        <TextView
+                android:id="@+id/choice"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--竖线-->
+        <TextView
+                android:id="@+id/line"
+                android:text="|"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--规格值-->
+        <TextView
+                android:id="@+id/option"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--数量固定-->
+        <TextView
+                android:id="@+id/fixName2"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--数量值-->
+        <TextView
+                android:id="@+id/quantity"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--金额固定-->
+        <TextView
+                android:id="@+id/fixName3"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <!--金额值-->
+        <TextView
+                android:id="@+id/amount"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+        <TextView
+                android:id="@+id/placeHolder"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!--我们把LinearLayout的总空间（其实应该叫“剩余空间”，我们下面再说）看作100%，
+    那么设定了“layout_weight”值的 总和就代表100%。这里有两个控件设置了layout_weight（分别为1），
+    所以值2就相当于100%空间。而按钮设定的值1就相当于 1 / 2 = 50%，代表当前控件占总空间的50%。
+    因为LinearLayout的layout_width=“match_parent”，所以就相当于屏幕的50%。-->
+
+    <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dashed_style_view"
+            android:layerType="software" />-->
+</LinearLayout>
