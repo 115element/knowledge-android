@@ -1,4 +1,4 @@
-package com.example.knowledge_android.utils;
+package com.example.knowledge_android.other.utils;
 
 import static java.util.Objects.requireNonNull;
 

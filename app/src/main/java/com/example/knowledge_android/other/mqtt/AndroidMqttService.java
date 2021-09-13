@@ -1,4 +1,4 @@
-package com.example.knowledge_android.mqtt;
+package com.example.knowledge_android.other.mqtt;
 
 import static android.content.ContentValues.TAG;
 
@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.example.knowledge_android.MainActivity;
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.utils.LogUtil;
+import com.example.knowledge_android.other.utils.LogUtil;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -58,9 +58,7 @@ import okhttp3.Response;
  * <p>
  * ssl校验方式的mqtt
  * <p>
- * by gmx
  */
-
 public class AndroidMqttService {
 
     //ssl签名文件校验

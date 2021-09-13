@@ -1,4 +1,4 @@
-package com.example.knowledge_android.receiver;
+package com.example.knowledge_android.other.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.mqtt;
+package com.example.knowledge_android.other.mqtt;
 
 public class ServerRes {
 

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.utils;
+package com.example.knowledge_android.other.utils;
 
 import static android.content.ContentValues.TAG;
 
@@ -7,7 +7,6 @@ import android.util.Log;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.Objects;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
