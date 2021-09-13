@@ -27,7 +27,8 @@ public class MainActivity6 extends AppCompatActivity {
         //设置角标
         QBadgeView badgeView1 = new QBadgeView(this);
         badgeView1.bindTarget(fm_btn_badge);
-        badgeView1.setBadgeNumber(100);
+        //badgeView1.setBadgeNumber(100);
+        badgeView1.setBadgeText("+￥"+"3元");
         //badgeView1.setBadgeGravity(Gravity.END | Gravity.TOP);
     }
 
