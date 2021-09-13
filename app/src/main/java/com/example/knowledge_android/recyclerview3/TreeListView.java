@@ -1,4 +1,4 @@
-package com.example.knowledge_android.treerecyclerview;
+package com.example.knowledge_android.recyclerview3;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.treerecyclerview.adpater.TreeRecyclerAdapter;
-import com.example.knowledge_android.treerecyclerview.factory.ItemFactory;
-import com.example.knowledge_android.treerecyclerview.tree.OneTreeItemParent;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranDetail;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranHead;
+import com.example.knowledge_android.recyclerview3.adpater.TreeRecyclerAdapter;
+import com.example.knowledge_android.recyclerview3.factory.ItemFactory;
+import com.example.knowledge_android.recyclerview3.tree.OneTreeItemParent;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranDetail;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranHead;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +24,7 @@ import java.util.Random;
 
 
 /**
- * @author Alex
- * @since 2021/09/12
- *
- * 列表主体
+ * 使用组件嵌入泓远项目中的方式
  */
 public class TreeListView extends LinearLayout {
 

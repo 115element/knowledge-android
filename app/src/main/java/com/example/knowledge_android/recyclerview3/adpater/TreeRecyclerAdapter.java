@@ -1,36 +1,50 @@
-package com.example.knowledge_android.treerecyclerview.adpater;
+package com.example.knowledge_android.recyclerview3.adpater;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranHead;
-import com.example.knowledge_android.treerecyclerview.view.TreeItem;
-import com.example.knowledge_android.treerecyclerview.view.TreeItemGroup;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranHead;
+import com.example.knowledge_android.recyclerview3.view.TreeItem;
+import com.example.knowledge_android.recyclerview3.view.TreeItemGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 
-
-/**
- * @author Alex
- * @since 2021/09/12
- *
- * 树级结构RecyclerAdapter.
- * item之间有子父级关系,
- */
 public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter<T> {
 
-    private TreeRecyclerViewType type;
+    //指定显示类型
+    private DiyViewType type = DiyViewType.EXPAND_SHOW_ALL;
+    public static enum DiyViewType {
+        /**
+         * 显示所有,不可展开折叠
+         * 适用场景,多级的data数据展示多type布局.
+         */
+        SHOW_ALL,
+        /**
+         * 显示所有,可展开折叠
+         * 适用场景,多级的data数据展示多type布局.
+         */
+        EXPAND_SHOW_ALL,
+        /**
+         * 默认显示一级,点击展开一级,折叠会使子级折叠
+         * 适用场景,多级列表,不保存展开状态
+         */
+        SHOW_COLLAPSE_CHILDS,
+        /**
+         * 默认显示,显示一级,点击展开,折叠不会影响子级展开折叠
+         * 适用场景,多级列表,保存展开状态
+         */
+        SHOW_DEFUTAL;
+    }
+
 
     private ItemManager<T> mItemManager;
-    /**
-     * 最初的数据.没有经过增删操作.
-     */
-    private List<T> initialDatas;
+
+    private List<T> initialDatas; //最初的数据.没有经过增删操作.
 
     //@Override
     public void onBindViewHolderClick1(final TreeViewHolder holder) {
@@ -38,7 +52,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("TAG","Click");
+                    Log.i("TAG", "Click");
                     int layoutPosition = holder.getLayoutPosition();
                     //检查item的position,这个item是否可以点击
                     if (getCheckItem().checkPosition(layoutPosition)) {
@@ -48,7 +62,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
                         T item = getDatas().get(itemPosition);
                         //展开,折叠和item点击不应该同时响应事件.
                         //必须是TreeItemGroup才能展开折叠,并且type不能为 TreeRecyclerViewType.SHOW_ALL
-                        if (type != TreeRecyclerViewType.SHOW_ALL && item instanceof TreeItemGroup) {
+                        if (type != DiyViewType.SHOW_ALL && item instanceof TreeItemGroup) {
                             //展开,折叠
                             expandOrCollapse(((TreeItemGroup) item));
                         } else {
@@ -97,13 +111,13 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
             refund.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("TAG","退货状态点击");
+                    Log.i("TAG", "退货状态点击");
                     int layoutPosition = holder.getLayoutPosition();
-                    Log.i("TAG","布局位置:" + layoutPosition);
+                    Log.i("TAG", "布局位置:" + layoutPosition);
                     TranHead data = (TranHead) getItemManager().getItem(layoutPosition).getData();
-                    Log.i("TAG","当前点击的交易数据:" + data.toString());
+                    Log.i("TAG", "当前点击的交易数据:" + data.toString());
                     if (Objects.equals(data.getStatus(), "退货")) {
-                        Log.i("TAG","点击退货");
+                        Log.i("TAG", "点击退货");
 //                        POSTerminalApplication application = POSTerminalApplication.getInstance();
 //                        BeiRuiPosScreen posScreen = (BeiRuiPosScreen) application.getPosScreen();
 //                        posScreen.showMessagePopup("退货",data.toString());
@@ -117,7 +131,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("TAG","click");
+                    Log.i("TAG", "click");
                     int layoutPosition = holder.getLayoutPosition();
                     //检查item的position,这个item是否可以点击
                     if (getCheckItem().checkPosition(layoutPosition)) {
@@ -127,7 +141,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
                         T item = getDatas().get(itemPosition);
                         //展开,折叠和item点击不应该同时响应事件.
                         //必须是TreeItemGroup才能展开折叠,并且type不能为 TreeRecyclerViewType.SHOW_ALL
-                        if (type != TreeRecyclerViewType.SHOW_ALL && item instanceof TreeItemGroup) {
+                        if (type != DiyViewType.SHOW_ALL && item instanceof TreeItemGroup) {
                             //展开,折叠
                             expandOrCollapse(((TreeItemGroup) item));
                         } else {
@@ -151,7 +165,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
 
 
     private boolean checkIsTreeItemGroup(T baseItem) {
-        if (type != TreeRecyclerViewType.SHOW_ALL) {
+        if (type != DiyViewType.SHOW_ALL) {
             return true;
         } else if (baseItem instanceof TreeItemGroup) {
             return true;
@@ -173,9 +187,9 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
 
     @Override
     public void setDatas(List<T> datas) {
-        Log.i("TAG",datas.toString());
+        Log.i("TAG", datas.toString());
         initialDatas = datas;
-        if (type == TreeRecyclerViewType.SHOW_ALL) {
+        if (type == DiyViewType.SHOW_ALL) {
             for (int i = 0; i < datas.size(); i++) {
                 T t = datas.get(i);
                 getDatas().add(t);
@@ -216,7 +230,7 @@ public class TreeRecyclerAdapter<T extends TreeItem> extends BaseRecyclerAdapter
      *
      * @param type
      */
-    public void setType(TreeRecyclerViewType type) {
+    public void setType(DiyViewType type) {
         this.type = type;
     }
 

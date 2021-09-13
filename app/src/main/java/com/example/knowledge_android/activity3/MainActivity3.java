@@ -8,17 +8,14 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.recyclerview1.adapter.FruitAdapter;
-import com.example.knowledge_android.recyclerview1.bean.Fruit;
-import com.example.knowledge_android.treerecyclerview.adpater.TreeRecyclerAdapter;
-import com.example.knowledge_android.treerecyclerview.factory.ItemFactory;
-import com.example.knowledge_android.treerecyclerview.tree.OneTreeItemParent;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranDetail;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranHead;
+import com.example.knowledge_android.recyclerview3.adpater.TreeRecyclerAdapter;
+import com.example.knowledge_android.recyclerview3.factory.ItemFactory;
+import com.example.knowledge_android.recyclerview3.tree.OneTreeItemParent;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranDetail;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranHead;
 
 import java.util.ArrayList;
 import java.util.List;

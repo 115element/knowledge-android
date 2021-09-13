@@ -1,4 +1,4 @@
-package com.example.knowledge_android.treerecyclerview.adpater;
+package com.example.knowledge_android.recyclerview3.adpater;
 
 import android.util.Log;
 import android.view.View;
@@ -7,22 +7,14 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-
 /**
- * Application class.
- *
- * @author Alex
- * @since 2021/09/12
- * <p>
- * 普通BaseRecyclerAdapter,itme无父子关系.
- * 限定泛型为BaseItem的子类.
- * 通过BaseItem去处理ViewHolder
+ * 基本适配器
  */
 public class BaseRecyclerAdapter<T extends BaseItem> extends RecyclerView.Adapter<TreeViewHolder> {
 
@@ -59,7 +51,7 @@ public class BaseRecyclerAdapter<T extends BaseItem> extends RecyclerView.Adapte
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("TAG","OnClickListener 时代大厦");
+                    Log.i("TAG", "OnClickListener 时代大厦");
                     //获得holder的position
                     int layoutPosition = holder.getLayoutPosition();
                     //检查item的position,是否可以点击.
@@ -78,7 +70,7 @@ public class BaseRecyclerAdapter<T extends BaseItem> extends RecyclerView.Adapte
             holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    Log.i("TAG","OnLongClickListener 是的撒多撒");
+                    Log.i("TAG", "OnLongClickListener 是的撒多撒");
                     //获得holder的position
                     int layoutPosition = holder.getLayoutPosition();
                     //检查position是否可以点击

@@ -1,10 +1,10 @@
-package com.example.knowledge_android.treerecyclerview.tree;
+package com.example.knowledge_android.recyclerview3.tree;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.treerecyclerview.adpater.TreeViewHolder;
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranDetail;
-import com.example.knowledge_android.treerecyclerview.view.TreeItemGroup;
+import com.example.knowledge_android.recyclerview3.adpater.TreeViewHolder;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranDetail;
+import com.example.knowledge_android.recyclerview3.view.TreeItemGroup;
 
 import java.util.List;
 

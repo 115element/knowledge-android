@@ -1,10 +1,10 @@
-package com.example.knowledge_android.treerecyclerview.base;
+package com.example.knowledge_android.recyclerview3.tree.base;
 
 import android.content.res.Resources;
 import android.util.Log;
 
-import com.example.knowledge_android.treerecyclerview.adpater.ItemManager;
-import com.example.knowledge_android.treerecyclerview.adpater.TreeViewHolder;
+import com.example.knowledge_android.recyclerview3.adpater.ItemManager;
+import com.example.knowledge_android.recyclerview3.adpater.TreeViewHolder;
 
 /**
  * 组合模式

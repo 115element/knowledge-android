@@ -1,23 +1,17 @@
-package com.example.knowledge_android.treerecyclerview.view;
-
-
-
+package com.example.knowledge_android.recyclerview3.view;
 
 import android.util.Log;
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
-import com.example.knowledge_android.treerecyclerview.base.BaseItemData;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItemData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 /**
- * //拥有子集
- * //子集可以是parent,也可以是child
+ * 拥有子集
+ * 子集可以是parent,也可以是child
  */
-
 public abstract class TreeItemGroup<D extends BaseItemData> extends TreeItem<D>
         implements TreeParent {
     /**

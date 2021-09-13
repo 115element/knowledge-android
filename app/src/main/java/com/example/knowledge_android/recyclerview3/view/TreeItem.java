@@ -1,10 +1,8 @@
-package com.example.knowledge_android.treerecyclerview.view;
+package com.example.knowledge_android.recyclerview3.view;
 
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
-import com.example.knowledge_android.treerecyclerview.base.BaseItemData;
-
-
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItemData;
 
 
 /**

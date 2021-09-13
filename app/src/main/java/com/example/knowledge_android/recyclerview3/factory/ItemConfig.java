@@ -1,7 +1,7 @@
-package com.example.knowledge_android.treerecyclerview.factory;
+package com.example.knowledge_android.recyclerview3.factory;
 
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
 
 import java.util.HashMap;
 

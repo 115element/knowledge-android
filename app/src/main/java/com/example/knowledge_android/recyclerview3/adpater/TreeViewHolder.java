@@ -1,4 +1,4 @@
-package com.example.knowledge_android.treerecyclerview.adpater;
+package com.example.knowledge_android.recyclerview3.adpater;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -21,12 +21,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * @author Alex
- * @since 2021/09/12
- *
- * 一个ViewHolder描述了一个项目视图和元数据关于它在RecyclerView中的位置。
- */
+
 public class TreeViewHolder extends RecyclerView.ViewHolder {
 
     private SparseArray<View> mViews;
@@ -42,8 +37,7 @@ public class TreeViewHolder extends RecyclerView.ViewHolder {
         return new TreeViewHolder(context, itemView);
     }
 
-    public static TreeViewHolder createViewHolder(Context context,
-                                                  ViewGroup parent, int layoutId) {
+    public static TreeViewHolder createViewHolder(Context context, ViewGroup parent, int layoutId) {
         View itemView = LayoutInflater.from(context).inflate(layoutId, parent,
                 false);
         return new TreeViewHolder(context, itemView);

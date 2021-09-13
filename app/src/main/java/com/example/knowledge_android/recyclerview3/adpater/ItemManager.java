@@ -1,7 +1,7 @@
-package com.example.knowledge_android.treerecyclerview.adpater;
+package com.example.knowledge_android.recyclerview3.adpater;
 
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @author Alex
  * @since 2021/09/12
  * <p>
- * 数据基类
+ * 数据操作类
  */
 public interface ItemManager<T extends BaseItem> {
     //增

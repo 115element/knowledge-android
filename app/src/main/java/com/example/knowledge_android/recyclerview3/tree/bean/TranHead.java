@@ -1,6 +1,7 @@
-package com.example.knowledge_android.treerecyclerview.tree.bean;
+package com.example.knowledge_android.recyclerview3.tree.bean;
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItemData;
+
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItemData;
 
 import java.util.List;
 

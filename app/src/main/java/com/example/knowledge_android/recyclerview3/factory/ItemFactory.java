@@ -1,15 +1,13 @@
-package com.example.knowledge_android.treerecyclerview.factory;
+package com.example.knowledge_android.recyclerview3.factory;
 
 
-import com.example.knowledge_android.treerecyclerview.base.BaseItem;
-import com.example.knowledge_android.treerecyclerview.base.BaseItemData;
-import com.example.knowledge_android.treerecyclerview.view.TreeItem;
-import com.example.knowledge_android.treerecyclerview.view.TreeItemGroup;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItem;
+import com.example.knowledge_android.recyclerview3.tree.base.BaseItemData;
+import com.example.knowledge_android.recyclerview3.view.TreeItem;
+import com.example.knowledge_android.recyclerview3.view.TreeItemGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 
 public class ItemFactory {

@@ -1,15 +1,15 @@
-package com.example.knowledge_android.treerecyclerview.tree;
+package com.example.knowledge_android.recyclerview3.tree;
 
 
 import android.graphics.Color;
 import android.widget.Button;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.treerecyclerview.adpater.TreeViewHolder;
-import com.example.knowledge_android.treerecyclerview.factory.ItemFactory;
-import com.example.knowledge_android.treerecyclerview.tree.bean.TranHead;
-import com.example.knowledge_android.treerecyclerview.view.TreeItem;
-import com.example.knowledge_android.treerecyclerview.view.TreeItemGroup;
+import com.example.knowledge_android.recyclerview3.adpater.TreeViewHolder;
+import com.example.knowledge_android.recyclerview3.factory.ItemFactory;
+import com.example.knowledge_android.recyclerview3.tree.bean.TranHead;
+import com.example.knowledge_android.recyclerview3.view.TreeItem;
+import com.example.knowledge_android.recyclerview3.view.TreeItemGroup;
 
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ import java.util.Objects;
 /**
  * @author Alex
  * @since 2021/09/12
- *
+ * <p>
  * 第一层
  */
 public class OneTreeItemParent extends TreeItemGroup<TranHead> {
@@ -46,19 +46,19 @@ public class OneTreeItemParent extends TreeItemGroup<TranHead> {
         Button refund = holder.itemView.findViewById(R.id.status);
         if (refund != null) {
             String buttonText = refund.getText().toString();
-            if (Objects.equals(buttonText,"已退货")) {
+            if (Objects.equals(buttonText, "已退货")) {
                 refund.setTextColor(Color.GRAY);
                 refund.setBackgroundColor(Color.parseColor("#D7DFF0"));
             }
-            if (Objects.equals(buttonText,"退货中")) {
+            if (Objects.equals(buttonText, "退货中")) {
                 refund.setTextColor(Color.YELLOW);
                 refund.setBackgroundColor(Color.parseColor("#D7DFF0"));
             }
-            if (Objects.equals(buttonText,"退货")) {
+            if (Objects.equals(buttonText, "退货")) {
                 refund.setTextColor(Color.WHITE);
                 refund.setBackgroundResource(R.drawable.circular_shape);
             }
-            //PosLog.info("按钮名称:" + refund.getText().toString());
+            //Log.i("TAG","按钮名称:" + refund.getText().toString());
         }
     }
 

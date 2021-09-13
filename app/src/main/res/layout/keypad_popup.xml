@@ -16,7 +16,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/rectangle_ellipse_button_grey"
+            android:background="@drawable/textview_border"
             android:gravity="center"
             android:textSize="20sp"
             android:text="请输入手机号" />
