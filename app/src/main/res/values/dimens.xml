@@ -1,5 +1,11 @@
 <resources>
 
+    <!--
+    dimen标签的作用：
+    ①用于定义公用尺寸单位的资源文件，方便修改调整，可以很方便的在多个布局中使用，常用于应用界面适配。
+    ②一个是可以重用，一个是可以用来适配
+    -->
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

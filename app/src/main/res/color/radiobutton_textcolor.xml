@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+Android Selector作用简单理解是在点击控件时，改变控件的状态或者属性
+    android:state_selected选中
+    android:state_focused获得焦点
+    android:state_pressed点击
+    android:state_enabled设置是否响应事件,指所有事件
+    -->
+
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--未选中时颜色-->
     <item android:color="#1E181A"
         android:state_checked="false" />
+
+    <!--选中时颜色-->
     <item android:color="#F4F1F2"
         android:state_checked="true" />
 </selector>
