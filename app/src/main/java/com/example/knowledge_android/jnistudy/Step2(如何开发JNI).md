@@ -71,7 +71,7 @@ Java_com_example_knowledge_1android_jnistudy_JniTest_getString(JNIEnv * env,jobj
 ##④生成动态库
 5) 生成动态库
 这里以在Windows中为例，需要生成dll文件。在保存HelloWorldImpl.c文件夹下面，使用 VC的 编译器cl成。 
-   cl -I%java_home%\include -I%java_home%\include\win32 -LD com_example_knowledge_android_jnistudy_JniTestImpl.c -Fe hello.dll 
+   cl -I%java_home%\include -I%java_home%\include\win32 -LD com_example_knowledge_android_jnistudy_JniTestImpl.c -Fehello.dll 
    注意：生成的dll文件名在选项-Fe后面配置，这里是hello，因为在JniTest.java文件中我们loadLibrary的时候使用的名字是hello。
    当然这里修改之后那里也需要修改。另外需要将-I%java_home%\include -I%java_home%\include\win32参数加上，因为在第四步里面编写本地方法的时候引入了jni.h文件。
 如果配置了MinGW,也可以这样来编译：
