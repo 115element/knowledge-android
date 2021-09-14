@@ -1,0 +1,100 @@
+<configuration>
+    <!--DATA_DIR -
+    The current user's internal files directory.
+    Note this is not the application data directory despite the name.
+    This variable will be renamed in a future release for clarity.
+
+    EXT_DIR -
+    The external storage directory if mounted (e.g., if the SD card is inserted).
+    If not mounted, this is null.
+    Usage: ${EXT_DIR:-${DATA_DIR}},
+    which specifies the external storage directory if mounted.
+    Otherwise, the internal files directory.-->
+
+    <!--
+        ${EXT_DIR:-${DATA_DIR}} 目前等同于 /data/data
+        目前发现用${EXT_DIR:-${DATA_DIR}}将会间接性失效
+     -->
+    <property name="logPath" value="/data/data/hyi.mobilepos/logfiles" />
+
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/hyi.mobilepos.log</file>
+
+        <!--初始化的时候是否创建文件,是否在第一次使用的时候创建文件-->
+        <lazy>false</lazy>
+        <!--log追加到文件,否则覆盖文件-->
+        <append>true</append>
+
+        <!-- each file should be at most 30MB, keep 60 days worth of history, but at most 1GB -->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/hyi.mobilepos-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>30MB</maxFileSize>
+            <maxHistory>11</maxHistory>
+            <totalSizeCap>300MB</totalSizeCap>
+        </triggeringPolicy>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="state" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/hyi.state.log</file>
+
+        <!--初始化的时候是否创建文件,是否在第一次使用的时候创建文件-->
+        <lazy>false</lazy>
+        <!--log追加到文件,否则覆盖文件-->
+        <append>true</append>
+
+        <!-- each file should be at most 30MB, keep 60 days worth of history, but at most 1GB -->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/hyi.state-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>30MB</maxFileSize>
+            <maxHistory>11</maxHistory>
+            <totalSizeCap>300MB</totalSizeCap>
+        </triggeringPolicy>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="logcat" class="ch.qos.logback.classic.android.LogcatAppender">
+        <tagEncoder>
+            <pattern>%logger{0}</pattern>
+        </tagEncoder>
+        <encoder>
+            <pattern>[%method] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!--打印info级别的日志-->
+    <logger name="hyi" level="DEBUG">
+        <appender-ref ref="file" />
+    </logger>
+
+    <logger name="hyi.cream.state" level="DEBUG">
+        <appender-ref ref="state" />
+    </logger>
+
+    <!--SqlLite输出日志控制,additivity[控制是否在root的logger中输出] -->
+<!--    <logger name="com.j256.ormlite" level="DEBUG">-->
+<!--        <appender-ref ref="file" />-->
+<!--    </logger>-->
+
+    <logger name="hyi.cream.inline" level="INFO">
+        <appender-ref ref="file" />
+    </logger>
+
+<!--    <logger name="hyi.cream.inline.SocketNetworkTrait" level="INFO">-->
+<!--        <appender-ref ref="file" />-->
+<!--    </logger>-->
+
+    <!-- 日志级别 -->
+    <root level="DEBUG">
+        <appender-ref ref="logcat" />
+    </root>
+</configuration>
