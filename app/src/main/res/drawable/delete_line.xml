@@ -1,4 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+[https://blog.csdn.net/sysukehan/article/details/52022307]
+以下描述范围仅限于android:shape=“rectangle”，即方形
+
+shape是用于定义一些形状的样式，经常用于在Android开发中控制控件的背景，使用起来不难。
+shape一共有六个属性，分别是corners、gradient、padding、size、solid、stroke，当shape六个属性中有重复的定义时，会以后定义的属性为准
+
+[corners]
+有时候并不需要让边框的四个角都是圆角，例如在弹出窗口中，弹出窗口本身是四个角都是圆角，
+但左下角的按钮只需要左下角是圆角即可。corners中除了有radius这个属性用于控制四个角的圆角以外，
+还有bottomLeftRadius、bottomRightRadius、topLeftRadius、topRightRadius这四个属性，
+分别用于控制左下、右下、左上、右上四个角的圆角大小，单独设置这四个属性的时候，可以让特定的角变为圆角，
+并且当radius和这四个共存时，会以这四个属性的设置优先。
+
+[padding]
+用于控制背景边框与背景中的内容的距离，也就是内边距。一共包含四个属性：bottom、top、left、right，分别用于控制上、下、左、右的内边距，如果四个要设置成一样的话，也只能一个一个设置，没有提供一起设置的属性。
+
+[size]
+用于设置背景的大小，有两个属性，height和width，这两个属性是不能设置为match_parent或者wrap_content的，只能是具体的距离。
+并且，如果设置得过小以至于比背景上的控件还要小的时候，系统不会以这个距离去作为背景，而是会以包裹住控件的最小的长和宽来作为背景的长和宽。如果设置得比较大，则会以设置的为准。
+
+顺便提一句，size这个属性和corners这个属性搭配可以做出圆形的背景，代码如下：
+<corners
+    android:radius="100dp"/>
+<size
+    android:height="200dp"
+    android:width="200dp"/>
+将背景变成圆形有几个要求。第一，背景必须是正方形，也就是设置size的height和width的时候两者要相等。
+第二，corners的radius属性设置的值必须超过width或者height值的一半，否则会不够圆，超过一半和刚好是一半的效果是一样的。
+第三，最好不要设置padding这个属性，即使要设置的话也要小心，因为设置了padding后，内容的大小加上padding的距离可能会超过size的大小的设置，
+那么系统会以实际大小作为背景的大小，这样可能会使radius的设置显得太小，导致不是一个完好的圆形。
+
+
+[solid]
+用于控制背景颜色，只有一个属性就是color
+
+
+[stroke]
+控制背景的边框，一共有四个属性，width、color、dashGap、dashWidth。
+width用于控制边框的宽度，color用于控制边框的颜色。
+dashGap和dashWidth控制边框是否为虚线，如果两个值同时设置为正数，那么边框就会是虚线。dashGap控制的是虚线之间的距离，
+dashWidth控制的是虚线段的长度。这两个值只要有一个没有设置或者被设置为0dp，那边框就是实线。
+
+
+[gradient]
+用于设置背景色的效果，一旦设置了这个属性，solid中设置的背景颜色不再生效。
+gradient中的属性有：angle、startColor、endColor、centerColor、type、gradientRadius、centerX、centerY、useLevel。当type的值不同时，有些属性不生效。
+type指定了渐变的类型，一共有三种类型：linear（线性、默认）、radial（中间扩散）、sweep（旋转扫一周）
+
+先解释一下几个在任何类型下表现都相同的属性：
+startColor：渐变开始的颜色
+endColor：渐变结束的颜色
+centerColor：渐变中间的颜色
+useLevel：这个属性有两个值，true和false。当设置为true时，这个shape会被当做LevelListDrawable处理，
+还没有理解这个LevelListDrawable是什么，但是如果设置为true的话预览中是没办法正常显示的，估计在运行中也是显示不出来的。所以这个属性一般设置为false，默认的话是设置为false。
+
+<gradient
+    android:startColor="@color/white"
+    android:endColor="@color/black"
+    android:centerColor="#3F51B5"
+    android:type="linear"
+    android:useLevel="false"/>
+
+接下来介绍其他属性在不同类型下的表现
+在线性渐变的类型下，angle影响的是渐变的方向，默认的话是从左向右，如果要设置的话设置的值为整数并且要能被45整除，否则会报错。
+正数是逆时针，负数是顺时针。也就是说，angle=“90”是从下往上渐变，angle=“-90”是从上往下渐变。angle这个属性在其他两种类型下不生效，因为其他两种类型都是圆圈渐变，哪个方向都是一样的。
+在线性渐变的类型下，centerX和centerY的表现比较奇怪，这两个结合可以移动开始色和结束色的边界，取值范围为0.0-1.0，类型为浮点型，但有时候出现设置后不生效或者移动没有规律，这个还没有弄懂，先放着。
+————————————————
+gradientRadius只有在渐变类型为radial的时候才生效，用于控制渐变的圆圈的大小。
+在radial类型下，这个属性必须设置，否则会报错。centerX用于控制渐变圆圈中心点距离左边框的距离，centerY用于控制渐变圆圈中心点距离上边框的距离
+
+在sweep类型中，除了之前提到的四个每种类型都生效的属性外，只有centerX和centerY属性生效，控制旋转点的位置，控制方法参照radial类型下的控制方法。
+-->
+
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
        android:shape="line">
     <solid android:color="#00000000"/>
