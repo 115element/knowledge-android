@@ -2,6 +2,24 @@
 <!--
     Ref: http://developer.android.com/guide/topics/resources/animation-resource.html
 -->
+
+<!--
+android <set>标签代表一系列的帧动画，可以在里面添加动画效果，比如左退出、消隐、透明等特专殊效果，
+只要在代码当中引用该动画名称，就可以进行播放。
+Android里的动画效果可以在代码里实现也可以自己通过自定义xml文件进行实现。
+通过xml文件自定义就会用到set，意思为集合，就是使用这个xml时会播放由哪些动画组成的集合序列，使用该xml得使用特定的API接口进行解析播放。
+
+左右滑入式
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+ <translate     //位置转移动画效果
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"  //设置动画为减速动画(动画播放中越来越慢)
+    android:duration="300"      //动画持续时间
+    android:fromXDelta="100%p"  //动画起始时，X坐标上的位置
+    android:toXDelta="0" />     //动画结束时，X坐标上的位置
+</set>
+
+-->
+
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <objectAnimator
             android:interpolator="@android:anim/accelerate_interpolator"
