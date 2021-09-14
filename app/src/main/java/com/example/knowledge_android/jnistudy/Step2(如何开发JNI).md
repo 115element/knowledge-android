@@ -34,7 +34,7 @@ extern "C" {
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_example_knowledge_1android_jnistudy_JniTest_getString
-  (JNIEnv *, jclass);
+  (JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }
@@ -44,7 +44,7 @@ JNIEXPORT void JNICALL Java_com_example_knowledge_1android_jnistudy_JniTest_getS
 JNI函数名称分为三部分：首先是Java关键字，供Java虚拟机识别；然后是调用者类名称(全限定的类名，其中用下划线代替名称分隔符)；最后是对应的方法名称，各段名称之间用下划线分割。
 JNI函数的参数也由三部分组成：首先是JNIEnv *,是一个指向JNI运行环境的指针；第二个参数随本地方法是静态还是非静态而有所不同一一非静态本地方法的第二个参数是对对象的引用，而静态本地方法的第二个参数是对其Java类的引用；其余的参数对应通常Java方法的参数，参数类型需要根据一定规则进行映射。
 编写C++文件com_example_knowledge_android_jnistudy_JniTest.h的实现类，我是比较常用VC6.0来生成dll文件（hello.dll）的
-[这里我们可以这样理解：这个h文件相当于我们在java里面的接口，这里声明了一个Java_com_example_knowledge_1android_jnistudy_JniTest_getString(JNIEnv *, jclass);方法。
+[这里我们可以这样理解：这个h文件相当于我们在java里面的接口，这里声明了一个Java_com_example_knowledge_1android_jnistudy_JniTest_getString(JNIEnv *, jobject);方法。
 然后在我们的本地方法里面实现这个方法，也就是说我们在编写 C/C++程序的时候所使用的方法名必须和这里的一致]。
 
 ##③编写本地代码实现
@@ -52,18 +52,18 @@ JNI函数的参数也由三部分组成：首先是JNIEnv *,是一个指向JNI�
 
 代码2：
 ```text
-#include"jni.h"
-#include"com_example_knowledge_android_jnistudy_JniTest.h"
+#include <jni.h>
+#include <com_example_knowledge_android_jnistudy_JniTest.h>
 //#includeotherheaders
 
 JNIEXPORT  void  JNICALL
-Java_com_example_knowledge_1android_jnistudy_JniTest_getString(JNIEnv * env,jclass obj)
+Java_com_example_knowledge_1android_jnistudy_JniTest_getString(JNIEnv * env,jobject obj)
 {
     printf ( "HelloWorld!\n" );
     return ;
 }
 ```
-注意代码2中的第1行，需要将jni.h（该文件可以在%JAVA_HOME%/include文件夹下面找到）文件引入，因为在程序中的JNIEnv、 jclass等类型都是在该头文件中定义的；
+注意代码2中的第1行，需要将jni.h（该文件可以在%JAVA_HOME%/include文件夹下面找到）文件引入，因为在程序中的JNIEnv、 jobject等类型都是在该头文件中定义的；
 另外在第2行需要将com_example_knowledge_android_jnistudy_JniTest.h头文件引入
 （我是这么理解的：相当于我们在编写java程序的时候，实现一个 接口的话需要声明才可以，这里就是将com_example_knowledge_android_jnistudy_JniTest.h头文件里面声明的方法加以实现。当然不一定是这样）。
 然后保存为 com_example_knowledge_android_jnistudy_JniTestImpl.c 就ok了。

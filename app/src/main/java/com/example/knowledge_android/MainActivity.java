@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.knowledge_android.jnistudy.JniTest;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
