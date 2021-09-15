@@ -1,15 +1,17 @@
-package com.example.knowledge_android.constriantactivity;
+package com.example.knowledge_android.constriantlayout;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.knowledge_android.R;
+
 
 /*
 ————————————————
@@ -32,26 +34,24 @@ layout_constraintRight_toLeftOf     期望视图的右边对齐另一个视图�
 layout_constraintRight_toRightOf    期望视图的右边对齐另一个视图的右边。
 如果需要，属性支持开始和结尾也可用在左和右对齐。
 ————————————————
-*/
-
-
-/**
- * 自定义用法
  */
-public class LoginForXml extends ConstraintLayout implements View.OnClickListener {
+
+public class ConstraintMainActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     RadioButton username;
-
     RadioButton password;
-
     TextView tipsValue;
 
-    public LoginForXml(Context context) {
-        super(context);
-        inflate(context, R.layout.login_constraint_layout, this);
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login_constraint_layout);
+
         //初始化view总的所有组件对象,并分别设置点击事件
         initView();
     }
+
 
     private void initView() {
         //设置各个控件的点击响应
@@ -107,35 +107,8 @@ public class LoginForXml extends ConstraintLayout implements View.OnClickListene
         //最下方提示框
         tipsValue = (TextView) findViewById(R.id.tips_value);
         tipsValue.setOnClickListener(this);
-
     }
 
-
-    public RadioButton getUsername() {
-        return username;
-    }
-
-    public void setUsername(RadioButton username) {
-        this.username = username;
-    }
-
-    //选中密码框
-    public RadioButton getPassword() {
-        return password;
-    }
-
-    public void setPassword(RadioButton password) {
-        this.password = password;
-    }
-
-    //提示信息
-    public TextView getTipsValue() {
-        return tipsValue;
-    }
-
-    public void setTipsValue(TextView tipsValue) {
-        this.tipsValue = tipsValue;
-    }
 
     @SuppressLint({"NonConstantResourceId", "UseCompatLoadingForDrawables"})
     @Override
@@ -199,12 +172,10 @@ public class LoginForXml extends ConstraintLayout implements View.OnClickListene
 
             case R.id.username:
                 System.out.println("username");
-
                 break;
 
             case R.id.password:
                 System.out.println("password");
-
                 break;
 
             default:
@@ -212,5 +183,4 @@ public class LoginForXml extends ConstraintLayout implements View.OnClickListene
                 break;
         }
     }
-
 }

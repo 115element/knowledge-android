@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.viewpager_view7;
+package com.example.knowledge_android.viewpager.viewpager_view7;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.activity7.ImageUtils;
-import com.example.knowledge_android.activity7.transformer.ScaleViewPagerTransformer;
+import com.example.knowledge_android.viewpager.ImageUtils;
+import com.example.knowledge_android.viewpager.transformer.ScaleViewPagerTransformer;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

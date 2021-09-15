@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.navigator;
+package com.example.knowledge_android.viewpager.navigator;
 
 import android.content.Context;
 import android.graphics.Canvas;

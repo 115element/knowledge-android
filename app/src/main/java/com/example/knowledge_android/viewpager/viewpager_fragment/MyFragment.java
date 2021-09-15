@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.viewpager_fragment;
+package com.example.knowledge_android.viewpager.viewpager_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

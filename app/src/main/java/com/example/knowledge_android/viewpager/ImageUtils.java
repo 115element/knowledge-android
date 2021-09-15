@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7;
+package com.example.knowledge_android.viewpager;
 
 import android.content.Context;
 import android.graphics.Bitmap;

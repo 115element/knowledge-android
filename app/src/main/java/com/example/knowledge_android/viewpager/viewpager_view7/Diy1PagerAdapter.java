@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.viewpager_view8;
+package com.example.knowledge_android.viewpager.viewpager_view7;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +17,11 @@ import java.util.List;
  * destroyItem()：从当前container中删除指定位置（position）的View;
  * instantiateItem()：做了两件事，第一：将当前视图添加到container中，第二：返回当前View
  */
-public class Diy2PagerAdapter extends PagerAdapter {
+public class Diy1PagerAdapter extends PagerAdapter {
 
     private List<View> viewList; //view数组
 
-    public Diy2PagerAdapter(List<View> viewList) {
+    public Diy1PagerAdapter(List<View> viewList) {
         this.viewList = viewList;
     }
 

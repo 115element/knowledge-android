@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.viewpager_view8;
+package com.example.knowledge_android.viewpager.viewpager_view8;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.activity7.ImageUtils;
-import com.example.knowledge_android.activity7.navigator.ScaleCircleNavigator;
-import com.example.knowledge_android.activity7.transformer.ScaleViewPagerTransformer;
+import com.example.knowledge_android.viewpager.ImageUtils;
+import com.example.knowledge_android.viewpager.navigator.ScaleCircleNavigator;
+import com.example.knowledge_android.viewpager.transformer.ScaleViewPagerTransformer;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;

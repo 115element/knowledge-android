@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity7.transformer;
+package com.example.knowledge_android.viewpager.transformer;
 
 import android.view.View;
 

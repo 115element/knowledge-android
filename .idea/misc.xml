@@ -3,8 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/dashed_style_view.xml" value="0.26979166666666665" />
-        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/view_border.xml" value="0.26979166666666665" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/circular_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/dashed_style_view.xml" value="0.22083333333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/delete_line.xml" value="0.15885416666666666" />
@@ -16,12 +14,15 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/toggle_button_selector.xml" value="0.15885416666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/username_selector.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/view_border.xml" value="0.15885416666666666" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_index_gallery_item.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_1.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_2.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_4.xml" value="0.29438405797101447" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_5.xml" value="0.5" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_6.xml" value="0.3234375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_7.xml" value="0.1890625" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_8.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/category_form.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/child_caption.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/fold_layout.xml" value="0.36614583333333334" />

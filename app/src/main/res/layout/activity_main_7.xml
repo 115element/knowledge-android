@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--//HorizontalScrollView其实是FrameLayout的子类，里面最多只能包含一个直接组件（组件里面还可以嵌套组件），这里选择LinearLayout，方向设置水平。-->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#AA444444"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+</LinearLayout>
