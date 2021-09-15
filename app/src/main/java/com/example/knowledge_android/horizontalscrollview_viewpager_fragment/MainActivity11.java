@@ -21,7 +21,7 @@ import com.example.knowledge_android.R;
 
 import java.util.ArrayList;
 
-public class MainActivity10 extends AppCompatActivity {
+public class MainActivity11 extends AppCompatActivity {
 
     private ColumnHorizontalScrollView mColumnHorizontalScrollView;
     private LinearLayout ll_content;

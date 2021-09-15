@@ -40,7 +40,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的空间效果-->
         <activity
-            android:name=".horizontalscrollview_viewpager_fragment.MainActivity10"
+            android:name=".horizontal_viewpager_fragment.XMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

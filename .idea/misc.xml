@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_big_button_bg.xml" value="0.21041666666666667" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/radio_button_bg.xml" value="0.21041666666666667" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_index_gallery_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_10.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_10_horizontal.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_5.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_8.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_9.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/news_fragment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/viewpager_fragment1.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/viewpager_fragment2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/viewpager_fragment3.xml" value="0.25364583333333335" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tab.xml" value="0.36770833333333336" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/circular_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/dashed_style_view.xml" value="0.22083333333333333" />

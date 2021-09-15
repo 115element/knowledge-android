@@ -53,7 +53,7 @@ public class MyHorizontalScrollViewAdapter {
         return convertView;
     }
 
-    private class MyViewHolder {
+    private static class MyViewHolder {
         ImageView mImg;
         TextView mText;
     }
