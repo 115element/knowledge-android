@@ -3,6 +3,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        // MPAndroidChart
+        maven { url "https://jitpack.io" }
+        maven { url "https://www.mvnrepository.com" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"

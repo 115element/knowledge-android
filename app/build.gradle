@@ -68,6 +68,11 @@ dependencies {
 
     //Android实现二维码扫描功能
     implementation 'com.google.zxing:core:3.3.3'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
+    //implementation 'com.android.support:appcompat-v7:28.0.0'
+    //implementation 'com.android.support:design:28.0.0'
+
+    //viewpager的导航条扩展
+    //gradle7.0之后，需要在settings.gradle中配置： maven {url "https://jitpack.io"}
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!--
+        tools:context="com.example.MainActivity" >
+
+        上面这句话的作用：
+        tools:context=".MainActivity"作用
+        总而言之， 这些tools 属性主要针对的 上图右边那个模拟器 调试时候显示状态，，编译中不起作用的,
+        这里出现的 tools:context 作用，网上讲了很多，主要回答如下：
+        tools:context="activity name"这一句不会被打包进APK。
+        只是ADT的Layout Editor在你当前的Layout文件里面设置对应的渲染上下文，
+        说明你当前的Layout所在的渲染上下文是activity name对应的那个activity，
+        如果这个activity在manifest文件中设置了Theme，那么ADT的Layout Editor会根据这个Theme来渲染你当前的Layout。
+        就是说如果你设置的MainActivity设置了一个Theme.Light（其他的也可以），
+        那么你在可视化布局管理器里面看到的背景阿控件阿什么的就应该是Theme.Light的样子。仅用于给你看所见即所得的效果而已。
+    -->
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</RelativeLayout>
