@@ -34,12 +34,12 @@ public class XHorizontalScrollView extends HorizontalScrollView implements View.
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
-        Log.i("TTT","滚动事件触发");
+        Log.i("TTT", "滚动事件触发");
     }
 
     @Override
     public void onClick(View view) {
-        Log.i("XHorizontalScrollView","点击");
+        Log.i("XHorizontalScrollView", "点击");
     }
 
 
@@ -107,7 +107,6 @@ public class XHorizontalScrollView extends HorizontalScrollView implements View.
 //                    Log.i("TAG","点");
 //                }
 //            });
-
             mContainer.addView(view);
             mViewPos.put(view, i);
             mCurrentIndex = i;

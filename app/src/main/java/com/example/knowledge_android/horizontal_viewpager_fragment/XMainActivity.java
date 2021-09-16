@@ -54,13 +54,13 @@ public class XMainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //1.主题布局 HorizontalScrollView+ViewPager
+        //1.设置主体布局 HorizontalScrollView+ViewPager
         setContentView(R.layout.activity_main_10);
 
         //2.初始化布局中的ViewPager
         initFragment();
         initIndicator();
-        initPager();
+        initViewPager();
 
 
         //3.初始化布局中的HorizontalScrollView
@@ -84,7 +84,7 @@ public class XMainActivity extends AppCompatActivity {
         titles.add("Third" + i);
     }
 
-    private void initPager() {
+    private void initViewPager() {
         viewPager = (ViewPager) findViewById(R.id.xViewPager);
         XFragmentAdapter adapter = new XFragmentAdapter(getSupportFragmentManager(), frags);
         viewPager.setAdapter(adapter);

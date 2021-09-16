@@ -75,7 +75,10 @@ public class XHorizontalScrollViewAdapter {
                 @Override
                 public void onClick(View view) {
 
+                    //1.得到ViewPager的适配器
                     XFragmentAdapter adapter = (XFragmentAdapter) viewPager.getAdapter();
+
+                    //2.建立新的Fragment数据
                     frags = new ArrayList<>();
                     XFragment xFragment1 = XFragment.newInstance(R.layout.viewpager_fragment1);
                     XFragment xFragment2 = XFragment.newInstance(R.layout.viewpager_fragment2);
@@ -84,12 +87,14 @@ public class XHorizontalScrollViewAdapter {
                     frags.add(xFragment2);
                     frags.add(xFragment3);
 
+                    //3.创建新的TAB指示器
                     changeIndicator();
 
+                    //4.ViewPager适配器数据更新，并通知数据改变
                     adapter.setDatas(frags);
                     adapter.notifyDataSetChanged();
 
-                    //恢复ViewPager的item到第一位，因为数据重新加载了。
+                    //5.恢复ViewPager的item到第一位，因为数据重新加载了。
                     viewPager.setCurrentItem(0);
 
                     Log.i("TAG", "点击商品大类");
@@ -105,7 +110,7 @@ public class XHorizontalScrollViewAdapter {
     }
 
     List<Fragment> frags;
-    private List<String> titles = new ArrayList<>();     //存放指示器的标题
+    private final List<String> titles = new ArrayList<>();     //存放指示器的标题
     private void changeIndicator() {
         Random random = new Random();
         int i = random.nextInt(1000);
