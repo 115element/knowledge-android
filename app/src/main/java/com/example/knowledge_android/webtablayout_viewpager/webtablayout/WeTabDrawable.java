@@ -4,9 +4,8 @@ import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 
 /**
- * Created to :
- *
- * @date 2020/5/11
+ * 2021-09-18
+ * @author alex
  */
 public class WeTabDrawable {
 

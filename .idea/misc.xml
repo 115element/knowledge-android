@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tab.xml" value="0.36770833333333336" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/below_line.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/circular_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/dashed_style_view.xml" value="0.22083333333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/delete_line.xml" value="0.15885416666666666" />
@@ -19,7 +20,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_index_gallery_item.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_1.xml" value="0.36614583333333334" />
-        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_11.xml" value="0.24806201550387597" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_11.xml" value="0.1" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_2.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_4.xml" value="0.29438405797101447" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_5.xml" value="0.5" />

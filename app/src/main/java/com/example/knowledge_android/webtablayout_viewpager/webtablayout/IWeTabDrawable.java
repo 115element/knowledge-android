@@ -4,8 +4,6 @@ import android.graphics.drawable.Drawable;
 
 /**
  * Created to :Tab设置上下左右设置小icon。
- *
- * @date 2020/5/11
  */
 public interface IWeTabDrawable {
 
