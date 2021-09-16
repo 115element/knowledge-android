@@ -10,6 +10,14 @@ public class XFragmentAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> datas;
 
+    public List<Fragment> getDatas() {
+        return datas;
+    }
+
+    public void setDatas(List<Fragment> datas) {
+        this.datas = datas;
+    }
+
     public XFragmentAdapter(FragmentManager fm, List<Fragment> list) {
         super(fm);
         datas = list;

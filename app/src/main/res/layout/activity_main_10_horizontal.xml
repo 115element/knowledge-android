@@ -11,7 +11,8 @@
         android:layout_gravity="center"
         android:background="#E91E63"
         android:text="商品大类"
-        android:textSize="20sp" />
+        android:layout_margin="5dp"
+        android:textSize="10sp" />
 
 
 </LinearLayout>

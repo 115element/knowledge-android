@@ -16,7 +16,6 @@ import com.example.knowledge_android.horizontal_viewpager_fragment.horizonalscro
 import com.example.knowledge_android.horizontal_viewpager_fragment.horizonalscroll.XHorizontalScrollViewAdapter;
 import com.example.knowledge_android.horizontal_viewpager_fragment.viewpager.XFragment;
 import com.example.knowledge_android.horizontal_viewpager_fragment.viewpager.XFragmentAdapter;
-import com.example.knowledge_android.viewpager.viewpager_fragment.MyFragment;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -32,12 +31,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * HorizontalScrollView + ViewPager + Fragment
+ */
+
 public class XMainActivity extends AppCompatActivity {
 
     private XHorizontalScrollView xHorizontalScrollView;
     private XHorizontalScrollViewAdapter xHorizontalScrollViewAdapter;
-//    private List<Integer> mDatas = new ArrayList<Integer>(Arrays.asList(
-//            R.id.xViewPager, R.id.xViewPager, R.id.xViewPager));
 
     private List<Integer> mDatas = new ArrayList<Integer>(Arrays.asList(
             R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,
@@ -45,8 +46,7 @@ public class XMainActivity extends AppCompatActivity {
             R.drawable.g, R.drawable.g));
 
     private List<Fragment> frags;    //存放每一个Fragment
-    private List<ViewPager> viewPagers = new ArrayList<>();
-    private ViewPager viewPager;
+    private ViewPager viewPager;     //
     private MagicIndicator indicator;//指示器
     private List<String> titles;     //存放指示器的标题
 
@@ -54,20 +54,19 @@ public class XMainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //1.主题布局 HorizontalScrollView+ViewPager
         setContentView(R.layout.activity_main_10);
 
-        for (int i = 0; i < 4; i++) {
-            initFragment();
-            initIndicator();
-            initPager();
-            viewPagers.add(viewPager);
-        }
+        //2.初始化布局中的ViewPager
+        initFragment();
+        initIndicator();
+        initPager();
 
 
-        //获取HorizontalScrollView
+        //3.初始化布局中的HorizontalScrollView
         xHorizontalScrollView = findViewById(R.id.xHorizontalScrollView);
         //获取自定义适配器
-        xHorizontalScrollViewAdapter = new XHorizontalScrollViewAdapter(this, mDatas, viewPagers);
+        xHorizontalScrollViewAdapter = new XHorizontalScrollViewAdapter(this, mDatas, viewPager, indicator);
         xHorizontalScrollView.initDatas(xHorizontalScrollViewAdapter);
     }
 
