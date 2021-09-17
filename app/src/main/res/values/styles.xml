@@ -14,6 +14,18 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="NoSurplusDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--最后面是window background-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">false</item>
+        <!--这个不设置它会沾满屏幕-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--        &lt;!&ndash; 设置contentview的背景图&ndash;&gt;-->
+        <!--        <item name="android:background">@drawable/myshape</item>-->
+    </style>
+
 
     <style name="Base.Theme.MobilePOSApp" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
@@ -261,4 +273,25 @@
         <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
+
+
+    <!--<style name="PreferenceTheme.textAppearanceListItem">-->
+    <!--<item name="android:textSize">24sp</item>-->
+    <!--<item name="android:textColor">@color/my_dark_text</item>-->
+    <!--</style>-->
+
+    <!--<style name="PreferenceTheme" parent="Base.Theme.MobilePOSApp">-->
+    <!--<item name="colorPrimary">#00FF00</item>-->
+    <!--<item name="android:textColor">@color/my_dark_primary_text</item>-->
+    <!--<item name="android:textColorPrimary">#00FF00</item>-->
+    <!--<item name="android:textColorSecondary">@color/my_dark_secondary_text</item>-->
+
+    <!--<item name="textAppearanceListItem">@style/PreferenceTheme.textAppearanceListItem</item>-->
+    <!--<item name="textAppearanceListItemSmall">@style/PreferenceTheme.textAppearanceListItem</item>-->
+
+    <!--<item name="android:background">#ffff0000</item>-->
+    <!--</style>-->
+
+
+
 </resources>

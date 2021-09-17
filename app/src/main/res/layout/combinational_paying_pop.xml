@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_ellipse_button_red">
+
+
+    <TextView
+        android:id="@+id/top_text1"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="待支付金额 : "
+        android:textColor="#999999"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/not_yet_paying_value1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_horizontal"
+        android:text="¥ 637"
+        android:textColor="#C25348"
+        android:textSize="30dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/top_text1"
+        app:layout_constraintStart_toEndOf="@+id/top_text1" />
+
+
+    <TextView
+        android:id="@+id/cash_paying"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|right"
+        android:text="现金支付"
+        android:textColor="#333333"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@id/united_paying"
+        app:layout_constraintTop_toBottomOf="@id/top_text1" />
+
+    <TextView
+        android:id="@+id/cash_paying_value"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:gravity="center"
+        android:text="请输入金额"
+        app:layout_constraintStart_toEndOf="@id/cash_paying"
+        app:layout_constraintTop_toTopOf="@id/cash_paying" />
+
+
+    <TextView
+        android:id="@+id/united_paying"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|right"
+        android:text="微信/支付宝"
+        android:textColor="#333333"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cash_paying" />
+
+    <TextView
+        android:id="@+id/united_paying_value"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:gravity="center"
+        android:text="请输入金额"
+        app:layout_constraintBottom_toBottomOf="@id/united_paying"
+        app:layout_constraintStart_toEndOf="@id/united_paying"
+        app:layout_constraintStart_toStartOf="@id/cash_paying_value" />
+
+    <TextView
+        android:id="@+id/point_paying"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|right"
+        android:text="积分支付"
+        android:textColor="#333333"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@id/united_paying"
+        app:layout_constraintTop_toBottomOf="@id/united_paying" />
+
+    <TextView
+        android:id="@+id/point_paying_value"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:gravity="center"
+        android:text="请输入金额"
+        app:layout_constraintBottom_toBottomOf="@id/point_paying"
+        app:layout_constraintStart_toEndOf="@id/point_paying"
+        app:layout_constraintStart_toStartOf="@id/cash_paying_value" />
+
+    <Button
+        android:id="@+id/use_all_point_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ellipse_button_red"
+        android:text="全部使用"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/point_paying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/point_paying_value" />
+
+    <TextView
+        android:id="@+id/current_point"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="left"
+        android:text="当前积分:"
+        app:layout_constraintStart_toStartOf="@+id/point_paying"
+        app:layout_constraintTop_toBottomOf="@id/point_paying" />
+
+    <TextView
+
+        android:id="@+id/current_point_value"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:text="324"
+        app:layout_constraintStart_toEndOf="@+id/current_point"
+        app:layout_constraintTop_toTopOf="@id/current_point" />
+
+    <TextView
+        android:id="@+id/current_point_value_to_rmb"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="right"
+        android:text="本订单可抵扣: "
+        app:layout_constraintStart_toEndOf="@+id/current_point_value"
+        app:layout_constraintTop_toTopOf="@id/current_point_value" />
+
+    <TextView
+        android:id="@+id/current_point_value_to_rmb_value"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="0dp"
+        android:gravity="left"
+        android:text="333"
+        app:layout_constraintStart_toEndOf="@+id/current_point_value_to_rmb"
+        app:layout_constraintTop_toTopOf="@id/current_point_value_to_rmb" />
+
+
+    <!--数字键盘布局-->
+    <!-- 已7作为长兄组件,作为头指针对数字键盘整体操作-->
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="7"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toStartOf="@id/current_point"
+        app:layout_constraintTop_toBottomOf="@id/current_point" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="8"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_7"
+        app:layout_constraintTop_toTopOf="@id/btn_7" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="9"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_8"
+        app:layout_constraintTop_toTopOf="@id/btn_7" />
+
+    <!-- 在9的右边alignTop两空间上边缘对齐 -->
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="清\n空"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_9"
+        app:layout_constraintTop_toTopOf="@id/btn_9" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toLeftOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_7" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_4"
+        app:layout_constraintTop_toTopOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_5"
+        app:layout_constraintTop_toTopOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toLeftOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_1"
+        app:layout_constraintTop_toTopOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_2"
+        app:layout_constraintTop_toTopOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toStartOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_dot"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="."
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_0"
+        app:layout_constraintTop_toTopOf="@id/btn_0" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="⃖"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        android:textSize="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_dot"
+        app:layout_constraintTop_toTopOf="@id/btn_dot" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:background="#F5663D"
+        android:text="确\n定"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_3"
+        app:layout_constraintTop_toTopOf="@id/btn_3" />
+
+
+    <TextView
+        android:id="@+id/botton_void2"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="已收 :"
+        android:textColor="#6F2A2A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_0"
+        app:layout_constraintTop_toBottomOf="@+id/btn_0" />
+
+    <TextView
+        android:id="@+id/already_paying_value"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="¥700"
+        android:textColor="#6F2A2A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/botton_void2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_0"
+        app:layout_constraintTop_toTopOf="@id/botton_void2" />
+
+    <TextView
+        android:id="@+id/botton_void3"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="找零 :"
+        android:textColor="#6F2A2A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/already_paying_value"
+        app:layout_constraintTop_toBottomOf="@+id/btn_0"
+        app:layout_constraintTop_toTopOf="@id/already_paying_value" />
+
+    <TextView
+        android:id="@+id/give_change_value"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="¥63"
+        android:textColor="#6F2A2A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/botton_void3"
+        app:layout_constraintTop_toBottomOf="@id/btn_enter"
+        app:layout_constraintTop_toTopOf="@id/botton_void3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

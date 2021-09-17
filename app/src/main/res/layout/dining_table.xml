@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true" android:background="#fff9f9f9">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/my_gridview_background">
+
+            <com.astuetz.PagerSlidingTabStrip
+                    android:id="@+id/dining_area_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    app:pstsTabTextSize="16sp"
+                    app:pstsTabPaddingLeftRight="20dp"
+                    app:pstsTabTextColor="@color/my_dark_primary_text"
+                    app:pstsDividerColor="@color/my_tab_divider"
+                    app:pstsDividerWidth="1dp"
+                    app:pstsDividerPadding="10dp"
+                    app:pstsUnderlineColor="@color/my_tab_background"
+                    app:pstsUnderlineHeight="3dp"
+                    app:pstsIndicatorColor="@color/my_dark_primary_text"
+                    app:pstsIndicatorHeight="4dp"
+                    android:background="@color/my_tab_background"/>
+
+            <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/dining_table_pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:paddingBottom="1dp"
+                    android:background="@color/my_gridview_background"
+                    android:gravity="bottom"/>
+
+            <LinearLayout
+                    android:id="@+id/dining_table_changing_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:visibility="gone">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        style="@style/LargeDarkTextViewStyle"
+                        android:text="@string/please_select_dining_table_to_change"
+                        />
+
+                <Button
+                        android:id="@+id/btn_cancel_choosing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        style="@style/LargeTextViewStyle"
+                        android:text="@android:string/cancel"
+                        />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                style="@style/LargeTextViewStyle"
+                android:text="@string/refresh"
+                android:visibility="gone"/>
+
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+</LinearLayout>

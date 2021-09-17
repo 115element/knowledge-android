@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_search_article">
+        <item>貨號</item>
+        <item>條形碼</item>
+    </string-array>
+
+    <string-array name="pref_menu_style_list">
+        <item>頁簽式</item>
+        <item>下拉式</item>
+    </string-array>
+    <string-array name="pref_menu_style_list_value">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_screen_orientation_list">
+        <item>橫屏</item>
+        <item>豎屏</item>
+    </string-array>
+    <string-array name="pref_screen_orientation_list_value">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_business_type_list">
+        <item>桌次管理</item>
+        <item>先點先結</item>
+        <item>點餐管理</item>
+    </string-array>
+    <string-array name="pref_business_type_list_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_decimal_digits_list">
+        <item>元</item>
+        <item>角</item>
+        <item>分</item>
+    </string-array>
+    <string-array name="pref_decimal_digits_list_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="demo_item_names">
+        <item>商品1</item>
+        <item>商品2</item>
+        <item>商品3</item>
+        <item>商品4</item>
+        <item>商品5</item>
+    </string-array>
+
+</resources>

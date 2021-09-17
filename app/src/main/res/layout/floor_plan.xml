@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:descendantFocusability="beforeDescendants"
+              android:focusableInTouchMode="true" android:background="#fff9f9f9">
+
+    <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/floor_plan_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/background_tabs"/>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/floor_plan_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:paddingBottom="1dp"
+            android:gravity="bottom"/>
+
+    <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Back"-->
+            <!--android:id="@+id/back_button"-->
+            <!--/>-->
+</LinearLayout>

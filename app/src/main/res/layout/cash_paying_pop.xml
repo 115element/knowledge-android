@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_ellipse_button_red">
+
+
+    <TextView
+        android:id="@+id/amount_frame"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:gravity="center"
+        android:text="请输入金额"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/already_paying"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="已支付: ¥"
+        android:textColor="#C25348"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/amount_frame"
+        app:layout_constraintTop_toBottomOf="@id/amount_frame" />
+
+    <TextView
+        android:id="@+id/already_paying_value"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="0.00"
+        android:textColor="#C25348"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/already_paying"
+        app:layout_constraintTop_toBottomOf="@id/amount_frame"
+        app:layout_constraintTop_toTopOf="@+id/already_paying" />
+
+
+    <TextView
+        android:id="@+id/give_change"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="找零: ¥"
+        android:textColor="#C25348"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/amount_frame"
+        app:layout_constraintTop_toBottomOf="@id/already_paying" />
+
+    <TextView
+        android:id="@+id/give_change_value"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="0.00"
+        android:textColor="#C25348"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/give_change"
+        app:layout_constraintTop_toBottomOf="@id/amount_frame"
+        app:layout_constraintTop_toTopOf="@id/give_change" />
+
+
+    <!--数字键盘布局-->
+    <!-- 已7作为长兄组件-->
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="7"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/amount_frame"
+        app:layout_constraintTop_toTopOf="@id/amount_frame" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="8"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_7"
+        app:layout_constraintTop_toTopOf="@id/btn_7" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="9"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_8"
+        app:layout_constraintTop_toTopOf="@id/btn_7" />
+
+    <!-- 在9的右边alignTop两空间上边缘对齐 -->
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="清\n空"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_9"
+        app:layout_constraintTop_toTopOf="@id/btn_9" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toLeftOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_7" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_4"
+        app:layout_constraintTop_toTopOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toRightOf="@id/btn_5"
+        app:layout_constraintTop_toTopOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintLeft_toLeftOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_1"
+        app:layout_constraintTop_toTopOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_2"
+        app:layout_constraintTop_toTopOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-0dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toStartOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_dot"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="."
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintStart_toEndOf="@id/btn_0"
+        app:layout_constraintTop_toTopOf="@id/btn_0" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/beirui_button_selector"
+        android:text="⃖"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        android:textSize="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_dot"
+        app:layout_constraintTop_toTopOf="@id/btn_dot" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#F5663D"
+        android:text="确\n定"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#ff333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_3"
+        app:layout_constraintTop_toTopOf="@id/btn_3" />
+
+    <TextView
+        android:id="@+id/tips_value"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

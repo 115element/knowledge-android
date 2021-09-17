@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">贝瑞咖啡</string>
+    <string name="app_name_sotpos">贝瑞咖啡</string>
+    <string name="app_name_self">贝瑞咖啡</string>
+    <string name="app_title">Hyi mPos®</string>
+    <string name="action_find_location">Find</string>
+    <string name="action_exit">退出</string>
+
+    <string name="function_menu">收银员菜单</string>
+    <string name="function_sales">收银</string>
+    <string name="function_settings">设置</string>
+    <string name="action_settings">设置</string>
+    <string name="action_shift">交班</string>
+    <string name="action_shift_in">开班</string>
+    <string name="shift_report">交班报表</string>
+    <string name="action_shift_report">交班报表查询</string>
+    <string name="action_transaction_operations">交易重印/退餐</string>
+    <string name="shift_out_finish">交班完成。</string>
+    <string name="shift_out_confirmation">确定要执行交班吗？</string>
+    <string name="shift_in_confirmation">确定要执行开班吗？</string>
+    <string name="shift_out_failed">交班数据无法保存。</string>
+    <string name="please_shift_in">请先做员工登录。</string>
+    <string name="cannot_do_shift">尚有未结账交易数据存在，无法交班。</string>
+    <string name="action_example">退出</string>
+    <string name="SC授权端口">SC授权端口</string>
+    <string name="服务器Ip地址">服务器Ip地址</string>
+    <string name="服务器端口">服务器端口</string>
+    <string name="设备唯一号">设备唯一号</string>
+    <string name="保存">保存</string>
+    <string name="申请">申请</string>
+    <string name="授权">授权</string>
+    <string name="有新主档请下载主档">有新的主档,请退出重新登录</string>
+    <string name="no_store_id">门店编号未输入</string>
+    <string name="no_device_id">设备编号未输入</string>
+    <string name="no_server_ip_addr">服务器地址未输入</string>
+    <string name="no_shouquan_ip_addr">授权地址未输入</string>
+    <string name="设备编号验证失败">设备编号验证失败</string>
+    <string name="申请成功">申请成功</string>
+    <string name="授权成功1">授权成功</string>
+    <string name="indexs">indexs</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="cannot_enter_func_pos_terminal">目前无法进入收银功能。</string>
+    <string name="cannot_enter_func_cashier_menu">目前无法进入收银菜单，請先结账。</string>
+    <string name="cannot_enter_func_settings">目前无法进入设置功能。</string>
+
+    <!-- From Tablet App -->
+
+    <string name="signon_fragment_user_label">用户ID</string>
+    <string name="signon_fragment_pwd_label">密码</string>
+    <string name="signon_fragment_confirm_button_label">登录</string>
+    <string name="signoff_fragment_confirm_button_label">注销</string>
+    <string name="device_ip_address">(移动设备: %1$s)</string>
+    <string name="data_download">数据下传</string>
+    <string name="data_upload">数据上传</string>
+    <string name="category_ordering">一览订货录入</string>
+    <string name="category_inventory">一览盘点录入</string>
+    <string name="shelf_management">货架管理录入</string>
+    <string name="order_input">订货录入</string>
+    <string name="inventory_input">盘点录入</string>
+    <string name="article_qty_total">商品数量合计</string>
+    <!--    <string name="shelf_area">货架号/区域</string>
+    -->
+    <string name="shelf_area">区域</string>
+    <string name="article_qty">商品数量</string>
+    <string name="inventory_update_time">最终盘点录入时间</string>
+    <string name="sale_date_limit_days">%1$,d天</string>
+    <string name="no_data_cannot_enter">没有对象数据，无法启动</string>
+    <string name="plu_button_text"><![CDATA[
+<html>
+<body>
+%1$s<br/>
+￥%2$s
+</div>
+</body>
+</html>
+]]></string>
+    <string name="store_info"><![CDATA[
+<html>
+<body>
+营业日:%1$s<br>
+门店名:%2$s %3$s %4$s
+</body>
+</html>
+]]></string>
+    <string name="store_info_user">用戶:%1$s</string>
+    <string name="statusbar_order_title"><![CDATA[
+<html>
+<body>
+订货<br>上传状态
+</body>
+</html>
+]]></string>
+    <string name="statusbar_shelf_title"><![CDATA[
+<html>
+<body>
+货架<br>上传状态
+</body>
+</html>
+]]></string>
+    <string name="statusbar_pricecheck_title"><![CDATA[
+<html>
+<body>
+售价检查<br>上传状态
+</body>
+</html>
+]]></string>
+    <string name="signoff_fragment_welcome_message">欢迎，%1$s</string>
+    <string name="statusbar_inventory_title"><![CDATA[
+<html>
+<body>
+盘点<br>上传状态
+</body>
+</html>
+]]></string>
+    <string name="invalid_server_address"><![CDATA[
+<html>
+<body>
+<p><h3>服务器地址錯誤。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_server_port"><![CDATA[
+<html>
+<body>
+<p><h3>服务器端口于1到65535之间。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_shouquan_address"><![CDATA[
+<html>
+<body>
+<p><h3>授权地址錯誤。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_shouquan_port"><![CDATA[
+<html>
+<body>
+<p><h3>授权端口于1到65535之间。</h3>
+</body>
+</html>
+]]></string>
+    <string name="statusbar_master_title"><![CDATA[
+<html>
+<body>
+下传状态
+</body>
+</html>
+]]></string>
+    <string name="queued_master_message"><![CDATA[
+<html>
+<body>
+<font color="red">有未%1$s数据。</font><br>
+<font color="red">请在WiFi环境下进行%1$s作业。</font><br>
+<font color="red">%2$s</font>
+</body>
+</html>
+]]></string>
+
+    <string name="queued_data_message"><![CDATA[
+<html>
+<body>
+<font color="red">本终端内存在未%1$s数据。%2$s</font><br>
+<font color="red">请在WiFi环境下进行%1$s作业。</font><br>
+<font color="red">%3$s</font>
+</body>
+</html>
+]]></string>
+    <string name="no_queued_data_message"><![CDATA[
+<html>
+<body>
+没有未%1$s数据。<br>
+%2$s
+</body>
+</html>
+]]></string>
+    <string name="upload">上传</string>
+    <string name="download">下载</string>
+    <string name="last_data_message">最近一次数据%1$s在%2$tm/%2$td %2$tH时%2$tM分%2$tS秒。</string>
+    <string name="queued_data_user">用戶(%1$s)</string>
+
+
+    <string name="statusbar_order_button_label">上传</string>
+    <string name="statusbar_inventory_button_label">上传</string>
+    <string name="statusbar_master_button_label">下载</string>
+
+    <string name="statusbar_orderinfo_title"><![CDATA[
+<html>
+<body>
+订货信息
+</body>
+</html>
+]]></string>
+    <string name="statusbar_inventoryinfo_title"><![CDATA[
+<html>
+<body>
+盘点信息
+</body>
+</html>
+]]></string>
+    <string name="order_deadline_message"><![CDATA[
+<html>
+<body>
+<p><h3>订货截止时间已到，请在可订货时间再行订货。</h3>
+</body>
+</html>
+]]></string>
+    <string name="after_order_deadline_message"><![CDATA[
+<html>
+<body>
+今天的订货已经结束。<br>
+数据还未导入，请执行上传处理。
+</body>
+</html>
+]]></string>
+    <string name="before_order_deadline_message"><![CDATA[
+<html>
+<body>
+订货日是%1$tY/%1$tm/%1$td。
+</body>
+</html>
+]]></string>
+    <string name="no_order_article_message"><![CDATA[
+<html>
+<body>
+今天没有可订货商品。
+</body>
+</html>
+]]></string>
+    <string name="no_sale_article_message"><![CDATA[
+<html>
+<body>
+今天没有可销售商品。
+</body>
+</html>
+]]></string>
+    <string name="inventory_date_message"><![CDATA[
+<html>
+<body>
+今天是盘点日。<br>
+盘点日期是%1$tY/%1$tm/%1$td。
+</body>
+</html>
+]]></string>
+    <string name="no_inventory_article_message"><![CDATA[
+<html>
+<body>
+今天没有可盘点商品。
+</body>
+</html>
+]]></string>
+
+
+    <string-array name="week">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+
+    <string-array name="wifi_status">
+        <item>离\n线</item>
+        <item>连\n线</item>
+    </string-array>
+
+    <string name="battery_status">电量\n%1$s</string>
+    <string name="app_info">ID:%1$s\nVer:%2$s</string>
+
+    <string name="pref_key_server_ip_addr">server_ip_address</string>
+    <string name="pref_title_server_ip_addr">SC授权IP地址</string>
+
+    <string name="pref_key_sntp_server">sntp_server</string>
+    <string name="pref_title_sntp_server">时间服务器地址(SNTP Server)</string>
+
+    <string name="pref_key_store_id">store_id</string>
+    <string name="pref_title_store_id">门市代号</string>
+
+    <string name="pref_key_device_id">device_id</string>
+    <string name="pref_title_device_id">设备编号</string>
+
+    <!-- 记录当前收银员 in preference. -->
+    <string name="pref_key_current_cashier_no">current_cashier_no</string>
+
+    <!-- 记录当前班别 in preference. -->
+    <string name="pref_key_current_shift_number">current_shift_number</string>
+
+    <!-- 记录当前的门店信息 in preference. -->
+    <string name="pref_key_current_store_info">current_store_info</string>
+
+    <string name="pref_key_license_code">license_code</string>
+
+    <string name="pref_key_lefthanded_mode">lefthanded_mode</string>
+    <string name="pref_title_lefthanded_mode">惯用左手</string>
+
+    <string name="pref_key_menu_style">menu_style</string>
+    <string name="pref_title_menu_style">业务菜单显示模式</string>
+
+    <string name="pref_key_business_type">business_type</string>
+    <string name="pref_title_business_type">营业横式</string>
+
+    <string name="pref_key_decimal_digits">decimal_digits</string>
+    <string name="pref_title_decimal_digits">金额小数位数</string>
+
+    <string name="pref_key_screen_orientation">screen_orientation</string>
+    <string name="pref_title_screen_orientation">横屏或竖屏显示</string>
+
+    <string name="pref_key_master_dl_enabled">master_download_enabled</string>
+    <string name="pref_title_master_dl_enabled">重新下载数据</string>
+
+    <string name="pref_key_show_item_image">show_item_image</string>
+    <string name="pref_title_show_item_image">显示菜品图片</string>
+
+    <string name="pref_key_transaction_print">transaction_print</string>
+    <string name="pref_title_transaction_print">交易打印</string>
+
+    <string name="pref_key_reset_database">reset_database</string>
+    <string name="pref_title_reset_database">数据清除</string>
+    <string name="reset_database_confirmation">确定清除数据？</string>
+    <string name="reset_database_confirmation_again">你真的确定清除所有数据？</string>
+
+    <string name="pref_key_download_master">download_master</string>
+    <string name="pref_title_download_master">主档下传</string>
+    <string name="download_master_confirmation">确定下传主档？</string>
+
+    <string name="pref_key_reboot_time">reboot_time</string>
+    <string name="pref_title_reboot_time">系统重启时间</string>
+
+    <string name="pref_key_reboot">reboot</string>
+    <string name="pref_title_reboot">系统重启</string>
+    <string name="reboot_confirmation">确定重启系统？</string>
+
+    <string name="pref_key_system_exit">system_exit</string>
+    <string name="pref_title_system_exit">退出系统</string>
+    <string name="system_exit_confirmation">确定退出系统？</string>
+
+    <string name="pref_key_master_ver">master_version</string>
+    <string name="pref_key_app_ver">app_version</string>
+    <string name="pref_key_master_dl_time">master_download_time</string>
+    <string name="pref_key_app_dl_time">app_download_time</string>
+    <string name="pref_key_app_dl_enabled">app_download_enabled</string>
+    <string name="master_download_dialog_title">数据下载</string>
+    <string name="pref_key_server_port">server_port</string>
+    <string name="pref_key_shouquan_port">shouquan_port</string>
+    <string name="pref_key_shouquan_ip_addr">shouquan_ip_address</string>
+    <string name="pref_shouquan">pref_shouquan</string>
+    <string name="pref_key_server_connect_timeout">server_connect_timeout</string>
+    <string name="pref_key_server_read_timeout">server_read_timeout</string>
+    <string name="pref_key_reboot_time_hour">reboot_time_hour</string>
+    <string name="pref_key_reboot_time_minute">reboot_time_minute</string>
+    <string name="pref_key_last_trans_upload_time">last_trans_upload_time</string>
+
+    <string name="lefthanded_numpad">数字键盘位于画面左边</string>
+    <string name="righthanded_numpad">数字键盘位于画面右边</string>
+
+    <string name="master_download_dialog_message">下载中...</string>
+    <string name="download_successfully"><![CDATA[
+<html>
+<body>
+<p><h3>数据下载成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="upload_successfully"><![CDATA[
+<html>
+<body>
+<p><h3>数据上传成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="warning_dialog_title">错误</string>
+    <string name="master_version_info">主档版本 %1$s</string>
+    <string name="no_need_download_master">主档已为最新版本，无需下载。</string>
+    <string name="master_download_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>数据下载发生错误。<br/>(错误代码：%1$d)</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_article_download_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>此时无法下载，请稍后再试！</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_upload">订货数据上传</string>
+    <string name="order_upload_successful"><![CDATA[
+<html>
+<body>
+<p><h3>订货数据上传成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="sale_price_check_upload">售价检查上传</string>
+    <string name="sale_price_check_upload_successful"><![CDATA[
+<html>
+<body>
+<p><h3>售价检查上传成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_upload">架陈列数据上传</string>
+    <string name="shelf_upload_successful"><![CDATA[
+<html>
+<body>
+<p><h3>货架陈列数据上传成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventory_upload">盘点数据上传</string>
+    <string name="inventory_upload_successful"><![CDATA[
+<html>
+<body>
+<p><h3>盘点数据上传成功。</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_upload_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>订货数据上传发生错误。<br/>(错误代码：%1$d)</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_upload_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>货架陈列数据上传发生错误。<br/>(错误代码：%1$d)</h3>
+</body>
+</html>
+]]></string>
+    <string name="sale_price_check_upload_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>售价检查数据上传发生错误。<br/>(错误代码：%1$d)</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventory_upload_error_message"><![CDATA[
+<html>
+<body>
+<p><h3>盘点数据上传发生错误。<br/>(错误代码：%1$d)</h3>
+</body>
+</html>
+]]></string>
+    <string name="pref_key_ord_ul_enabled">order_ul_enabled</string>
+    <string name="pref_key_ord_ul_time">order_ul_time</string>
+    <string name="pref_key_sale_price_check_ul_enabled">sale_price_check_ul_enabled</string>
+    <string name="pref_key_sale_price_check_ul_time">sale_price_check_ul_time</string>
+    <string name="pref_key_shelf_ul_enabled">shelf_ul_enabled</string>
+    <string name="pref_key_shelf_ul_time">shelf_ul_time</string>
+    <string name="pref_key_inv_ul_enabled">inventory_ul_enabled</string>
+    <string name="pref_key_inv_ul_time">inventory_ul_time</string>
+    <string name="pref_key_current_transaction_number">current_transaction_number</string>
+    <string name="pref_title_current_transaction_number">当前交易号</string>
+    <string name="employee_not_exists">用户不存在。</string>
+    <string name="password_error">密码错误。</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="pref_key_ord_ul_users">order_ul_users</string>
+    <string name="pref_key_inv_ul_users">inventory_ul_users</string>
+    <string name="data_upload_dialog_title">数据上传</string>
+    <string name="data_upload_confirmation"><![CDATA[
+<html>
+<body>
+<p><h3>确认进行数据上传吗？</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_article_upload_dialog_message">货架陈列数据上传...</string>
+    <string name="orderinput_upload_dialog_message">订货数据上传...</string>
+    <string name="inventoryinput_upload_dialog_message">盘点数据上传...</string>
+    <string name="salepricecheck_upload_dialog_message">售价检查上传...</string>
+    <string name="signoff_confirmation">注销确认</string>
+    <string name="signoff_with_upload_data"><![CDATA[
+<html>
+<body>
+<p><h3>尚有数据未上传，是否仍要注销？</h3>
+</body>
+</html>
+]]></string>
+    <string name="loading">数据加载中...</string>
+    <string name="uploading">数据上传中...</string>
+
+    <string name="ordering_info_no_data"><![CDATA[
+<html>
+<body>
+今天不是订货日<br>
+订货人是%1$s
+</body>
+</html>
+]]></string>
+    <string name="ordering_info"><![CDATA[
+<html>
+<body>
+订货日是%1$tY/%1$tm/%1$td<br>
+订货人是%2$s
+</body>
+</html>
+]]></string>
+    <string name="shelf_info"><![CDATA[
+<html>
+<body>
+货架日是%1$tY/%1$tm/%1$td<br>
+货架人是%2$s
+</body>
+</html>
+]]></string>
+    <string name="shelf_info_no_data"><![CDATA[
+<html>
+<body>
+今天不是货架日<br>
+货架人是%1$s
+</body>
+</html>
+]]></string>
+    <string name="inventorying_info_no_data"><![CDATA[
+<html>
+<body>
+今天不是盘点日<br>
+盘点人是%1$s
+</body>
+</html>
+]]></string>
+    <string name="inventorying_info"><![CDATA[
+<html>
+<body>
+盘点日是%1$tY/%1$tm/%1$td<br>
+盘点人是%2$s
+</body>
+</html>
+]]></string>
+    <string name="department">部门</string>
+    <string name="category3">大分类</string>
+    <string name="category2">中分类</string>
+    <string name="category1">小分类</string>
+    <string name="change_cat1_button_label">变更小分类</string>
+    <string name="change_shelf_button_label">变更货架号</string>
+    <string name="change_area_button_label">变更区域号</string>
+    <string name="back_button_label">返回</string>
+    <string name="clear_button_label">置空</string>
+    <string name="article_id">货号</string>
+    <string name="shelf_id">货架号</string>
+    <string name="number_of_sheets">张数</string>
+    <string name="print_num_not_zero">打印张数不允许为零</string>
+    <string name="print_num_not_shelf_cdoe">货架号为空，不允许登录</string>
+    <string name="print_reason">原因</string>
+    <string name="article_name">品名</string>
+    <string name="sale_date_limit">允销期限</string>
+    <string name="order_qty">订货量</string>
+    <string name="date">日期</string>
+    <string name="pos_sale_promotion">促销中</string>
+    <string name="pos_sale_change">DM</string>
+    <!--    <string name="pos_sale_change">变价</string> -->
+
+    <string name="pos_sale_pressing_chage">紧急变价</string>
+    <string name="inventory_qty">预入库</string>
+    <string name="actual_order_qty">实订货</string>
+    <string name="actual_sale_qty">实销售</string>
+    <string name="today_cannot_order">今天不是订货日</string>
+    <string name="today_cannot_inventory">今天不是盘点日</string>
+    <string name="yuan">元</string>
+    <string name="article_order_history_date_label"><![CDATA[
+<html>
+<body>
+%1$d/%2$d<br>
+(%3$s)
+</body>
+</html>
+]]></string>
+    <string name="department_list_title">部门一览</string>
+    <string name="list_empty">无资料</string>
+    <string name="no_department">部门未输入</string>
+    <string name="no_area">区域未输入</string>
+    <!--  2014-06-03 tangyao
+    <string name="no_shelf">货架号未输入</string>   -->
+
+    <string name="no_shelf">区域未输入</string>
+    <string name="no_article_id">货号未输入</string>
+    <string name="no_barcode">条形码未输入</string>
+    <string name="category3_dialog_message"><![CDATA[
+<html>
+<body>
+部门:<font color="cyan">%1$s</font>
+</body>
+</html>
+]]></string>
+    <string name="department_list_header_1">部门编码</string>
+    <string name="department_list_header_2">部门名称</string>
+    <string name="category3_list_header_1">大分类编码</string>
+    <string name="category3_list_header_2">大分类名称</string>
+    <string name="category3_list_title">大分类一览</string>
+    <string name="category2_list_title">中分类一览</string>
+    <string name="no_category4">部门未输入</string>
+    <string name="no_category3">大分类未输入</string>
+    <string name="category2_dialog_message"><![CDATA[
+<html>
+<body>
+部门:<font color="cyan">%1$s</font>&nbsp;&nbsp;&nbsp;&nbsp;大分类:<font color="cyan">%2$s</font>
+</body>
+</html>
+]]></string>
+    <string name="category2_list_header_1">中分类编码</string>
+    <string name="category2_list_header_2">中分类名称</string>
+    <string name="category1_list_title">小分类一览</string>
+    <string name="shelf_list_title">货架号一览</string>
+    <!--   2014-04-21-002-01 tangyao    -->
+    <string name="shelf_list_title2_ty">订货一览</string>
+    <!--     -->
+    <!--  2014-05-27 tangyao
+          <string name="shelf_list_title2">货架订货一览</string>
+    -->
+    <string name="shelf_list_title2">区域一览</string>
+    <string name="area_list_title">区域一览</string>
+    <string name="no_category2">中分类未输入</string>
+    <string name="subcategory_not_found">查无下属分类</string>
+    <string name="shelf_not_found">查无货架</string>
+    <string name="category1_dialog_message"><![CDATA[
+<html>
+<body>
+部门:<font color="cyan">%1$s</font>&nbsp;&nbsp;&nbsp;&nbsp;大分类:<font color="cyan">%2$s</font>&nbsp;&nbsp;&nbsp;&nbsp;中分类:<font color="cyan">%3$s</font>
+</body>
+</html>
+]]></string>
+    <string name="category1_list_header_1">小分类编码</string>
+    <string name="category1_list_header_2">小分类名称</string>
+    <!--  2014-05-27  tangyao
+    <string name="shelf_list_header_1">货架号</string>
+    -->
+    <string name="shelf_list_header_1">编号</string>
+    <string name="shelf_list_header_2">货架略称</string>
+    <string name="shelf_list_header_3">订货数量</string>
+    <string name="top_page">首页</string>
+    <string name="page_up">上页</string>
+    <string name="page_down">下页</string>
+    <string name="end_page">末页</string>
+    <string name="list_order_info"><![CDATA[小分类>品号升序]]></string>
+    <string name="article_seq">No</string>
+    <string name="article_sale_price">售价</string>
+    <string name="article_order_price">进价</string>
+    <string name="article_delivery_type">类型</string>
+    <string name="article_leadtime">前置期</string>
+    <string name="article_min_po_qty">最低\n订量</string>
+    <string name="article_sales_unit">单位</string>
+    <string name="article_sale_unit">销售单位</string>
+    <string name="article_grade">等级</string>
+    <string name="article_po_batch_qty">订货批量</string>
+    <string name="article_on_hand_qty">库存</string>
+    <string name="delivery_type_01">物流</string>
+    <string name="delivery_type_02">自送</string>
+    <string name="display_order">陈列顺序</string>
+    <string name="article_base_price">基本售价</string>
+    <string name="article_promotion_price">促销售价</string>
+    <string name="article_mix_price">MIX售价</string>
+    <string name="system_info_sysdatetime"><![CDATA[
+<html>
+<body>
+%1$tY/%1$tm/%1$td(%2$s)<br>
+%1$tR
+</body>
+</html>
+]]></string>
+    <string name="upload_button">上传</string>
+    <string name="deleterow_button">删除行</string>
+    <string name="home_button_label">回首页</string>
+    <string name="article_barcode">条形码</string>
+    <string name="article_barcode_article_id">条形码/货号</string>
+    <string name="shelf_check">检索</string>
+    <string name="leadtime_column_format">%1$d天</string>
+    <string name="confirmation">确认</string>
+    <string name="barcode_item_exists">商品已存在</string>
+    <string name="barcode_item_exists_confirmation"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已进行过录入。是否转到已录入商品所在行？</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_item_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已进行过录入。</h3>
+</body>
+</html>
+]]></string>
+    <string name="record_state_1">已录入</string>
+    <string name="record_state_0">未录入</string>
+    <string name="record_state_2">全部</string>
+    <string name="record_state_option">选择条件</string>
+    <string name="record_state_label">对象</string>
+    <string name="order_deletion">删除订货</string>
+    <string name="change_shelf">货架号切换</string>
+    <string name="shelf_deletion">删除货架陈列</string>
+    <string name="shelf_login">登录货架陈列</string>
+    <string name="inventory_deletion">删除盘点</string>
+    <string name="shelf_too_many">货架陈列超过最大可登录数！</string>
+    <string name="shelf_delte_fail">货架陈列全件删除失败,请检查数据库</string>
+    <string name="shelf_insert_fail">货架陈列登录失败,请检查数据库</string>
+    <string name="price_check_fail"></string>
+    <string name="confirm_shelf_article_login"><![CDATA[
+<html>
+<body>
+<p><h3>确认登录此货架陈列？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_ordering_deletion"><![CDATA[
+<html>
+<body>
+<p><h3>确认删除此商品订货:%1$s %2$s？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_shelf_deletion"><![CDATA[
+<html>
+<body>
+<p><h3>确认从此货架陈列删除此商品：:%1$s %2$s？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_shelf_login"><![CDATA[
+<html>
+<body>
+<p><h3>尚有未登录商品，确认要换货架号？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_shelf_login_back"><![CDATA[
+<html>
+<body>
+<p><h3>尚有未登录商品，确认要返回？</h3>
+</body>
+</html>
+]]></string>
+    <string name="download_with_upload_data"><![CDATA[
+<html>
+<body>
+<p><h3>尚有未上传货架陈列数据，是否继续下载？用户(%1$s)</h3>
+</body>
+</html>
+]]></string>
+    <string name="download_with_upload_data2"><![CDATA[
+<html>
+<body>
+<p><h3>尚有未上传货架陈列数据，是否继续下载？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_shelf_login_home"><![CDATA[
+<html>
+<body>
+<p><h3>尚有未登录商品，确认要回首页？</h3>
+</body>
+</html>
+]]></string>
+    <string name="confirm_inventorying_deletion"><![CDATA[
+<html>
+<body>
+<p><h3>确认删除此商品盘点:%1$s %2$s？</h3>
+</body>
+</html>
+]]></string>
+    <string name="please_find_by_article_id"><![CDATA[
+<html>
+<body>
+<p><h3>在一览订货画面中请使用商品货号查找。</h3>
+</body>
+</html>
+]]></string>
+    <string name="browsing_inventory_article_id_not_fount"><![CDATA[
+<html>
+<body>
+<p><h3>在此盘点中找不到该货号商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="shelf_article_id_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在此货架陈列中找不到该货号商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_article_id_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在此分类中找不到该货号商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_barcode_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在此分类中找不到该条形码商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="barcode_order_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在此订货中找不到该条形码商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_article_barcode_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在此盘点中找不到该条形码商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="sale_article_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>在销售中找不到该条形码商品：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventory_article_not_found"><![CDATA[
+<html>
+<body>
+<p><h3>该商品不是今天的盘点对象：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="check_ordering_qty">检查订货数</string>
+    <string name="check_stock_qty">检查盘点数</string>
+    <string name="check_barcode">检查条形码</string>
+    <string name="please_check_ordering_qty">请检查订货数。</string>
+    <string name="please_check_stock_qty">请检查盘点数量。</string>
+    <string name="ordering_qty_is_too_large1"><![CDATA[
+<html>
+<body>
+<p><h3>输入了过大的订货数：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="stock_qty_is_too_large1"><![CDATA[
+<html>
+<body>
+<p><h3>输入了过大的盘点数量：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="stock_qty_has_too_many_scales1"><![CDATA[
+<html>
+<body>
+<p><h3>盘点数量不能超过三位小数位数：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_is_too_large2"><![CDATA[
+<html>
+<body>
+<p><h3>输入了过大的订货数：“%1$s”。<br/>还原回原订货数：“%2$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="stock_qty_is_too_large2"><![CDATA[
+<html>
+<body>
+<p><h3>输入了过大的盘点数量：“%1$s”。<br/>还原回原盘点数量：“%2$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="stock_qty_has_too_many_scales2"><![CDATA[
+<html>
+<body>
+<p><h3>盘点数量不能超过三位小数位数：“%1$s”。<br/>还原回原盘点数：“%2$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_cannot_be_zero1"><![CDATA[
+<html>
+<body>
+<p><h3>订货数不能为零！</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_article_not_power"><![CDATA[
+<html>
+<body>
+<p><h3>没有对该商品进行订货的权限：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_cannot_be_zero2"><![CDATA[
+<html>
+<body>
+<p><h3>订货数不能为零！<br/>还原回原订货数：“%1$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_qty_barcord_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已使用商品分类、货架进行了订货。需要放弃已经录入的订货数量重新录入吗？</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_qty_category_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已使用条形码、货架进行了订货。需要放弃已经录入的订货数量重新录入吗？</h3>
+</body>
+</html>
+]]></string>
+    <string name="order_qty_shelf_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已使用条形码、商品分类进行了订货。需要放弃已经录入的订货数量重新录入吗？</h3>
+</body>
+</html>
+]]></string>
+
+    <!--  2014-05-27 tangyao
+        <string name="inventory_qty_barcord_exists"><![CDATA[
+    <html>
+    <body>
+    <p><h3>该商品已使用商品分类、货架进行了盘点。要继续录入吗？</h3>
+    </body>
+    </html>
+    ]]></string>
+
+        <string name="inventory_qty_category_exists"><![CDATA[
+    <html>
+    <body>
+    <p><h3>该商品已使用条形码、货架进行了盘点。要继续录入吗？</h3>
+    </body>
+    </html>
+    ]]></string>
+    -->
+    <string name="inventory_qty_barcord_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已经进行过盘点。要继续录入吗？</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventory_qty_category_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已经进行过盘点。要继续录入吗？</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventory_qty_shelf_exists"><![CDATA[
+<html>
+<body>
+<p><h3>该商品已使用条形码、商品分类进行了盘点。要继续录入吗？</h3>
+</body>
+</html>
+]]></string>
+
+    <string name="ordering_qty_is_lower_than_min_order_qty1"><![CDATA[
+<html>
+<body>
+<p><h3>输入的订货数 “%1$s” 低于最低订量 “%2$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_is_lower_than_min_order_qty2"><![CDATA[
+<html>
+<body>
+<p><h3>输入的订货数 “%1$s” 低于最低订量 “%2$s”。<br/>还原回原订货数：“%3$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_is_not_multiply_of_pack1"><![CDATA[
+<html>
+<body>
+<p><h3>输入的订货数 “%1$s” 不是订货批量 “%2$s” 的倍数。</h3>
+</body>
+</html>
+]]></string>
+    <string name="ordering_qty_is_not_multiply_of_pack2"><![CDATA[
+<html>
+<body>
+<p><h3>输入的订货数 “%1$s” 不是订货批量 “%2$s” 的倍数。<br/>还原回原订货数：“%3$s”。</h3>
+</body>
+</html>
+]]></string>
+    <string name="inventorying_area">区域</string>
+    <!--   2014-05-27 tangyao
+    <string name="inventorying_shelf">货架</string>
+     -->
+    <string name="inventorying_shelf">区域</string>
+    <string name="stock_area_option">盘点位置</string>
+    <string name="shelf_order">货架指定订货</string>
+    <string name="category_order">分类指定订货</string>
+    <string name="shelf_inventory">货架指定盘点</string>
+    <string name="cat_inventory">分类指定盘点</string>
+    <string name="shelf">指定货架</string>
+    <string name="category">指定分类</string>
+    <string name="article_inventory">指定商品</string>
+    <string name="stock_area_3">其他</string>
+    <string name="stock_area_2">货架</string>
+    <string name="stock_area_1">仓库</string>
+    <string name="article_brand">品牌</string>
+    <string name="article_production_location">产地</string>
+    <string name="article_spec">规格</string>
+    <string name="article_stock_qty">盘点数量</string>
+    <!--  2014-05-27  tangyao
+    <string name="input_area">录入地区</string>
+    <string name="input_shelf">录入货架</string>
+    <string name="barcode_area">盘点地区</string>
+    -->
+    <string name="input_area">录入区域</string>
+    <string name="input_shelf">录入区域</string>
+    <string name="barcode_area">盘点区域</string>
+    <string name="system_management">系统管理</string>
+    <string name="please_set_device_id_and_server_ip_first"><![CDATA[
+<html>
+<body>
+<p><h3>请先在【系统管理】中设置服务器IP地址、门市代号和设备编号。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_store_id"><![CDATA[
+<html>
+<body>
+<p><h3>门市代号的长度应介于1到6之间。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_device_id"><![CDATA[
+<html>
+<body>
+<p><h3>设备编号的长度应介于1到2之间。</h3>
+</body>
+</html>
+]]></string>
+    <string name="invalid_current_transaction_number"><![CDATA[
+<html>
+<body>
+<p><h3>交易号的长度应介于1到10之间。</h3>
+</body>
+</html>
+]]></string>
+    <string name="program_download_and_install">新版程序下载和安装中…</string>
+    <string name="program_downloading">新版程序下载中…</string>
+
+    <string name="pricecheck_condition">  检查条件 </string>
+    <string name="pricecheck_uncheck">未检查  </string>
+    <string name="pricecheck_check">检查  </string>
+    <string name="pricecheck_tv_change">  变价对象 </string>
+    <string name="pricecheck_rb_change">变价  </string>
+    <string name="pricecheck_rb_normal">一般  </string>
+    <string name="pricecheck_rb_all">全部  </string>
+
+    <string name="pricecheck_tv_print">   打印指示  </string>
+    <string name="pricecheck_rbtx_print_all">全部  </string>
+    <string name="pricecheck_rbtx_print_yes">有　</string>
+    <string name="pricecheck_rbtx_print_no">无　</string>
+
+
+    <string name="pricecheck_shelfno">货架号</string>
+
+
+    <string name="pcb_barcode">条形码</string>
+    <string name="pcb_article_no">货号</string>
+    <string name="pcb_article_name">品名</string>
+    <string name="pcb_posprice">POS售价</string>
+    <string name="pcb_master_time">主档日时</string>
+    <string name="pcb_master_date_time">主档最终更新时间</string>
+    <string name="pcb_check_time">检查日时</string>
+    <string name="pcb_print">打印</string>
+    <string name="pcb_shelfno">货架号</string>
+
+    <string name="pcb_check_condition_tv">检查条件</string>
+    <string name="pcb_change">变价対象</string>
+    <string name="pcb_printhint">打印指示</string>
+    <string name="pricecheck_save_button_text">登录</string>
+    <string name="edit_button_text">编辑</string>
+
+    <!--   2014-04-21-002-02 tangyao      -->
+    <string name="shelf_list_header_4_ty">货架(方式)</string>
+    <!--          -->
+    <!--   2014-05-27 tangyao
+    <string name="shelf_list_header_4">货架名称</string>
+     -->
+    <string name="shelf_list_header_4">名称</string>
+    <string name="shelf_list_header_5">区域号</string>
+    <string name="shelf_list_header_6">区域名称</string>
+    <string name="order_price">通常进价</string>
+    <string name="sale_price">通常售价</string>
+    <string name="prompt">提示</string>
+    <string name="price_check_connect_webservice">无法实时取得POS销售价格主档!</string>
+    <string name="shelf_title_download"><![CDATA[
+<html>
+<body>
+货架<br>下载状态
+</body>
+</html>
+]]></string>
+    <string name="print_num_not_zero_start">打印张数不允许以0开头，只能输入正整数</string>
+
+    <string name="warning">警告</string>
+    <string name="transaction_upload_success">交易上传成功</string>
+    <string name="transaction_upload_failed">交易上传失败,请检查网络和服务器</string>
+    <string name="transaction_save_failed">交易保存失败</string>
+    <string name="taocanmingxiyoubuncunzaideshangpin">套餐明细有不存在的商品</string>
+    <string name="invalid_payment">一笔交易只能有四种支付</string>
+    <string name="payment_warning">支付金额与合计金额不匹配</string>
+    <string name="change_amount">找零</string>
+    <string name="spill_amount">溢收</string>
+    <string name="customer_data_input">客户资料录入</string>
+    <string name="customer_data">客户资料</string>
+    <string name="mobile_out_order">手机出库单:</string>
+    <string name="mobile_out_order_notnull">手机出库单不能为空</string>
+    <string name="if_need_to_print_invoice">是否开发票</string>
+    <string name="customer_number">客 户 编 号:</string>
+    <string name="store_area">门 店 区 域:</string>
+    <string name="cashier_number_1">营业员编号1:</string>
+    <string name="cashier_number_2">营业员编号2:</string>
+    <string name="cashier_number_invalid">营业员至少要输入一个</string>
+    <string name="customer_name">客 户 姓 名:</string>
+    <string name="customer_mobile">客户手机号:</string>
+    <string name="customer_mobile_notnull">客户手机号不能为空</string>
+    <string name="customer_mobile_invalid">客户手机号只能是数字</string>
+    <string name="customer_memo">客 户 备 注:</string>
+    <string name="sales_close_button">结账</string>
+    <string name="pos_number">机号</string>
+    <string name="back">&lt; 返回</string>
+    <string name="total_amount">合计</string>
+    <string name="tender_total_amount">销售合计</string>
+    <string name="scanner">扫条码</string>
+    <string name="return_button">退货</string>
+    <string name="floor_plan_button">平面图</string>
+    <string name="tender_button">小计</string>
+    <string name="query_button">查询</string>
+    <string name="download_button">主档下载</string>
+    <string name="sales_cancel_button">交易取消</string>
+    <string name="download_master_successfully_finished">主档下载完成。</string>
+    <string name="quantity">数量</string>
+    <string name="pleaseSelect">请选择...</string>
+
+    <string name="category_data_input">商品分类</string>
+
+    <string name="steward_signon">乘务员登录</string>
+    <string name="steward_id">乘务员编号</string>
+    <string name="staff_signon">员工登录</string>
+    <string name="staff_id">工号</string>
+    <string name="password">口令</string>
+    <string name="license_code">授权码</string>
+    <string name="check_license_code">检查授权</string>
+
+    <string name="choose_image">选择图片</string>
+    <string name="take_picture">拍照</string>
+    <string name="dining_table">桌台</string>
+    <string name="dining_table_view">桌次选择</string>
+    <string name="unsent_count">（未上传：%1$d）</string>
+    <string name="refresh">刷新</string>
+    <string name="dining_table_reload_ok">桌次状态更新完成。</string>
+    <string name="dining_table_reload_failed">桌次状态更新失败。</string>
+    <string name="dining_table_save_failed">桌次状态保存失败。</string>
+    <string name="new_table">开桌</string>
+    <string name="take_order">点餐</string>
+    <string name="send_order">下单</string>
+    <string name="order_number">单号</string>
+    <string name="dining_table_short">桌</string>
+    <string name="change_table">换桌</string>
+    <string name="change_table_confirmation">确定要把 %1$s 换到 %2$s？</string>
+    <string name="change_table_succeeded">桌 %1$s 已换到 %2$s。</string>
+    <string name="change_table_failed">桌 %1$s 没能成功换到 %2$s！</string>
+    <string name="change_customer_count">更改来客数</string>s
+    <string name="action_options">选项＞</string>
+    <string name="system_preference">系统设置</string>
+    <string name="send_meal_order_failed_please_retry_later">发送餐点失败，请稍候重试。</string>
+    <string name="send_meal_order_success">发送餐点成功</string>
+    <string name="no_any_meal_order_need_to_send">没有需要发送的点餐数据。</string>
+    <string name="delete_meal_order_failed_please_retry_later">交易取消失败，请稍候重试。</string>
+    <string name="transaction_cancel_confirmation">确定要交易取消？</string>
+    <string name="transaction_cancel_successfully">交易取消完成。</string>
+    <string name="no_any_meal_order_need_to_delete">没有需要删除或取消的数据。</string>
+    <string name="cannot_download_dining_table_info">无法获取桌次信息。</string>
+    <string name="cannot_tranhead_data">无法获取交易数据。</string>
+
+    <string name="waiter">服务员</string>
+    <string name="note">备注</string>
+    <string name="please_select_waiter">请选择服务员</string>
+    <string name="please_send_order">请先下单再结账</string>
+    <string name="discount">折扣</string>
+    <string name="discount_amount">折扣金额</string>
+    <string name="discount_amount_error">折扣额错误，不允许空或负数</string>
+    <string name="customer_count_error">请输入来客数</string>
+    <string name="customer_count_update_successfully">来客数更改成功。</string>
+    <string name="customer_count_update_failed">无法更改来客数。</string>
+    <string name="save">保存</string>
+    <string name="dirty_transaction_exists">尚有未结账交易数据存在，请先结账。</string>
+    <string name="item_modifier">备注</string>
+    <string name="item_modifier_category">分类</string>
+    <string name="edit_item_modifier">商品口味</string>
+    <string name="there_are_some_useless_payments">有多余的支付</string>
+    <string name="change_amount_is_too_large">找零金额过大</string>
+    <string name="payment_is_not_enough">支付金额不足</string>
+    <string name="payment_info">支付信息</string>
+    <string name="please_select_dining_table_to_change">请选择要换的桌位</string>
+    <string name="cannot_change_to_a_busy_table">此桌已被占用，无法更换。</string>
+    <string name="original_sales_price">原销售金额</string>
+    <string name="discount_input">折扣录入</string>
+    <string name="discount_percentage_hint">打八折输入: 80 [打折]</string>
+    <string name="after_discount_amount">折扣后金额</string>
+    <string name="discount_percentage_portrait">打\n折\n％</string>
+    <string name="clear_to_zero_portrait">清\n零</string>
+    <string name="transaction_query">交易查询</string>
+    <string name="undo_modification">撤销修改</string>
+    <string name="undo_modification_confirmation">确定要撤销点餐数据的修改？</string>
+    <string name="undo_modification_finished">点餐数据修改已撤销</string>
+    <string name="whole_transaction_refund">整笔退单</string>
+    <string name="whole_transaction_refund_sent_successfully">整笔退单指令发送完成。</string>
+    <string name="whole_transaction_refund_sent_failed">整笔退单指令发送失败！</string>
+    <string name="reprint_receipt">重印小票</string>
+    <string name="reprint_receipt_command_sent_successfully">重印小票指令发送完成。</string>
+    <string name="reprint_receipt_command_sent_failed">重印小票指令发送失败！</string>
+    <string name="back_to_dining_table_interface">返回点餐</string>
+    <string name="please_wait">请稍候...</string>
+    <string name="category_name">%1$s类</string>
+    <string name="setReplace">套餐替换项:</string>
+    <string name="shift_out_date">交班日期</string>
+    <string name="choose_date">选择日期</string>
+    <string name="query_shift_report">交班报表查询</string>
+    <string name="modifier_description">口味描述</string>
+    <string name="input_amount">输入金额</string>
+    <string name="please_input_legal_license">请输入有效授权</string>
+    <string name="license_check">授权核查</string>
+
+    <string name="printer_status_success">正常</string>
+    <string name="printer_status_settings_error">打印机参数未设置</string>
+    <string name="printer_status_open_error">连线打印机程序错误，未呼叫open()方法</string>
+    <string name="printer_status_offline">打印机没开启</string>
+    <string name="printer_status_connect_error">连线打印机失败</string>
+    <string name="printer_status_busy">打印机忙碌中</string>
+    <string name="printer_status_mechanical_error">打印机机械故障</string>
+    <string name="printer_status_error_occurred">打印机异常</string>
+    <string name="printer_status_unrecoverable_error">打印机无法恢复的故障</string>
+    <string name="printer_status_cover_open">打印机上盖开启</string>
+    <string name="printer_status_feed_button_pressed">走纸键被按下</string>
+    <string name="printer_status_stopped_due_to_paper_end">没纸而停止</string>
+    <string name="printer_status_paper_near_end">打印机纸卷快要用完</string>
+    <string name="printer_status_paper_empty">打印机纸卷已用完</string>
+    <string name="printer_status_please_install_paper_roll">请放入纸卷</string>
+    <string name="printer_status_error">打印机通讯错误</string>
+    <string name="printer_status_cutter_error">打印机切刀异常</string>
+    <string name="printer_status_overheat">打印机过热</string>
+    <string name="printer_status_settings_error_parameters">%1$s打印机参数未设定</string>
+    <string name="printer_status_connect_error_parameters">连线%1$s打印机失败</string>
+    <string name="printer_status_error_parameters">%1$s打印机通讯错误</string>
+
+    <string name="输入条码">输入条码</string>
+    <string name="微信支付失败">微信支付失败</string>
+    <string name="微信参数未设置">微信参数未设置</string>
+    <string name="支付宝参数未设置">支付宝参数未设置</string>
+    <string name="支付宝支付失败">支付宝支付失败</string>
+    <string name="网络O2O支付失败">网络O2O支付失败</string>
+    <string name="扫描">扫描</string>
+    <string name="系统日期与后台不一致">本地系统日期与后台不一致，请检查！</string>
+    <string name="请先登录">请先登录</string>
+    <string name="已开班">已开班,不允许重复开班</string>
+    <string name="开班成功">开班成功</string>
+    <string name="点餐管理不支持开班">点餐管理不支持开班</string>
+    <string name="点餐管理不支持交班">点餐管理不支持交班</string>
+    <string name="点餐管理不支持交易重印">点餐管理不支持交易重印/退餐</string>
+    <string name="未开班">未开班,不允许交班</string>
+    <string name="不允许查询交易">未开班,不允许查询交易</string>
+    <string name="不允许点餐">未开班,不允许点餐</string>
+    <string name="未交班">昨天未交班,请先交班</string>
+    <string name="桌子状态已经被更新">桌子状态已经被更新,不允许下单</string>
+    <string name="机号不允许修改">机号不允许修改</string>
+    <string name="桌子流水号与单据流水号不一致">桌次流水号与单据流水号不一致,请刷新桌次</string>
+    <string name="无法连接打印机">无法连接打印机!</string>
+    <string name="结账状态不允许登录会员">结账状态,不允许登录会员</string>
+    <string name="载入数据库">载入数据库...</string>
+    <string name="开始主档信息比对">开始主档信息比对...</string>
+    <string name="下载主档信息">下载主档信息...</string>
+    <string name="主档信息下载结束">主档信息下载结束</string>
+    <string name="下载程序">下载程序...</string>
+    <string name="程序下载结束">程序下载结束</string>
+    <string name="载入外设">载入外设...</string>
+    <string name="界面初始化">界面初始化...</string>
+    <string name="扫描枪打开失败">扫描枪打开失败!</string>
+    <string name="马上重启POS">马上重启POS</string>
+    <string name="未获取到服务端主档信息">未获取到服务端主档信息</string>
+    <string name="支付超时请扫描确认码">支付超时,请扫描确认码</string>
+
+    <string name="facepay_init_failed">人脸识别初始化失败</string>
+    <string name="facepay_raw_data_failed">获取用户RawData失败，将无法获取SDK调用凭证</string>
+    <string name="facepay_init_success">刷脸支付初始化成功</string>
+</resources>

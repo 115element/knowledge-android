@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:dslv="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:focusableInTouchMode="true"
+              android:background="#fff9f9f9"
+			  android:orientation="horizontal">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:layout_weight="0.5">
+
+<!--
+        <com.mobeta.android.dslv.DragSortListView
+                android:id="@+id/category_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingLeft="10dp"
+                android:layout_margin="10dp"
+                android:dividerHeight="5dp"
+                android:fastScrollEnabled="true"
+                dslv:drag_enabled="true"
+                dslv:collapsed_height="2dp"
+                dslv:drag_scroll_start="0.33"
+                dslv:max_drag_scroll_speed="0.5"
+                dslv:float_alpha="0.6"
+                dslv:slide_shuffle_speed="0.3"
+                dslv:track_drag_sort="false"
+                dslv:use_default_controller="true"
+                dslv:drag_handle_id="@+id/drag_handle"
+                dslv:sort_enabled="true"
+                dslv:remove_enabled="true"
+                dslv:drag_start_mode="onDown"
+                dslv:remove_mode="flingRemove"
+                android:layout_weight="1"/>
+-->
+        <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:src="@drawable/add_64"
+                android:id="@+id/imageButton" android:scaleType="fitCenter" android:padding="5dp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="8dp">
+        <TextView
+                android:id="@+id/textview_category_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="分类代码："
+                android:textSize="@dimen/normal_text_size_for_landscape"
+                android:paddingTop="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="8dp"/>
+        <EditText
+                android:id="@+id/edittext_category_id"
+                android:layout_width="wrap_content"
+                android:ems="6"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normal_text_size_for_landscape"
+                android:layout_alignBaseline="@+id/textview_category_id"
+                android:layout_toRightOf="@+id/textview_category_id"/>
+        <TextView
+                android:id="@+id/textview_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/normal_text_size_for_landscape"
+                android:text="分类名称："
+                android:layout_below="@+id/edittext_category_id"
+                android:layout_alignRight="@+id/textview_category_id"
+                />
+        <EditText
+                android:id="@+id/edittext_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="@dimen/normal_text_size_for_landscape"
+                android:layout_alignBaseline="@+id/textview_category_name"
+                android:layout_toRightOf="@+id/textview_category_name"/>
+        <TextView
+                android:id="@+id/textview_category_printer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/normal_text_size_for_landscape"
+                android:text="打印机："
+                android:layout_below="@+id/edittext_category_name"
+                android:layout_alignRight="@+id/textview_category_name"
+                />
+
+    </RelativeLayout>
+</LinearLayout>

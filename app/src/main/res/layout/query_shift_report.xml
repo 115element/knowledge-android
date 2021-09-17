@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        >
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            >
+
+        <!--
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:text="@string/transaction_query"
+                    style="@style/LargeDarkTextViewStyle"
+                    />
+        -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="@string/shift_out_date"
+                style="@style/MediumDarkTextViewStyle"
+                />
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/view_border" android:padding="2dp">
+            <TextView
+                    android:id="@+id/shift_report_date_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text="2015-10-31"
+                    style="@style/MediumDarkTextViewStyle"
+                    />
+            <hyi.mobilepos.widget.PhonicButton
+                    android:id="@+id/choose_date_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:minWidth="120dp"
+                    style="@style/MediumTextViewStyle"
+                    android:background="@drawable/ic_button_apple_white"
+                    android:text="@string/choose_date"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:background="@drawable/view_border">
+        <ListView
+                android:id="@+id/shift_report_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_item_listview_background"
+                style="@style/SmallDarkTextViewStyle"
+                />
+    </FrameLayout>
+
+</LinearLayout>

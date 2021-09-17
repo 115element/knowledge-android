@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="hyi.mobilepos.MainActivity">
+
+    <group android:checkableBehavior="all">
+        <item
+                android:id="@+id/action_pos_terminal"
+                android:icon="@drawable/ic_register"
+                android:title="@string/take_order"/>
+        <item
+                android:id="@+id/action_transaction_operations"
+                android:icon="@drawable/ic_search"
+                android:title="@string/action_transaction_operations"/>
+        <item
+                android:id="@+id/action_shift_in"
+                android:icon="@drawable/ic_shift_in"
+                android:title="@string/action_shift_in"/>
+        <item
+                android:id="@+id/action_shift"
+                android:icon="@drawable/ic_shift"
+                android:title="@string/action_shift"/>
+        <item
+                android:id="@+id/action_shift_report"
+                android:icon="@drawable/ic_receipt"
+                android:title="@string/action_shift_report"
+                android:visible="false"/>
+        <item
+                android:id="@+id/action_exit"
+                android:icon="@drawable/ic_sign_out"
+                android:title="@string/action_exit"/>
+        <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/system_preference"/>
+    </group>
+
+</menu>

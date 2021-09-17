@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="hyi.mobilepos.MainActivity">
+
+    <item
+            android:id="@+id/action_shift"
+            android:orderInCategory="100"
+            android:title="@string/action_shift"
+            android:icon="@drawable/ic_shift"
+            app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/rectangle_ellipse_button_grey"
+              android:orientation="vertical">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="商品名"
+                        android:textColor="#ff333333"
+                        android:gravity="center_horizontal"
+                        android:textSize="20sp"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="数量"
+                        android:textColor="#ff333333"
+                        android:gravity="center_horizontal"
+                        android:textSize="20sp"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="价格"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp"
+                />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="清空"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/rectangle_ellipse_red"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                />
+        </LinearLayout>
+        <ListView
+                android:id="@+id/item_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"/>
+
+
+</LinearLayout>

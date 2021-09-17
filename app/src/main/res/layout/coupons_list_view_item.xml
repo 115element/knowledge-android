@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/coupons_item_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/bonus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="贝瑞咖啡30元代金券（满128元可用）"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/bonus_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="权益代号:......"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/bonus_name"
+                app:layout_constraintTop_toBottomOf="@+id/bonus_name" />
+
+        <TextView
+                android:id="@+id/qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="剩余8张"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/bonus_id"
+                app:layout_constraintTop_toTopOf="@+id/bonus_id" />
+
+        <TextView
+                android:id="@+id/start_date_and_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效期:"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/bonus_name"
+                app:layout_constraintTop_toBottomOf="@+id/qty" />
+
+        <TextView
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2021-08-19 00:00"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/start_date_and_end_date"
+                app:layout_constraintTop_toTopOf="@+id/start_date_and_end_date" />
+
+        <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="至"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/start_date"
+                app:layout_constraintTop_toTopOf="@+id/start_date" />
+
+        <TextView
+                android:id="@+id/end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2021-08-29 00:00"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/to"
+                app:layout_constraintTop_toTopOf="@+id/to" />
+
+        <TextView
+                android:id="@+id/coupon_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥30"
+                android:textColor="#D74A3C"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bonus_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bonus_name" />
+
+        <TextView
+                android:id="@+id/condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满128可用"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bonus_name"
+                app:layout_constraintTop_toBottomOf="@+id/coupon_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

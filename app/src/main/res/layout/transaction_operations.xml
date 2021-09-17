@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        >
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <!--
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:text="@string/transaction_query"
+                    style="@style/LargeDarkTextViewStyle"
+                    />
+        -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/dining_table"
+                style="@style/MediumDarkTextViewStyle"
+                />
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/view_border" android:padding="2dp">
+            <Spinner
+                    android:id="@+id/dining_table_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinner_background_dark"
+                    android:popupBackground="@color/my_item_listview_background"
+                    style="@style/LargeDarkTextViewStyle"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/demo_item_names"
+                    />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:padding="2dp"
+            android:background="@drawable/view_border">
+        <ListView
+                android:id="@+id/transaction_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_item_listview_background"
+                style="@style/SmallDarkTextViewStyle"
+                />
+    </FrameLayout>
+
+</LinearLayout>

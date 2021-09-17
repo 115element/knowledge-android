@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--做一个对父控件纯居中的voidview作为长兄Button的左右参照控件-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_in_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/payingAmount"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="¥ 632"
+        android:textColor="#ffc25348"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="待支付金额"
+        android:textColor="#ffc25348"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/payingAmount" />
+
+    <TextView
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="请选择支付方式"
+        android:textColor="#ff333333"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/rl1" />
+
+
+    <TextView
+        android:id="@+id/rl3"
+        android:layout_width="150dp"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/rl1"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:background="#ffeeeeee"
+        app:layout_constraintRight_toLeftOf="@+id/center_in_parent"
+        app:layout_constraintTop_toTopOf="@+id/rl2" />
+
+
+    <View
+        android:id="@+id/rl4"
+        android:layout_width="150dp"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/rl1"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/center_in_parent"
+        android:background="#ffeeeeee"
+        app:layout_constraintLeft_toRightOf="@+id/center_in_parent"
+        app:layout_constraintTop_toTopOf="@+id/rl2" />
+
+
+    <Button
+        android:id="@+id/cash_pay_btn"
+        style="@style/LargeTextViewStyle"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:drawableStart="@mipmap/cash_paying_red"
+        android:minWidth="100dp"
+        android:paddingStart="25dp"
+        android:text="现金支付"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@+id/center_in_parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl2" />
+
+    <Button
+        android:id="@+id/united_pay_btn"
+        style="@style/LargeTextViewStyle"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:drawableStart="@mipmap/weixin"
+        android:drawableEnd="@mipmap/zhifubao"
+        android:minWidth="100dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="微信/支付宝"
+        android:textColor="#ff333333"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/center_in_parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl2"
+        app:layout_constraintTop_toTopOf="@+id/cash_pay_btn" />
+
+    <Button
+        android:id="@+id/cash_card_pay_btn"
+        style="@style/LargeTextViewStyle"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:drawableStart="@mipmap/cash_card_paying_red"
+        android:minWidth="100dp"
+        android:paddingStart="25dp"
+        android:text="现金卡支付"
+        android:textColor="#ff333333"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@+id/center_in_parent"
+        app:layout_constraintStart_toStartOf="@+id/cash_pay_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cash_pay_btn" />
+
+    <Button
+        android:id="@+id/point_pay_btn"
+        style="@style/LargeTextViewStyle"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/united_pay_btn"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:drawableStart="@mipmap/point_paying_red"
+        android:minWidth="100dp"
+        android:paddingLeft="25dp"
+        android:text="积分支付"
+        android:textColor="#ff333333"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/united_pay_btn"
+        app:layout_constraintLeft_toRightOf="@+id/center_in_parent"
+        app:layout_constraintTop_toBottomOf="@+id/united_pay_btn"
+        app:layout_constraintTop_toTopOf="@id/cash_card_pay_btn" />
+
+    <Button
+        android:id="@+id/combinational_pay_btn"
+        style="@style/LargeTextViewStyle"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_ellipse_button_grey"
+        android:drawableStart="@mipmap/combinational_paying_red"
+        android:minWidth="100dp"
+        android:paddingStart="25dp"
+        android:text="组合支付"
+        android:textColor="#ff333333"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@+id/center_in_parent"
+        app:layout_constraintStart_toStartOf="@+id/cash_card_pay_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cash_card_pay_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
