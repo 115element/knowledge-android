@@ -10,6 +10,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 
+    <color name="color_00ff00">#00ff00</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_ffff00">#ffff00</color>
+    <color name="color_8e35ef">#8e35ef</color>
+    <color name="color_303F9F">#303F9F</color>
+
     <color name="window_background">#fffffeee</color>
     <color name="dark_window_background">#dd333333</color>
 

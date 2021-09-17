@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <!--
+   GridView是一个在二维可滚动的网格中展示内容的控件。网格中的内容通过使用adapter自动插入到布局中。
+   下面通过实现一个简单的显示省份名的demo，介绍GridView控件的基本使用方法：
+    -->
+
+<!--
+    GridView的主要属性:
+
+    android:columnWidth
+    相关方法setColumnWidth(int)。定义每一列的固定宽度。
+    必须是dimension值（浮点数后面拼接单位，例如“14.5sp”）。有效的单位有：px，dp，sp，in，mm。
+    它也可以是一个资源的引用（@[package:]type:name）或主题属性（?[package:][type:]name）。
+
+    android:gravity
+    相关方法setGravity(int)。定义每一个单元格的重心。
+    必须是一个或多个（使用“|”分隔）下面的常量
+    top	                0x30	将对象放在它的容器的顶部，不会改变它的大小
+    bottom	            0x50	将对象放在它的容器的底部，不会改变它的大小
+    left	            0x03	将对象放在它的容器的左面，不会改变它的大小
+    right	            0x05	将对象放在它的容器的右面，不会改变它的大小
+    center_vertical	    0x10	将对象放在它的容器垂直方向的中心，不会改变它的大小
+    fill_vertical	    0x70	如果需要改变对象的垂直大小以完全填充它的容器
+    center_horizontal	0x01	将对象放在它的容器水平方向的中心，不会改变它的大小
+    fill_horizontal	    0x07	如果需要改变对象的水平大小以完全填充它的容器
+    center	            0x11	将对象放在它的容器的中心，不会改变它的大小
+    fill	            0x77	如果需要改变对象的水平和垂直方向的大小以完全填充它的容器
+    clip_vertical	    0x80	附加选项被设置用来将子视图的上面或下面边缘裁剪到它的容器的边界。这个裁剪基于垂直方向的重心：top重心将会裁剪底部边缘，bottom重心将会裁剪顶部边缘，不会同时裁剪两边
+    clip_horizontal	    0x08	附加选项被设置用来将子视图的左面或右面边缘裁剪到它的容器的边界。这个裁剪基于水平方向的重心：left重心将会裁剪右面边缘，right重心将会裁剪左面边缘，不会同时裁剪两边
+    start	            0x00800003	将对象放在它的容器的起始位置，不会改变它的大小
+    end	                0x00800005	将对象放在它的容器的末尾位置，不会改变它的大小
+
+    android:horizontalSpacing
+    相关方法setHorizontalSpacing(int)。定义了两列之间的水平间隔。
+    属性设置要求同android:columnWidth
+
+    android:numColumns
+    相关方法setNumColumns(int)。定义了展示的列数。
+    可以是一个整形值，如“100”。也可以是一个资源的引用（@[package:]type:name）或主题属性（?[package:][type:]name）。
+    或者下面的这个常量：
+    auto_fit	-1	在有效空间展示尽量多的列数
+
+    android:stretchMode
+    相关方法setStretchMode(int)。定义了列拓展填充有限闲置空间的方式。
+    必须是下面常量值中的一个：
+    none	            0	扩展无效
+    spacingWidth	    1	列与列之间的空间被扩展
+    columnWidth	        2	每一列被相等的拓展
+    spacingWidthUniform	3	列与列之间的空间被均匀的扩展
+
+    android:verticalSpacing
+    相关方法setVerticalSpacing(int)。定义两行之间的垂直间隔。
+    属性设置要求同android:columnWidth
+-->
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+</RelativeLayout>
