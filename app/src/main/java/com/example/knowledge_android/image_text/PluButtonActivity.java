@@ -1,8 +1,10 @@
 package com.example.knowledge_android.image_text;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.TypedValue;
 import android.view.Gravity;
 
 import androidx.annotation.Nullable;
@@ -29,6 +31,8 @@ public class PluButtonActivity extends AppCompatActivity {
 
         pluButtonView.setBackgroundColor(Color.YELLOW);
 
+
+
         //文字如何换行
         StringBuilder sb = new StringBuilder();
         sb.append("如果文字换行使用br,使用\\n会有问题");
@@ -38,6 +42,13 @@ public class PluButtonActivity extends AppCompatActivity {
         sb.append("</font>");
         pluButtonView.setText(Html.fromHtml(sb.toString()));
 
+
+        //字体大小为16，并且加粗
+        pluButtonView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        pluButtonView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+
+        //取消加粗
+        //pluButtonView.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
 
         pluButtonView.setSingleLine(false);
         pluButtonView.setMinLines(1);
