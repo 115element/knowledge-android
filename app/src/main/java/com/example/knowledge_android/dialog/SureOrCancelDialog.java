@@ -19,7 +19,6 @@ import com.example.knowledge_android.R;
  */
 public class SureOrCancelDialog extends Dialog implements View.OnClickListener {
 
-
     public SureOrCancelDialog(Context context) {
         super(context, R.style.NoSurplusDialog);
         setContentView(R.layout.xinxiang_normal_dialog);

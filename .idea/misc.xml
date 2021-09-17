@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main.xml" value="0.2078804347826087" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_15.xml" value="0.2078804347826087" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/popup_window_1.xml" value="0.2078804347826087" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/show_layout_1.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/xinxiang_normal_dialog.xml" value="0.2078804347826087" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tab.xml" value="0.36770833333333336" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tabs.xml" value="0.2015625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/below_line.xml" value="0.38229166666666664" />

@@ -1,6 +1,24 @@
 <resources>
 
+<!--
+    【样式的定义，也就是组件属性的定义】
+    Android的样式一般定义在res/values/styles.xml文件中，
+    其中有一个根元素<resource>，而具体的每种样式定义则是通过<resource>下的子标签<style>来完成，
+    <style>通过添加多个<item>来设置样式不同的属性。另外，样式是可以继承的，
+    可通过<style>标签的parent属性声明要继承的样式，也可通过点前缀 (.) 继承，点前面为父样式名称，后面为子样式名称。
+    点前缀方式只适用于自定义的样式，若要继承Android内置的样式，则只能通过parent属性声明。
+    用个实例说明具体的用法吧，以下代码为Android 5.0系统默认的按钮样式：
+
+    Style个人理解就是view的一些属性的集合，那么一系列view（例如TextVIew），
+    只要是要该style那么就都有相同的内容，如 文字的大少，颜色等，方便修改
+    首先最基本的使用，多个textView都显示一样的颜色 跟文字大少等属性
+
+    Style也可以指定APP的主题，例如下面name=AppThemes这个
+    其它的style,name就是组件的名字。
+-->
+
     <!-- Base application theme. -->
+    <!--利用Style指定APP的主题，name表示主题-->
     <style name="AppThemeS" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -14,6 +32,16 @@
         <item name="android:gravity">center</item>
     </style>
 
+
+    <!--指定组件的动画效果-->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/push_buttom_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+
     <style name="NoSurplusDialog" parent="Animation.AppCompat.Dialog">
         <item name="android:windowFrame">@null</item>
         <!--最后面是window background-->
@@ -22,7 +50,7 @@
         <!--这个不设置它会沾满屏幕-->
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <!--        &lt;!&ndash; 设置contentview的背景图&ndash;&gt;-->
+        <!--        设置contentview的背景图-->
         <!--        <item name="android:background">@drawable/myshape</item>-->
     </style>
 
