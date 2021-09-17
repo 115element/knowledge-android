@@ -61,6 +61,7 @@ public class PluButtonActivity extends AppCompatActivity {
         //pluButtonView.setBackgroundResource(R.drawable.top);
         pluButtonView.setBitmap(R.drawable.plu);
 
+        //如何在代码中设置setCompoundDrawables，上下左右图片
 //            Drawable drawable = getResources().getDrawable(R.drawable.top);
 //            int x = drawable.getMinimumWidth();
 //            int y = drawable.getMinimumHeight();
