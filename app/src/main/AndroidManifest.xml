@@ -40,7 +40,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的空间效果-->
         <activity
-            android:name=".image_text_combined.PluButtonActivity"
+            android:name=".secondary_list.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

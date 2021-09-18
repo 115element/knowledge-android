@@ -81,4 +81,7 @@ dependencies {
     //RoundImageView
     implementation 'com.makeramen:roundedimageview:2.2.1'
 
+    //如何引入本地的Jar包  因为我们已经引入Gson了，这里只是演示下
+    //implementation files('libs/gson-2.2.4.jar')
+
 }

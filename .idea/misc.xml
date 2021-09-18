@@ -43,6 +43,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_7.xml" value="0.1890625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_8.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_9.xml" value="0.27440633245382584" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_second_list.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/cardviews.xml" value="0.1" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/category_form.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/child_caption.xml" value="0.36614583333333334" />
@@ -51,9 +52,11 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/fragment_ceshi.xml" value="0.3491847826086957" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/fruit_item.xml" value="0.25" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/image_chooser.xml" value="0.2598958333333333" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_child.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_grid.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_linear.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_list_text_view.xml" value="0.14270833333333333" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_parent.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_sliding_tab_layout.xml" value="0.3491847826086957" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/jump_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/keypad_popup.xml" value="0.2857789855072464" />
