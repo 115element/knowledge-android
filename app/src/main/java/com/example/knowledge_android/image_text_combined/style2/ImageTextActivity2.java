@@ -1,4 +1,4 @@
-package com.example.knowledge_android.image_text.style2;
+package com.example.knowledge_android.image_text_combined.style2;
 
 import android.os.Bundle;
 import android.widget.ImageView;

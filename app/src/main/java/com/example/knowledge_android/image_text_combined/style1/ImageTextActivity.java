@@ -1,4 +1,4 @@
-package com.example.knowledge_android.image_text.style1;
+package com.example.knowledge_android.image_text_combined.style1;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
