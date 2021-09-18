@@ -40,7 +40,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的控件效果-->
         <activity
-            android:name=".secondary_list2.MainActivity"
+            android:name=".linkagelistview.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,6 +62,11 @@
         <activity android:name=".secondary_list2.EmptyShowOneActivity" android:exported="true"/>
         <activity android:name=".secondary_list2.EmptyShowTwoActivity" android:exported="true"/>
         <activity android:name=".secondary_list2.EmptyShowThreeActivity" android:exported="true"/>
+
+        <activity android:name=".plu_show.activity.ScrollGridActivity" android:exported="true"/>
+        <activity android:name=".plu_show.activity.RecyclerViewListActivity" android:exported="true"/>
+        <activity android:name=".plu_show.activity.ExpandableListViewActivity" android:exported="true"/>
+        <activity android:name=".plu_show.activity.ExpandableGridViewActivity" android:exported="true"/>
 
 
 

@@ -11,3 +11,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "knowledge-android"
 include ':app'
+
+//关联另一个Module
+include ':linkage-recyclerview'
