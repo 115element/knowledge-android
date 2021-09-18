@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+这个文件的作用介绍：
+
+1、概述
+  ids.xml：为应用的相关资源提供唯一的资源id。id是为了获得xml中的对象需要的参数，也就是
+  Object = findViewById(R.id.id_name);
+  中的id_name。
+
+2.用法
+  2.1 xml中使用
+  这些值可以在代码中用android.R.id引用到。若在ids.xml中定义id，则在layout中可如下定义@id/id_name;否则为@+id/id_name。
+
+2.2 代码中使用
+  Button btn=new  Button(context);
+  btn.setId(R.id.btn_name);
+
+3.ids.xml的优点
+（1）命名方便，我们可以把一些特定的控件先命好名，我们在使用的时候直接在我们的布局中设置id，省去了一个命名环节。
+（2）在我们写代码布局的时候，我们在设置id的时候，我们就需要使用这种方式为我们的控件来命名了，在查找的时候它就可以去R文件中查找相应的id，然后进行转换。
+
+*注意：在ids.xml中的每一项目也会生成成到R文件中的。
+-->
+
+
+
 <resources>
   <!-- Messages IDs -->
   <item type="id" name="auto_focus"/>
@@ -14,4 +39,5 @@
   <item type="id" name="return_scan_result"/>
   <item type="id" name="search_book_contents_failed"/>
   <item type="id" name="search_book_contents_succeeded"/>
+  <item type="id" name="tag_expand_status"/>
 </resources>

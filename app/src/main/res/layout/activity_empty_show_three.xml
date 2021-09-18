@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Switch
+        android:id="@+id/status_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/first_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/status_switch"
+        android:background="#DDDDDD"
+        android:gravity="center"
+        android:text="Content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/first_content_tv"
+        android:orientation="vertical">
+
+        <com.example.knowledge_android.secondary_list2.view.QRecyclerViewEmptySupport
+            android:id="@+id/empty_and_expandable_rv"
+            android:layout_width="match_parent"
+            android:layout_height="335dp" />
+
+        <Button
+            android:id="@+id/float_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FloatBtn" />
+    </LinearLayout>
+
+<!--
+    在Android的开发中，布局文件可以让我们很方便的对各个UI控件进行界面上的定位和一些属性设置，
+    而在程序中可以直接取得控件的id对它直接进行操作。但是，如果是一个复杂的界面设计，
+    我们把所有布局都放在一个文件中来描述，那这个文件会显得比较臃肿并且结构变得无法清晰了。
+    为此，Android为我们提供了include标签，它可以将已经写好的layout布局文件模块引用到其他的布局文件中。
+    这样的语法可以减少布局文件的臃肿程度，提高布局文件的结构化，使得布局文件简介、结构清晰，提高代码的复用性。
+
+    需要注意的问题：
+    1.如果同一个Activity的布局文件中引用了相同的多个layout文件，
+    那么使用FindViewById查找子控件的时候需要通过定义两个View来加以区分。
+    也就是说，这时候应该先找到include标签id所对应的View，然后再在View中查找相应的子控件，
+    否则，如果直接查找，系统总是找到的是第一个子控件，而不能找到其他子控件（这时候这些子控件的id都是相同的）。
+-->
+    <include
+        android:id="@+id/empty_status"
+        layout="@layout/view_empty_status"
+        android:visibility="gone" />
+</RelativeLayout>

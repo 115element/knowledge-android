@@ -22,8 +22,8 @@ import java.util.List;
 
 public class ExpandableAdapter extends RecyclerView.Adapter {
 
-    private final static int VIEW_PARENT = R.layout.item_parent;//父级布局
-    private final static int VIEW_CHILD = R.layout.item_child;//子级布局
+    private final static int VIEW_PARENT = R.layout.item_parent_1;//父级布局
+    private final static int VIEW_CHILD = R.layout.item_child_1;//子级布局
 
     //定义一个Object类型的集合来存放混合了省和市的数据实体
     private List<Object> objects = new ArrayList<>();

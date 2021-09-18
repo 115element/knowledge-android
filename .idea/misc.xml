@@ -28,6 +28,9 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-land/license_code_input.xml" value="0.19135802469135801" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-land/sign_on.xml" value="0.19135802469135801" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_drag_recyclerview.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_empty_show_one.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_empty_show_three.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_empty_show_two.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_index_gallery_item.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_1.xml" value="0.36614583333333334" />
@@ -43,6 +46,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_7.xml" value="0.1890625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_8.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_9.xml" value="0.27440633245382584" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_second2.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_second_list.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/cardviews.xml" value="0.1" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/category_form.xml" value="0.36614583333333334" />
@@ -53,7 +57,9 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/fruit_item.xml" value="0.25" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/image_chooser.xml" value="0.2598958333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_child.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_child_11.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_grid.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_group_11.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_linear.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_list_text_view.xml" value="0.14270833333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/item_parent.xml" value="0.36614583333333334" />
@@ -78,6 +84,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_parent.xml" value="0.2046875" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_phone.xml" value="0.33" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/united_pay_dialog.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/view_empty_status.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/viewpager_fragment1.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/viewpager_fragment2.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/viewpager_fragment3.xml" value="0.36614583333333334" />
