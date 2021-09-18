@@ -1,4 +1,4 @@
-package com.example.knowledge_android.recyclerview5;
+package com.example.knowledge_android.number_image_view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.example.knowledge_android.R;
 
 @SuppressLint("AppCompatCustomView")
 public class NumImageView extends ImageView {

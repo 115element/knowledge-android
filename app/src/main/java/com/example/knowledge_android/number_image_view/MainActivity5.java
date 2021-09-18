@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity5;
+package com.example.knowledge_android.number_image_view;
 
 import android.os.Bundle;
 
@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.recyclerview5.NumImageView;
+import com.example.knowledge_android.number_image_view.NumImageView;
 
 public class MainActivity5 extends AppCompatActivity {
 

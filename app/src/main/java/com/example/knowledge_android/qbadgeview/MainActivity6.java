@@ -1,4 +1,4 @@
-package com.example.knowledge_android.activity6;
+package com.example.knowledge_android.qbadgeview;
 
 import android.os.Bundle;
 import android.widget.Button;

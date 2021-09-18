@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.example.knowledge_android.recyclerview5.NumImageView
+    <com.example.knowledge_android.number_image_view.NumImageView
         android:id="@+id/actionbar_btn"
         android:layout_width="100dp"
         android:layout_height="100dp"
