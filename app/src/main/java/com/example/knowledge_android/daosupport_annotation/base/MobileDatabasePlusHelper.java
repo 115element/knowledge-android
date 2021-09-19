@@ -1,15 +1,14 @@
-package com.example.knowledge_android.daosupport.base;
+package com.example.knowledge_android.daosupport_annotation.base;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.knowledge_android.OneApplication;
-import com.example.knowledge_android.daosupport.MasterDatabaseHelper;
-import com.example.knowledge_android.daosupport.TransDatabaseHelper;
-import com.example.knowledge_android.daosupport.beanconfig.TableList;
+import com.example.knowledge_android.daosupport_annotation.MasterDatabasePlusHelper;
+import com.example.knowledge_android.daosupport_annotation.TransDatabasePlusHelper;
+import com.example.knowledge_android.daosupport_annotation.tablelistplus.TableListPlus;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.support.ConnectionSource;
-import com.j256.ormlite.table.DatabaseTableConfig;
 import com.j256.ormlite.table.TableUtils;
 
 
@@ -18,23 +17,23 @@ import java.sql.SQLException;
 /**
  * MobileDatabaseHelper.
  *
- * @author Bruce on 2018/06/04.
+ * @author Alex on 2021/09/19.
  */
-public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDatabaseHelper {
+public class MobileDatabasePlusHelper extends AbstractPlusDatabaseHelper implements IDatabasePlusHelper {
 
     OneApplication application;
 
     //数据库1
-    MasterDatabaseHelper masterDatabaseHelper;
+    MasterDatabasePlusHelper masterDatabasePlusHelper;
     //数据库2
-    TransDatabaseHelper transDatabaseHelper;
+    TransDatabasePlusHelper transDatabasePlusHelper;
 
     //数据库1的连接
     ConnectionSource masterConnection;
     //数据库2的连接
     ConnectionSource tranConnection;
 
-    public MobileDatabaseHelper(OneApplication application) {
+    public MobileDatabasePlusHelper(OneApplication application) {
         this.application = application;
         initConnectionSource();
     }
@@ -58,17 +57,17 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
         try {
             SQLiteDatabase db;
             if (masterConnection == null) {
-                masterDatabaseHelper = getMasterDatabaseHelper();
-                db = masterDatabaseHelper.getReadableDatabase();
+                masterDatabasePlusHelper = getMasterDatabasePlusHelper();
+                db = masterDatabasePlusHelper.getReadableDatabase();
                 db.close();
-                this.masterConnection = masterDatabaseHelper.getConnectionSource();
+                this.masterConnection = masterDatabasePlusHelper.getConnectionSource();
             }
 
-            if (transDatabaseHelper == null) {
-                transDatabaseHelper = getTransDatabaseHelper();
-                db = transDatabaseHelper.getWritableDatabase();
+            if (transDatabasePlusHelper == null) {
+                transDatabasePlusHelper = getTransDatabasePlusHelper();
+                db = transDatabasePlusHelper.getWritableDatabase();
                 db.close();
-                this.tranConnection = transDatabaseHelper.getConnectionSource();
+                this.tranConnection = transDatabasePlusHelper.getConnectionSource();
             }
         } catch (Exception ex) {
             Log.e("1", "2", ex);
@@ -85,9 +84,9 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
         if (onlyMaster) {
             try {
                 if (masterConnection != null) {
-                    masterDatabaseHelper.close();
+                    masterDatabasePlusHelper.close();
                     masterConnection = null;
-                    masterDatabaseHelper = null;
+                    masterDatabasePlusHelper = null;
                 }
             } catch (Exception e) {
                 Log.e("D", "仅仅关闭Master库连接", e);
@@ -95,14 +94,14 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
         } else {
             try {
                 if (masterConnection != null) {
-                    masterDatabaseHelper.close();
+                    masterDatabasePlusHelper.close();
                     masterConnection = null;
-                    masterDatabaseHelper = null;
+                    masterDatabasePlusHelper = null;
                 }
                 if (tranConnection != null) {
-                    transDatabaseHelper.close();
+                    transDatabasePlusHelper.close();
                     tranConnection = null;
-                    transDatabaseHelper = null;
+                    transDatabasePlusHelper = null;
                 }
             } catch (Exception e) {
                 Log.e("E", "关闭Master库连接和关闭Tran库连接", e);
@@ -124,17 +123,16 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
     @Override
     public void createTablesIfNotExists(Class clazz) {
         ConnectionSource db = null;
-        if (TableList.getMasterTables().contains(clazz)) {
+        if (TableListPlus.getMasterTables().contains(clazz)) {
             db = masterConnection;
         }
-        if (TableList.getTranTables().contains(clazz)) {
+        if (TableListPlus.getTranTables().contains(clazz)) {
             db = tranConnection;
         }
 
-        DatabaseTableConfig tableConfig = TableList.getTableConfigMap().get(clazz);
-        if (db != null && tableConfig != null) {
+        if (db != null) {
             try {
-                TableUtils.createTableIfNotExists(db, tableConfig);
+                TableUtils.createTableIfNotExists(db, clazz);
             } catch (SQLException e) {
                 Log.getStackTraceString(e);
             }
@@ -143,10 +141,9 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
 
     @Override
     public void createTablesIfNotExists(Class clazz, ConnectionSource db) {
-        DatabaseTableConfig tableConfig = TableList.getTableConfigMap().get(clazz);
-        if (db != null && tableConfig != null) {
+        if (db != null) {
             try {
-                TableUtils.createTableIfNotExists(db, tableConfig);
+                TableUtils.createTableIfNotExists(db, clazz);
             } catch (SQLException e) {
                 Log.getStackTraceString(e);
             }
@@ -155,31 +152,31 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
 
     @Override
     public ConnectionSource getConnectionSource(Class clazz) {
-        if (TableList.getMasterTables().contains(clazz)) {
+        if (TableListPlus.getMasterTables().contains(clazz)) {
             return masterConnection;
         }
-        if (TableList.getTranTables().contains(clazz)) {
+        if (TableListPlus.getTranTables().contains(clazz)) {
             return tranConnection;
         }
         return null;
     }
 
-    public MasterDatabaseHelper getMasterDatabaseHelper() {
-        if (masterDatabaseHelper == null) {
-            masterDatabaseHelper = OpenHelperManager.getHelper(application, MasterDatabaseHelper.class);
-            masterDatabaseHelper.loadDefaults();
+    public MasterDatabasePlusHelper getMasterDatabasePlusHelper() {
+        if (masterDatabasePlusHelper == null) {
+            masterDatabasePlusHelper = OpenHelperManager.getHelper(application, MasterDatabasePlusHelper.class);
+            masterDatabasePlusHelper.loadDefaults();
         }
-        return masterDatabaseHelper;
+        return masterDatabasePlusHelper;
     }
 
-    public TransDatabaseHelper getTransDatabaseHelper() {
-        if (transDatabaseHelper == null) {
+    public TransDatabasePlusHelper getTransDatabasePlusHelper() {
+        if (transDatabasePlusHelper == null) {
             //TODO Ormlite使用多个数据库时，不能使用下面这行代码，因为先创建的MasterDatabaseHelper，已经设置了Class为MasterDatabaseHelper.class,这里继续设置Class会出错
-            //transDatabaseHelper = OpenHelperManager.getHelper(application, TransDatabaseHelper.class);
-            transDatabaseHelper = new TransDatabaseHelper(application);
-            transDatabaseHelper.loadDefaults();
+            //transDatabaseHelper = OpenHelperManager.getHelper(application, TransDatabasePlusHelper.class);
+            transDatabasePlusHelper = new TransDatabasePlusHelper(application);
+            transDatabasePlusHelper.loadDefaults();
         }
-        return transDatabaseHelper;
+        return transDatabasePlusHelper;
     }
 
     /**
@@ -188,7 +185,7 @@ public class MobileDatabaseHelper extends AbstractDatabaseHelper implements IDat
      */
     public void reloadMasterDatabaseHelper() {
         OpenHelperManager.releaseHelper();
-        masterDatabaseHelper = OpenHelperManager.getHelper(application, MasterDatabaseHelper.class);
-        masterDatabaseHelper.loadDefaults();
+        masterDatabasePlusHelper = OpenHelperManager.getHelper(application, MasterDatabasePlusHelper.class);
+        masterDatabasePlusHelper.loadDefaults();
     }
 }

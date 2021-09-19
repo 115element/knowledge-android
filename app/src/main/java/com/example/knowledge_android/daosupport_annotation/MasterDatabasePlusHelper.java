@@ -1,12 +1,13 @@
-package com.example.knowledge_android.daosupport;
+package com.example.knowledge_android.daosupport_annotation;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.knowledge_android.daosupport.bean.master.CashierDac;
-import com.example.knowledge_android.daosupport.bean.master.PluDac;
-import com.example.knowledge_android.daosupport.beanconfig.TableList;
+import com.example.knowledge_android.daosupport_annotation.bean.master.CashierPlus;
+import com.example.knowledge_android.daosupport_annotation.bean.master.PluPlus;
+import com.example.knowledge_android.daosupport_annotation.tablelistplus.TableListPlus;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -38,10 +39,10 @@ import java.util.List;
 
 // masterDatabaseHelper = OpenHelperManager.getHelper(application, MasterDatabaseHelper.class); 这一句代码触发这个类
 
-public class MasterDatabaseHelper extends OrmLiteSqliteOpenHelper {
+public class MasterDatabasePlusHelper extends OrmLiteSqliteOpenHelper {
 
-    private static final String TAG = "MasterDatabaseHelper";
-    private static final String DATABASE_NAME = "master";
+    private static final String TAG = "MasterDatabasePlusHelper";
+    private static final String DATABASE_NAME = "master_plus";
     private static final int DATABASE_VERSION = 2019021802;
 
 
@@ -52,25 +53,26 @@ public class MasterDatabaseHelper extends OrmLiteSqliteOpenHelper {
      * factory： 游标实例，多数时候设置成NULL。
      * databaseVersion：数据库版本，当数据库版本升高时，会调用onUpgrade（）方法。
      */
-    public MasterDatabaseHelper(Context context) {
+    public MasterDatabasePlusHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
         try {
-            for (Class clazz : TableList.getMasterTables()) {
-                TableUtils.createTableIfNotExists(connectionSource, TableList.getTableConfigMap().get(clazz));
+            for (Class clazz : TableListPlus.getMasterTables()) {
+                TableUtils.createTableIfNotExists(connectionSource, clazz);
             }
             Log.i(TAG, "Master tables were created.");
         } catch (Exception e) {
-            Log.e(TAG, "Cannot create database master.", e);
+            Log.e(TAG, "Cannot create database master_plus.", e);
         }
         try {
-            Dao dao = DaoManager.createDao(connectionSource, TableList.getTableConfigMap().get(CashierDac.class));
+            Dao dao = DaoManager.createDao(connectionSource, CashierPlus.class);
             List list = dao.queryForAll();
             if (list == null || list.size() == 0) {
-                CashierDac cashierDac = new CashierDac();
+                CashierPlus cashierDac = new CashierPlus();
                 cashierDac.setCashierNo("1111");
                 cashierDac.setVersion(new Date());
                 cashierDac.setCustId("222");
@@ -83,18 +85,15 @@ public class MasterDatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
 
         try {
-            Dao dao = DaoManager.createDao(connectionSource, TableList.getTableConfigMap().get(PluDac.class));
+            Dao dao = DaoManager.createDao(connectionSource, PluPlus.class);
             List list = dao.queryForAll();
             if (list == null || list.size() == 0) {
-                PluDac pluDac = new PluDac();
+                PluPlus pluDac = new PluPlus();
                 pluDac.setCustId("fff");
                 pluDac.setStoreId("ggg");
-                pluDac.setPluNo("11111");
-                pluDac.setPluName("ffff");
                 pluDac.setPluPrice(BigDecimal.ONE);
                 pluDac.setBeginDate(new Date());
                 pluDac.setSiGroup(23);
-                pluDac.setPromotionPrice(1);
                 dao.create(pluDac);
                 Log.i(TAG, "PluDac表数据插入成功");
             }
@@ -106,51 +105,23 @@ public class MasterDatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, ConnectionSource connectionSource,
                           int oldVersion, int newVersion) {
-
+        //当版本号发生变化，系统自动调用该方法
         upgrade2019021801(connectionSource, oldVersion);
 
     }
 
+    @SuppressLint("LongLogTag")
     void upgrade2019021801(ConnectionSource conn, int oldVersion) {
         if (oldVersion < 2019021801) {
             Log.i(TAG, "执行数据库版本更新，例如更新表结构操作，放在这里。。");
-//            try {
-//                def dao = DaoManager.createDao(conn, hyi.cream.busi.dao.lawson.TableList.tableConfigMap[Plu])
-//                log.info 'upgrade2019021801'
-////                dao.executeRaw("alter table plu add verificationMode varchar(1)")
-//                updatePosDBVersion(conn, oldVersion as String)
-//            } catch (Exception ex) {
-//                log.error('', ex)
-//            }
         }
     }
 
-    void updatePosDBVersion(ConnectionSource conn, String version) {
-//        def dao = DaoManager.createDao(conn, hyi.cream.busi.dao.lawson.TableList.tableConfigMap[Property])
-//        dao.createOrUpdate(new Property(name: 'PosMasterDBVersion', value: version))
-    }
-
+    @SuppressLint("LongLogTag")
     public void loadDefaults() {
         Log.i(TAG, "loadDefaults啥也没做。。");
     }
 
-//    private static final String DEFULT_MENU_ID = '1,2,3,11'
-//    private static final String MENU_ROLE_TYPE = '10'
-//    private static final String CATEGORY_ROLE_TYPE = '20'
-//    private static final String COLUMN_VALUE_SEPARATOR = '¦' // Pipe, Broken vertical bar
-//    private Context mContext
-
-//    static String getTableName(Class entityClass) {
-//        try {
-//            Annotation annotation = entityClass.getAnnotation(DatabaseTable.class)
-//            if (annotation != null && annotation instanceof DatabaseTable)
-//                return ((DatabaseTable) annotation).tableName()
-//        } catch (Exception e) {
-//            e.printStackTrace()
-//        }
-//        return ""
-//    }
-//
 
 //    /**
 //     * Download master.db from server and overwrite the database file.

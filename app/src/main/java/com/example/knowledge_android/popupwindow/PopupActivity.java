@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.daosupport.bean.tran.TranHead;
-import com.example.knowledge_android.daosupport.daohelp.DaoLocator;
-import com.example.knowledge_android.daosupport.bean.master.PluDac;
-import com.example.knowledge_android.daosupport.beandao.master.PluDao;
+import com.example.knowledge_android.daosupport_annotation.bean.master.PluPlus;
+import com.example.knowledge_android.daosupport_annotation.bean.tran.TranHeadPlus;
+import com.example.knowledge_android.daosupport_annotation.beandao.master.PluPlusDao;
+import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class PopupActivity extends Activity implements CustomPopupWindow.OnItemClickListener {
@@ -36,21 +37,22 @@ public class PopupActivity extends Activity implements CustomPopupWindow.OnItemC
     }
 
     @Override
-    public void setOnItemClick(View v) {
+    public void setOnItemClick(View v) throws SQLException {
         // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.id_btn_take_photo:
-                PluDao pluDao = DaoLocator.pluDao;
-                List<PluDac> pluDacs = pluDao.queryAll();
+                PluPlusDao pluDao = DaoLocatorPlus.pluDao;
+                List<PluPlus> pluDacs = pluDao.queryAll();
                 Toast.makeText(getApplicationContext(), pluDacs.toString(), Toast.LENGTH_LONG).show();
                 //Toast.makeText(getApplicationContext(), "拍照", Toast.LENGTH_LONG).show();
                 break;
             case R.id.id_btn_select:
-                TranHead query = DaoLocator.tranHeadDao.query();
+                TranHeadPlus query = DaoLocatorPlus.tranHeadDao.query();
                 Toast.makeText(getApplicationContext(), query.toString(), Toast.LENGTH_LONG).show();
                 //Toast.makeText(getApplicationContext(), "从相册中选择", Toast.LENGTH_LONG).show();
                 break;
             case R.id.id_btn_cancelo:
+                DaoLocatorPlus.tranHeadDao.testTransaction();
                 mPop.dismiss();
                 break;
         }

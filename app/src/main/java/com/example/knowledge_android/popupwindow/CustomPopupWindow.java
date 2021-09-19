@@ -12,6 +12,8 @@ import android.widget.PopupWindow;
 
 import com.example.knowledge_android.R;
 
+import java.sql.SQLException;
+
 public class CustomPopupWindow extends PopupWindow implements View.OnClickListener {
 
     private Button btnTakePhoto, btnSelect, btnCancel;
@@ -77,7 +79,7 @@ public class CustomPopupWindow extends PopupWindow implements View.OnClickListen
      * 定义一个接口，公布出去 在Activity中操作按钮的单击事件
      */
     public interface OnItemClickListener {
-        void setOnItemClick(View v);
+        void setOnItemClick(View v) throws SQLException;
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -88,7 +90,11 @@ public class CustomPopupWindow extends PopupWindow implements View.OnClickListen
     public void onClick(View v) {
         // TODO Auto-generated method stub
         if (mListener != null) {
-            mListener.setOnItemClick(v);
+            try {
+                mListener.setOnItemClick(v);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         }
     }
 

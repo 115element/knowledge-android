@@ -8,6 +8,9 @@ import androidx.multidex.MultiDexApplication;
 import com.example.knowledge_android.daosupport.daohelp.DaoLocator;
 import com.example.knowledge_android.daosupport.base.IDatabaseHelper;
 import com.example.knowledge_android.daosupport.base.MobileDatabaseHelper;
+import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
+import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
+import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -47,7 +50,7 @@ public class OneApplication extends MultiDexApplication {
      * MasterDatabaseHelper
      * TransDatabaseHelper
      **/
-    private IDatabaseHelper mobileDatabaseHelper;
+    private IDatabasePlusHelper iDatabasePlusHelper;
 
     @Override
     public void onCreate() {
@@ -74,8 +77,8 @@ public class OneApplication extends MultiDexApplication {
 
 
     public void openDataBase(){
-        mobileDatabaseHelper = new MobileDatabaseHelper(this);
-        DaoLocator.build(mobileDatabaseHelper);
+        iDatabasePlusHelper = new MobileDatabasePlusHelper(this);
+        DaoLocatorPlus.build(iDatabasePlusHelper);
     }
 
 

@@ -1,10 +1,10 @@
-package com.example.knowledge_android.daosupport.beandao.tran;
+package com.example.knowledge_android.daosupport_annotation.beandao.tran;
 
 import android.util.Log;
 
-import com.example.knowledge_android.daosupport.base.IDatabaseHelper;
-import com.example.knowledge_android.daosupport.bean.tran.TranDetail;
-import com.example.knowledge_android.daosupport.bean.tran.TranHead;
+import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
+import com.example.knowledge_android.daosupport_annotation.bean.tran.TranDetailPlus;
+import com.example.knowledge_android.daosupport_annotation.bean.tran.TranHeadPlus;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.misc.TransactionManager;
 
@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.Callable;
 
-public class TranHeadDao {
+public class TranHeadPlusDao {
 
-    public IDatabaseHelper iDatabaseHelper;
+    public IDatabasePlusHelper iDatabaseHelper;
 
-    public TranHeadDao(IDatabaseHelper iDatabaseHelper) {
+    public TranHeadPlusDao(IDatabasePlusHelper iDatabaseHelper) {
         this.iDatabaseHelper = iDatabaseHelper;
     }
 
@@ -56,28 +56,27 @@ public class TranHeadDao {
         TransactionManager.callInTransaction(iDatabaseHelper.getTranConnection(), new Callable<Boolean>() {
             @Override
             public Boolean call() throws Exception {
-                Dao<TranHead, ?> tranHeadDao = iDatabaseHelper.getDao(TranHead.class);
-                Dao<TranDetail, ?> tranDetailDao = iDatabaseHelper.getDao(TranDetail.class);
+                Dao<TranHeadPlus, ?> tranHeadDao = iDatabaseHelper.getDao(TranHeadPlus.class);
+                Dao<TranDetailPlus, ?> tranDetailDao = iDatabaseHelper.getDao(TranDetailPlus.class);
 
                 Random random = new Random(10000);
                 int i = random.nextInt();
                 String s = String.valueOf(i);
 
-                TranHead tranHead = new TranHead();
-                tranHead.setCustId(s);
-                tranHead.setStoreId(s);
-                tranHead.setDealType1(s);
-                tranHead.setTransactionNumber(i);
-                tranHead.setPosNo(i);
-                int i1 = tranHeadDao.create(tranHead);
-                TranDetail tranDetail = new TranDetail();
-                tranDetail.setItemSeq(i);
-                tranDetail.setSystemDate(new Date());
-                tranDetail.setCustId(s);
-                tranDetail.setPosNo(i);
-                tranDetail.setStoreId(s);
-                tranDetail.setTransactionNumber(i);
-                int i2 = tranDetailDao.create(tranDetail);
+                TranHeadPlus tranHeadPlus = new TranHeadPlus();
+                tranHeadPlus.setCustId(s);
+                tranHeadPlus.setStoreId(s);
+                tranHeadPlus.setTransactionNumber(i);
+                tranHeadPlus.setPosNo(i);
+                int i1 = tranHeadDao.create(tranHeadPlus);
+
+                TranDetailPlus tranDetailPlus = new TranDetailPlus();
+                tranDetailPlus.setSystemDate(new Date());
+                tranDetailPlus.setCustId(s);
+                tranDetailPlus.setPosNo(i);
+                tranDetailPlus.setStoreId(s);
+                tranDetailPlus.setTransactionNumber(i);
+                int i2 = tranDetailDao.create(tranDetailPlus);
 
                 //throw new RuntimeException("事务抛出异常");
 
@@ -94,23 +93,22 @@ public class TranHeadDao {
             int i = random.nextInt();
             String s = String.valueOf(i);
 
-            TranHead tranHead = new TranHead();
-            tranHead.setCustId(s);
-            tranHead.setStoreId(s);
-            tranHead.setDealType1(s);
-            tranHead.setTransactionNumber(i);
-            tranHead.setPosNo(i);
-            Dao<TranHead, ?> dao = iDatabaseHelper.getDao(TranHead.class);
-            dao.create(tranHead);
+            TranHeadPlus tranHeadPlus = new TranHeadPlus();
+            tranHeadPlus.setCustId(s);
+            tranHeadPlus.setStoreId(s);
+            tranHeadPlus.setTransactionNumber(i);
+            tranHeadPlus.setPosNo(i);
+            Dao<TranHeadPlus, ?> dao = iDatabaseHelper.getDao(TranHeadPlus.class);
+            dao.create(tranHeadPlus);
         } catch (SQLException throwables) {
-            Log.e("1", "1", throwables);
+            Log.e("1", "两个表事务成功提交", throwables);
         }
     }
 
-    public TranHead query() {
+    public TranHeadPlus query() {
         try {
-            Dao<TranHead, ?> dao = iDatabaseHelper.getDao(TranHead.class);
-            List<TranHead> tranHeads = dao.queryForAll();
+            Dao<TranHeadPlus, ?> dao = iDatabaseHelper.getDao(TranHeadPlus.class);
+            List<TranHeadPlus> tranHeads = dao.queryForAll();
             if (tranHeads != null && tranHeads.size() != 0) {
                 return tranHeads.get(0);
             }

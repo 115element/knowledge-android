@@ -1,11 +1,11 @@
-package com.example.knowledge_android.daosupport.base;
+package com.example.knowledge_android.daosupport_annotation.base;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 
 import java.sql.SQLException;
 
-public interface IDatabaseHelper {
+public interface IDatabasePlusHelper {
 
     void initConnectionSource();
 

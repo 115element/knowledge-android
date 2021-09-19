@@ -1,4 +1,4 @@
-package com.example.knowledge_android.daosupport;
+package com.example.knowledge_android.daosupport_annotation;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,7 +8,9 @@ import android.util.Log;
 import com.example.knowledge_android.OneApplication;
 import com.example.knowledge_android.daosupport.bean.tran.TranDetail;
 import com.example.knowledge_android.daosupport.bean.tran.TranHead;
-import com.example.knowledge_android.daosupport.beanconfig.TableList;
+import com.example.knowledge_android.daosupport_annotation.bean.tran.TranDetailPlus;
+import com.example.knowledge_android.daosupport_annotation.bean.tran.TranHeadPlus;
+import com.example.knowledge_android.daosupport_annotation.tablelistplus.TableListPlus;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -23,14 +25,14 @@ import java.util.List;
 /**
  * Database helper for trans.
  *
- * @author Bruce You
+ * @author Alex on 2021-09-19
  */
 
 // transDatabaseHelper = new TransDatabaseHelper(application); 这句代码触发该类创建
-public class TransDatabaseHelper extends OrmLiteSqliteOpenHelper {
+public class TransDatabasePlusHelper extends OrmLiteSqliteOpenHelper {
 
-    private static final String TAG = "TransDatabaseHelper";
-    private static final String DATABASE_NAME = "trans";
+    private static final String TAG = "TransDatabasePlusHelper";
+    private static final String DATABASE_NAME = "trans_plus";
     private static final int DATABASE_VERSION = 2021010801;
 
     private OneApplication application;
@@ -44,7 +46,7 @@ public class TransDatabaseHelper extends OrmLiteSqliteOpenHelper {
      * factory： 游标实例，多数时候设置成NULL。
      * databaseVersion：数据库版本，当数据库版本升高时，会调用onUpgrade（）方法。
      */
-    public TransDatabaseHelper(Context context) {
+    public TransDatabasePlusHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.mContext = context;
         this.application = (OneApplication) context.getApplicationContext();
@@ -53,22 +55,21 @@ public class TransDatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
         try {
-            for (Class clazz : TableList.getTranTables()) {
-                TableUtils.createTableIfNotExists(connectionSource, TableList.getTableConfigMap().get(clazz));
+            for (Class clazz : TableListPlus.getTranTables()) {
+                TableUtils.createTableIfNotExists(connectionSource, clazz);
             }
-            Log.i(TAG, "Master tables were created.");
+            Log.i(TAG, "Tran tables were created.");
         } catch (Exception e) {
-            Log.e(TAG, "Cannot create database master.", e);
+            Log.e(TAG, "Cannot create database tran_plus.", e);
         }
 
         try {
-            Dao dao = DaoManager.createDao(connectionSource, TableList.getTableConfigMap().get(TranHead.class));
+            Dao dao = DaoManager.createDao(connectionSource, TranHeadPlus.class);
             List list = dao.queryForAll();
             if (list == null || list.size() == 0) {
-                TranHead tranHead = new TranHead();
+                TranHeadPlus tranHead = new TranHeadPlus();
                 tranHead.setCustId("111");
                 tranHead.setStoreId("2099");
-                tranHead.setDealType1("101");
                 tranHead.setTransactionNumber(1000);
                 tranHead.setPosNo(100);
                 dao.create(tranHead);
@@ -79,11 +80,10 @@ public class TransDatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
 
         try {
-            Dao dao = DaoManager.createDao(connectionSource, TableList.getTableConfigMap().get(TranDetail.class));
+            Dao dao = DaoManager.createDao(connectionSource, TranDetailPlus.class);
             List list = dao.queryForAll();
             if (list == null || list.size() == 0) {
-                TranDetail tranDetail = new TranDetail();
-                tranDetail.setItemSeq(111);
+                TranDetailPlus tranDetail = new TranDetailPlus();
                 tranDetail.setSystemDate(new Date());
                 tranDetail.setCustId("111");
                 tranDetail.setPosNo(111);

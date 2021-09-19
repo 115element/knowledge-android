@@ -10,6 +10,7 @@ import com.j256.ormlite.dao.Dao;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class TranDetailDao {
     public IDatabaseHelper iDatabaseHelper;
@@ -20,13 +21,17 @@ public class TranDetailDao {
 
     public void insert() {
         try {
+            Random random = new Random(10000);
+            int i = random.nextInt();
+            String s = String.valueOf(i);
+
             TranDetail tranDetail = new TranDetail();
-            tranDetail.setItemSeq(111);
+            tranDetail.setItemSeq(i);
             tranDetail.setSystemDate(new Date());
-            tranDetail.setCustId("111");
-            tranDetail.setPosNo(111);
-            tranDetail.setStoreId("123");
-            tranDetail.setTransactionNumber(111);
+            tranDetail.setCustId(s);
+            tranDetail.setPosNo(i);
+            tranDetail.setStoreId(s);
+            tranDetail.setTransactionNumber(i);
             Dao<TranDetail, ?> dao = iDatabaseHelper.getDao(TranDetail.class);
             dao.create(tranDetail);
         } catch (SQLException throwables) {
