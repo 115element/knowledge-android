@@ -3,3 +3,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+
+   <!--
+   FrameLayout与Fragment标签都是用来放Fragment的，区别是，
+   Fragment标签只能设置固定的Fragment，而FrameLayout中可以通过FragmentManager更换Fragment
+
+1、静态使用：自定义类，继承Fragment,在xml中使用<fragment></fragment>当成一般控件使用
+2、动态使用：在xml中使用<FrameLayout></FrameLayout>，然后在Activity中根据不同的逻辑调用如下方法完成切换
+
+因此，FrameLayout为您提供了比使用fragment标签更强大的功能.
+FragmentTransaction：调用事务的常用方法有：add() hide() show() replace()等
+   -->

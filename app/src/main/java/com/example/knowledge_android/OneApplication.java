@@ -11,6 +11,7 @@ import androidx.multidex.MultiDexApplication;
 import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
+import com.example.knowledge_android.drawscreen.PosScreen;
 import com.example.knowledge_android.msetting.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;
 
@@ -39,10 +40,8 @@ public class OneApplication extends MultiDexApplication {
 
     private MSharedPreferences mSettings;
 
-    public Typeface getUserFont() {
-        this.mUserFont = Typeface.createFromAsset(getResources().getAssets(), USER_FONT);
-        return mUserFont;
-    }
+    private PosScreen posScreen;
+
 
     //定时任务工具类
     private ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
@@ -133,5 +132,18 @@ public class OneApplication extends MultiDexApplication {
             public void onActivityDestroyed(Activity activity) {
             }
         });
+    }
+
+    public Typeface getUserFont() {
+        this.mUserFont = Typeface.createFromAsset(getResources().getAssets(), USER_FONT);
+        return mUserFont;
+    }
+
+    public PosScreen getPosScreen() {
+        return posScreen;
+    }
+
+    public void setPosScreen(PosScreen posScreen) {
+        this.posScreen = posScreen;
     }
 }

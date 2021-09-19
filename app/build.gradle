@@ -82,7 +82,7 @@ dependencies {
     //gradle7.0之后，需要在settings.gradle中配置： maven {url "https://jitpack.io"}
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
 
-    //@OnUiThread注解，运行代码在UI线程
+    //@OnUiThread注解，运行代码在UI线程 、@OnBackground运行在非UI线程
     implementation 'com.arasthel:swissknife:1.3.3'
 
     //RoundImageView
