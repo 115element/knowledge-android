@@ -5,12 +5,10 @@ import android.util.Log;
 
 import androidx.multidex.MultiDexApplication;
 
-import com.example.knowledge_android.daosupport.daohelp.DaoLocator;
-import com.example.knowledge_android.daosupport.base.IDatabaseHelper;
-import com.example.knowledge_android.daosupport.base.MobileDatabaseHelper;
 import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
+import com.example.knowledge_android.statemachine.StateMachine;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -69,6 +67,8 @@ public class OneApplication extends MultiDexApplication {
 
         //启用定时任务
         scheduleGetDate();
+
+        new StateMachine().start();
     }
 
     public static OneApplication getInstance() {
@@ -85,10 +85,10 @@ public class OneApplication extends MultiDexApplication {
     void scheduleGetDate() {
         scheduledExecutor.scheduleWithFixedDelay(() -> {
             try {
-                Log.i("TAG","定时任务执行");
+                Log.i("TAG","alex is the best");
             } catch (Exception ex) {
                 Log.e("TAG","scheduleGetDate", ex);
             }
-        }, 0, 10, TimeUnit.SECONDS);
+        }, 0, 5, TimeUnit.MINUTES);
     }
 }
