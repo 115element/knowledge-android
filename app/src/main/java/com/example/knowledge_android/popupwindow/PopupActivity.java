@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.knowledge_android.R;
+import com.example.knowledge_android.daosupport.bean.tran.TranHead;
+import com.example.knowledge_android.daosupport.daohelp.DaoLocator;
+import com.example.knowledge_android.daosupport.bean.master.PluDac;
+import com.example.knowledge_android.daosupport.beandao.master.PluDao;
+
+import java.util.List;
 
 public class PopupActivity extends Activity implements CustomPopupWindow.OnItemClickListener {
 
@@ -34,10 +40,15 @@ public class PopupActivity extends Activity implements CustomPopupWindow.OnItemC
         // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.id_btn_take_photo:
-                Toast.makeText(getApplicationContext(), "拍照", Toast.LENGTH_LONG).show();
+                PluDao pluDao = DaoLocator.pluDao;
+                List<PluDac> pluDacs = pluDao.queryAll();
+                Toast.makeText(getApplicationContext(), pluDacs.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "拍照", Toast.LENGTH_LONG).show();
                 break;
             case R.id.id_btn_select:
-                Toast.makeText(getApplicationContext(), "从相册中选择", Toast.LENGTH_LONG).show();
+                TranHead query = DaoLocator.tranHeadDao.query();
+                Toast.makeText(getApplicationContext(), query.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "从相册中选择", Toast.LENGTH_LONG).show();
                 break;
             case R.id.id_btn_cancelo:
                 mPop.dismiss();

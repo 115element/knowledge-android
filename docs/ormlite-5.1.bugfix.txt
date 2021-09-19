@@ -1,0 +1,24 @@
+andriod下ormlite在事务嵌套上有bug
+libs/ormlite-core-5.1.fix.jar是打过补丁的jar
+
+等ormlite发布5.2时可以删掉libs下的ormlite的2个jar文件,使用官方提供的jar
+
+com.j256.ormlite.misc.TransactionManager
+
+bug版本
+				levelCount.incrementAndGet();
+				T result = callable.call();
+				if (hasSavePoint) {
+					// only commit if we have reached the end of our transaction stack
+					if (levelCount.decrementAndGet() <= 0) {
+
+fix版本
+                levelCount.incrementAndGet();
+                T result = callable.call();
+                int level = levelCount.decrementAndGet(); //重点
+                if (level <= 0) {
+                    transactionLevelThreadLocal.remove();
+                    levelCount = null;
+                }
+
+                if (hasSavePoint) {

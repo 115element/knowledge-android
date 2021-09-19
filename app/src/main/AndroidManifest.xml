@@ -40,7 +40,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的控件效果-->
         <activity
-            android:name=".linkagelistview.MainActivity"
+            android:name=".popupwindow.PopupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,6 +5,14 @@ import android.util.Log;
 
 import androidx.multidex.MultiDexApplication;
 
+import com.example.knowledge_android.daosupport.daohelp.DaoLocator;
+import com.example.knowledge_android.daosupport.base.IDatabaseHelper;
+import com.example.knowledge_android.daosupport.base.MobileDatabaseHelper;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 
 /**
  * 当android程序启动时系统会创建一个 application对象，用来存储系统的一些信息。通常我们是不需要指定一个Application的，
@@ -29,6 +37,18 @@ public class OneApplication extends MultiDexApplication {
         return mUserFont;
     }
 
+    //定时任务工具类
+    private ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
+
+    /**
+     * 数据工具类
+     * <p>
+     * 包含：主档库,交易库:
+     * MasterDatabaseHelper
+     * TransDatabaseHelper
+     **/
+    private IDatabaseHelper mobileDatabaseHelper;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -39,9 +59,33 @@ public class OneApplication extends MultiDexApplication {
 
         String property = System.getProperty("java.library.path");
         Log.i("TAG", "路径：" + property);
+
+        Log.i("TAG","开始打开数据");
+        openDataBase();
+        Log.i("TAG","完毕打开数据");
+
+        //启用定时任务
+        scheduleGetDate();
     }
 
     public static OneApplication getInstance() {
         return instance;
+    }
+
+
+    public void openDataBase(){
+        mobileDatabaseHelper = new MobileDatabaseHelper(this);
+        DaoLocator.build(mobileDatabaseHelper);
+    }
+
+
+    void scheduleGetDate() {
+        scheduledExecutor.scheduleWithFixedDelay(() -> {
+            try {
+                Log.i("TAG","定时任务执行");
+            } catch (Exception ex) {
+                Log.e("TAG","scheduleGetDate", ex);
+            }
+        }, 0, 10, TimeUnit.SECONDS);
     }
 }
