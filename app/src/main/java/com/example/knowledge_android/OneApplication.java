@@ -12,7 +12,7 @@ import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHel
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
 import com.example.knowledge_android.drawscreen.PosScreen;
-import com.example.knowledge_android.msetting.MSharedPreferences;
+import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;
 
 import java.util.concurrent.Executors;

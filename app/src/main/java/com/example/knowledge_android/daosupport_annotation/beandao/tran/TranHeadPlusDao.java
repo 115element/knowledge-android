@@ -6,9 +6,13 @@ import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHel
 import com.example.knowledge_android.daosupport_annotation.bean.tran.TranDetailPlus;
 import com.example.knowledge_android.daosupport_annotation.bean.tran.TranHeadPlus;
 import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.dao.GenericRawResults;
 import com.j256.ormlite.misc.TransactionManager;
 
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -117,4 +121,260 @@ public class TranHeadPlusDao {
         }
         return null;
     }
+
+
+
+
+//    @Override
+//    public List<String[]> queryTradingFlow(String custId, String storeId, int posNo, Date date1, Date date2) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            SimpleDateFormat dft = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            Date date = new Date();
+//            Calendar calendar = Calendar.getInstance();
+//            calendar.setTime(date);
+//            calendar.set(Calendar.DATE, calendar.get(Calendar.DATE) - 1);
+//            Date beginDate = dft.parse(dft.format(calendar.getTime()));
+//            if (date1 != null && date2 != null) {
+//                beginDate = date1;
+//                date = date2;
+//            }
+//            //--> 交易流水包括,（000正常销售,*00作废交易,030被退交易,004退货销售,034全部退货,003交易取消）
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select transactionNumber, systemDate, zNumber, cashierNo, netSaleTotalAmount, (dealtype1 || dealtype2 || dealtype3)" +
+//                            " from tranhead where dealType2 in ('0', '3') and custId = ? and storeId = ?" +
+//                            " and posNo = ? and systemDate between ? and ? order by systemDate desc;"
+//                    , custId, storeId, String.valueOf(posNo), dft.format(beginDate), dft.format(date));
+//            return rawResults.getResults();
+//        } catch (Exception e) {
+//            log.error("queryTradingFlow", e);
+//            return null;
+//        }
+//    }
+//
+//    /**
+//     * 查询操作日志（日志查询）
+//     *
+//     * @param storeId
+//     * @param posNo
+//     * @param date1
+//     * @param date2
+//     * @return
+//     */
+//    @Override
+//    public List<String[]> queryOperationLog(String custId, String storeId, int posNo, Date date1, Date date2) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            SimpleDateFormat dft = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            Date date = new Date();
+//            Calendar calendar = Calendar.getInstance();
+//            calendar.setTime(date);
+//            calendar.set(Calendar.DATE, calendar.get(Calendar.DATE) - 1);
+//            Date beginDate = dft.parse(dft.format(calendar.getTime()));
+//            if (date1 != null && date2 != null) {
+//                beginDate = date1;
+//                date = date2;
+//            }
+//            //--> 操作日志(开班，交班，中间回收[投库]，开钱箱，盘点开始，盘点结束，报废退货，保留，0Q0商品报废 ，*Q0被退报废交易)
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select transactionNumber, systemDate, zNumber, cashierNo, netSaleTotalAmount, (dealtype1 || dealtype2 || dealtype3), saleAmount" +
+//                            " from tranhead where dealType2 in('8', '9', '6', '7', 'G', '2', 'P', 'T', '5', 'Q', 'L', 'M') and custId = ? and storeId = ?" +
+//                            " and posNo = ? and systemDate between ? and ? order by systemDate desc",
+//                    custId, storeId, String.valueOf(posNo), dft.format(beginDate), dft.format(date));
+//            return rawResults.getResults();
+//        } catch (Exception e) {
+//            log.error("", e);
+//            return null;
+//        }
+//    }
+//
+//    @Override
+//    public List<String[]> queryTransByShiftNumberAndZNumber(int shiftNumber, int zNumber) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select transactionNumber, (dealtype1 || dealtype2 || dealtype3) as sellway," +
+//                            " payNo1, payNo2, payNo3, payNo4, payAmount1, payAmount2, payAmount3, payAmount4, changeAmount, type" +
+//                            " from tranhead where shiftNumber = ? and zNumber = ? and" +
+//                            " ((dealtype1 || dealtype2 || dealtype3) = '000' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '004' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '030' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '0L0' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '0M4' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '*L0' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '034') order by transactionNumber",
+//                    String.valueOf(shiftNumber), String.valueOf(zNumber));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryTransByShiftNumberAndZNumber", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryExpenseOrCouponByShiftNumberAndZNumber(int shiftNumber, int zNumber) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select d.detailCode as type, d.pluNo as no, d.pluName as name, sum(d.afterAmount) as anmount, count(*) as count from trandetail d" +
+//                            " left join tranhead h on d.transactionNumber = h.transactionNumber" +
+//                            " where d.detailCode in ('N', 'T') and d.afterAmount > 0" +
+//                            " and h.shiftNumber = ? and h.zNumber = ? group by d.detailCode,d.pluNo,d.pluName" +
+//                            " union" +
+//                            " select 'C' as type,d.ticketId as no, d.payName as name, sum(d.ticketFaceValue) as amount, count(*) as count from coupondetail d" +
+//                            " left join tranhead h on d.transactionNumber = h.transactionNumber" +
+//                            " where  (((h.dealtype1 || h.dealtype2 || h.dealtype3) = '000' and h.type != '6') or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '004' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '030' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0M4' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '*L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '034') and" +
+//                            " d.payId = '003' and h.shiftNumber = ? and h.zNumber = ?" +
+//                            " group by d.ticketId,d.payName" +
+//                            " ",
+//                    String.valueOf(shiftNumber), String.valueOf(zNumber), String.valueOf(shiftNumber), String.valueOf(zNumber));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryExpenseByShiftNumberAndZNumber", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryTransByZNumber(int zNumber) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select transactionNumber, (dealtype1 || dealtype2 || dealtype3) as sellway," +
+//                            " payNo1, payNo2, payNo3, payNo4, payAmount1, payAmount2, payAmount3, payAmount4, changeAmount, type" +
+//                            " from tranhead where zNumber = ? and" +
+//                            " ((dealtype1 || dealtype2 || dealtype3) = '000' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '004' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '030' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '0L0' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '0M4' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '*L0' or" +
+//                            " (dealtype1 || dealtype2 || dealtype3) = '034') order by transactionNumber",
+//                    String.valueOf(zNumber));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryTransByZNumber", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryTransByZNumberForY(int zNumber) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select transactionNumber, (dealtype1 || dealtype2 || dealtype3) as sellway," +
+//                            " payNo1, payNo2, payNo3, payNo4, payAmount1, payAmount2, payAmount3, payAmount4, changeAmount," +
+//                            " grossSaleAmount, saleAmount, netSaleTotalAmount, mmDiscountAmount, overAmount, taxAmount," +
+//                            " roundDownAmount, daiShouAmount, daiShouAmount2, cashierNo, systemDate, type" +
+//                            " from tranhead where zNumber = ? order by transactionNumber",
+//                    String.valueOf(zNumber));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryTransByZNumberForY", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryExpenseOrCouponByZNumber(int zNumber) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select d.detailCode as type, d.pluNo as no, d.pluName as name, sum(d.afterAmount) as anmount, count(*) as count from trandetail d" +
+//                            " left join tranhead h on d.transactionNumber = h.transactionNumber" +
+//                            " where d.detailCode in ('N', 'T') and d.afterAmount > 0" +
+//                            " and h.zNumber = ? group by d.detailCode,d.pluNo,d.pluName" +
+//                            " union" +
+//                            " select 'C' as type,d.ticketId as no, d.payName as name, sum(d.ticketFaceValue) as amount, count(*) as count from coupondetail d" +
+//                            " left join tranhead h on d.transactionNumber = h.transactionNumber" +
+//                            " where  (((h.dealtype1 || h.dealtype2 || h.dealtype3) = '000' and h.type != '6') or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '004' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '030' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0M4' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '*L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '034') and" +
+//                            " d.payId = '003' and h.zNumber = ?" +
+//                            " group by d.ticketId,d.payName",
+//                    String.valueOf(zNumber), String.valueOf(zNumber));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryExpenseOrCouponByZNumber", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryDaiShowByZNumberForY(int beginTransactionNumber, int endTransactionNumber, int posNo) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranHead.class);
+//            GenericRawResults<String[]> rawResults = dao.queryRaw(
+//                    "select d.pluNo, sum(d.afterAmount) as amount, sum(qty) as count from trandetail d" +
+//                            " left join tranhead h on d.transactionNumber = h.transactionNumber and d.posNo = h.posNo" +
+//                            " where ((h.dealtype1 ||  h.dealtype2 || h.dealtype3) = '000' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '004' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '030' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0M4' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '*L0' or" +
+//                            " (h.dealtype1 || h.dealtype2 || h.dealtype3) = '034') and" +
+//                            " d.detailCode = 'I' and d.itemVoid = 0 and" +
+//                            " h.transactionNumber between ? and ? and h.posNo = ? group by d.pluNo",
+//                    String.valueOf(beginTransactionNumber), String.valueOf(endTransactionNumber), String.valueOf(posNo));
+//            if (rawResults != null) {
+//                return rawResults.getResults();
+//            }
+//        } catch (Exception e) {
+//            log.error("queryDaiShowByZNumber", e);
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public List<String[]> queryDetailTaxTypeByTranNo(int beginTransactionNumber, int endTransactionNumber, int posNo) {
+//        try {
+//            Dao dao = getDatabaseHelper().getDao(TranDetail.class);
+//            // 无法保证别的交易类型是否会填afteramount等字段
+//            GenericRawResults<String[]> rawResults = dao.queryRaw("select d.taxType,sum(d.taxAmount),sum(d.afterAmount)" +
+//                    " from trandetail d" +
+//                    " left join tranhead h on d.storeId = h.storeid and d.posNo = h.posNo and d.transactionNumber = h.transactionNumber" +
+//                    " where ((h.dealtype1 || h.dealtype2 || h.dealtype3) = '000'" +//正常交易
+//                    " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '004'" +//部分退剩余明细
+//                    " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '030'" +//退货原交易
+////                " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0L0'" +//预约下单交易
+////                " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '0M4'" +//预约退货交易
+////                " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '*L0'" +//预约退货原交易
+//                    " or (h.dealtype1 || h.dealtype2 || h.dealtype3) = '034')" +//退货交易
+//                    " and h.transactionNumber between ${beginTransactionNumber} and ${endTransactionNumber} and h.posNo = ${posNo}" +
+//                    " and d.detailCode not in ('O', 'I') and d.itemVoid != '1'" + //税率统计排除代收代售
+//                    " group by d.taxtype");
+//            return rawResults.getResults();
+//        } catch (Exception e) {
+//            log.error("", e);
+//        }
+//        return Collections.EMPTY_LIST;
+//    }
+
+
+
+
+
+
 }

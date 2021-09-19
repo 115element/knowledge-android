@@ -46,4 +46,41 @@ public class CashierPlusDao {
         return cashierDacs;
     }
 
+
+
+    //一些复杂查询用法
+//    GenericRawResults<String[]> rawResults = dao.queryRaw(
+//            "select transactionNumber, systemDate, zNumber, cashierNo, netSaleTotalAmount, (dealtype1 || dealtype2 || dealtype3)" +
+//                    " from tranhead where dealType2 in ('0', '3') and custId = ? and storeId = ?" +
+//                    " and posNo = ? and systemDate between ? and ? order by systemDate desc;"
+//            , custId, storeId, String.valueOf(posNo), dft.format(beginDate), dft.format(date));
+//            return rawResults.getResults();
+
+
+//--> 操作日志(开班，交班，中间回收[投库]，开钱箱，盘点开始，盘点结束，报废退货，保留，0Q0商品报废 ，*Q0被退报废交易)
+//    GenericRawResults<String[]> rawResults = dao.queryRaw(
+//            "select transactionNumber, systemDate, zNumber, cashierNo, netSaleTotalAmount, (dealtype1 || dealtype2 || dealtype3), saleAmount" +
+//                    " from tranhead where dealType2 in('8', '9', '6', '7', 'G', '2', 'P', 'T', '5', 'Q', 'L', 'M') and custId = ? and storeId = ?" +
+//                    " and posNo = ? and systemDate between ? and ? order by systemDate desc",
+//            custId, storeId, String.valueOf(posNo), dft.format(beginDate), dft.format(date));
+//            return rawResults.getResults();
+
+
+//    GenericRawResults<String[]> rawResults = dao.queryRaw(
+//            "select transactionNumber, (dealtype1 || dealtype2 || dealtype3) as sellway," +
+//                    " payNo1, payNo2, payNo3, payNo4, payAmount1, payAmount2, payAmount3, payAmount4, changeAmount, type" +
+//                    " from tranhead where shiftNumber = ? and zNumber = ? and" +
+//                    " ((dealtype1 || dealtype2 || dealtype3) = '000' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '004' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '030' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '0L0' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '0M4' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '*L0' or" +
+//                    " (dealtype1 || dealtype2 || dealtype3) = '034') order by transactionNumber",
+//            String.valueOf(shiftNumber), String.valueOf(zNumber));
+//            if (rawResults != null) {
+//        return rawResults.getResults();
+//    }
+
+
 }

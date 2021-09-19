@@ -1,4 +1,4 @@
-package com.example.knowledge_android.msetting;
+package com.example.knowledge_android.msharedpreferences;
 
 
 import android.content.Context;
