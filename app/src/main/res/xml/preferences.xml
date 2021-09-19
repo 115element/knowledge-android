@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+            android:key="@string/pref_key_server_ip_addr"
+            android:title="@string/pref_title_server_ip_addr"
+            android:inputType="number"
+            android:digits="0123456789."
+            android:textColorHint="@color/my_primary_text"
+            android:textColor="@color/my_primary_text"
+            android:defaultValue=""/>
+    <!--<EditTextPreference android:key="@string/pref_key_sntp_server"
+                        android:title="@string/pref_title_sntp_server"
+                        android:textColor="@android:color/black"
+                        android:defaultValue="asia.pool.ntp.org"/>-->
+    <EditTextPreference
+            android:key="@string/pref_key_store_id"
+            android:title="@string/pref_title_store_id"
+            android:textColorHint="@color/my_primary_text"
+            android:textColor="@color/my_primary_text"
+            android:defaultValue=""/>
+    <EditTextPreference
+            android:key="@string/pref_key_device_id"
+            android:title="@string/pref_title_device_id"
+            android:textColorHint="@color/my_primary_text"
+            android:textColor="@color/my_primary_text"
+            android:defaultValue=""/>
+    <!--<hyi.mobilepos.view.IntEditTextPreference-->
+    <!--android:key="@string/pref_key_current_transaction_number"-->
+    <!--android:title="@string/pref_title_current_transaction_number"-->
+    <!--android:inputType="number"-->
+    <!--android:defaultValue="1"-->
+    <!--/>-->
+    <!--<CheckBoxPreference android:key="@string/pref_key_lefthanded_mode"-->
+    <!--android:title="@string/pref_title_lefthanded_mode"-->
+    <!--android:defaultValue="false"/>-->
+    <!--<ListPreference     android:key="@string/pref_key_menu_style"-->
+    <!--android:title="@string/pref_title_menu_style"-->
+    <!--android:defaultValue="2"-->
+    <!--android:entries="@array/pref_menu_style_list"-->
+    <!--android:entryValues="@array/pref_menu_style_list_value"/>-->
+    <!--<CheckBoxPreference android:key="@string/pref_key_master_dl_enabled"-->
+    <!--android:title="@string/pref_title_master_dl_enabled"-->
+    <!--android:defaultValue="true"/>-->
+    <ListPreference android:key="@string/pref_key_business_type"
+                    android:title="@string/pref_title_business_type"
+                    android:defaultValue="3"
+                    android:entries="@array/pref_business_type_list"
+                    android:entryValues="@array/pref_business_type_list_value"/>
+    <ListPreference android:key="@string/pref_key_decimal_digits"
+                    android:title="@string/pref_title_decimal_digits"
+                    android:defaultValue="2"
+                    android:entries="@array/pref_decimal_digits_list"
+                    android:entryValues="@array/pref_decimal_digits_list_value"/>
+    <!--<ListPreference android:key="@string/pref_key_screen_orientation"
+                    android:title="@string/pref_title_screen_orientation"
+                    android:defaultValue="2"
+                    android:entries="@array/pref_screen_orientation_list"
+                    android:entryValues="@array/pref_screen_orientation_list_value"/>-->
+    <CheckBoxPreference android:key="@string/pref_key_show_item_image"
+                        android:title="@string/pref_title_show_item_image"
+                        android:defaultValue="false"/>
+    <CheckBoxPreference android:key="@string/pref_key_transaction_print"
+                        android:title="@string/pref_title_transaction_print"
+                        android:defaultValue="false"/>
+    <Preference android:key="@string/pref_key_download_master"
+                android:title="@string/pref_title_download_master"/>
+    <Preference android:key="@string/pref_key_reset_database"
+                android:title="@string/pref_title_reset_database"/>
+    <!-- <Preference         android:key="@string/pref_key_reboot_time"
+                         android:title="@string/pref_title_reboot_time"/>
+     <Preference         android:key="@string/pref_key_reboot"
+                         android:title="@string/pref_title_reboot"/>-->
+    <Preference android:key="@string/pref_key_system_exit"
+                android:title="@string/pref_title_system_exit"/>
+</PreferenceScreen>

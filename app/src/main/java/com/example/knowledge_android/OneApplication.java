@@ -1,6 +1,9 @@
 package com.example.knowledge_android;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.util.Log;
 
 import androidx.multidex.MultiDexApplication;
@@ -8,6 +11,7 @@ import androidx.multidex.MultiDexApplication;
 import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
+import com.example.knowledge_android.msetting.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;
 
 import java.util.concurrent.Executors;
@@ -32,6 +36,8 @@ public class OneApplication extends MultiDexApplication {
     public static final String USER_FONT = "fonts/Futura.ttc"; //"fonts/PTMono.ttc";
 
     private Typeface mUserFont;
+
+    private MSharedPreferences mSettings;
 
     public Typeface getUserFont() {
         this.mUserFont = Typeface.createFromAsset(getResources().getAssets(), USER_FONT);
@@ -58,6 +64,7 @@ public class OneApplication extends MultiDexApplication {
 
         Log.i("TAG", "应用程序加载。。。。");
 
+        mSettings = new MSharedPreferences(this);
         String property = System.getProperty("java.library.path");
         Log.i("TAG", "路径：" + property);
 
@@ -90,5 +97,41 @@ public class OneApplication extends MultiDexApplication {
                 Log.e("TAG","scheduleGetDate", ex);
             }
         }, 0, 5, TimeUnit.MINUTES);
+    }
+
+
+    private void setupScreenOrientation() {
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityCreated(Activity a, Bundle savedInstanceState) {
+                a.setRequestedOrientation(mSettings.isScreenOrientationLandscape() ?
+                        ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE :
+                        ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            }
+
+            @Override
+            public void onActivityStarted(Activity activity) {
+            }
+
+            @Override
+            public void onActivityResumed(Activity activity) {
+            }
+
+            @Override
+            public void onActivityPaused(Activity activity) {
+            }
+
+            @Override
+            public void onActivityStopped(Activity activity) {
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+            }
+
+            @Override
+            public void onActivityDestroyed(Activity activity) {
+            }
+        });
     }
 }
