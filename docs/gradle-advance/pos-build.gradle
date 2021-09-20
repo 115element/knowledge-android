@@ -1,0 +1,82 @@
+apply plugin: 'application'
+
+group 'hyi.posfx'
+
+archivesBaseName = 'pos-lawson'
+
+mainClassName = 'hyi.cream.PosApp'
+
+//task run(type: JavaExec) {
+//    main = 'hyi.posfx.lawson.HelloGroovyFX'
+//    classpath sourceSets.main.runtimeClasspath
+//}
+
+//将src文件夹中的资源文件同时打包
+processResources {
+    exclude "**/dishes/**"
+    exclude "**/menu/**"
+    exclude "**/numbers/**"
+    exclude "**/sample_data/**"
+    //exclude "**/table_schema/**"
+    //exclude "**/*.png"
+    //exclude "**/*.jpg"
+    from('src/main/groovy') {
+        include 'hyi/table_schema/**'
+        include 'hyi/cream/state/statechart.conf'
+    }
+}
+
+dependencies {
+    implementation project(':model')
+    implementation project(':common')
+    implementation project(':busi')
+    implementation project(':library')
+
+    //implementation('org.groovyfx:groovyfx:8.0.0') {
+    //    // Ref: http://blog.freeside.co/2014/06/24/gradle-and-groovys-invoke-dynamic-support/
+    //    exclude module: "groovy-all"
+    //}
+    //// JFoenix for Java 8
+    //implementation 'com.jfoenix:jfoenix:8.0.3'
+
+    // Mysql JDBC Driver
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+
+    // For CliBuilder
+    implementation group: 'commons-cli', name: 'commons-cli', version: '1.4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task makeJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Lawson POS from Hongyuan Software',
+                'Implementation-Version': '3.4.7',
+                'Main-Class': 'hyi.cream.PosApp'
+    }
+//    archivesBaseName = 'pos-lawson'
+    //打包所有引用的jar包
+//    from {
+//        configurations.compile.collect {
+//            it.isDirectory() ? it : zipTree(it)
+//        }
+//    }
+    with jar
+}
+
+task sourcesJar(type: Jar, dependsOn: jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allSource
+    exclude '*.properties'
+}
+
+task deploy(type: Copy, dependsOn: sourcesJar) {
+    copy {
+        from jar.archiveFile
+        into '../updateVersion/pos/libs/'
+    }
+    copy {
+        from jar.archiveFile
+        into '../updateVersion/server/libs/'
+    }
+}

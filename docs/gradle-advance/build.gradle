@@ -1,0 +1,138 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        jcenter()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'com.github.ben-manes.versions' version '0.21.0'
+    id 'java'
+}
+
+group 'hyi.posfx'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'com.github.ben-manes.versions'
+    // The latest versions can be further filtered using Component Selection Rules.
+    // Ref: https://github.com/ben-manes/gradle-versions-plugin
+    dependencyUpdates.resolutionStrategy = {
+        componentSelection { rules ->
+            rules.all { ComponentSelection selection ->
+                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+                }
+                if (rejected) {
+                    selection.reject('Release candidate')
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url "https://repo.rdc.aliyun.com/repository/72438-release-z6An7U/"
+            credentials {
+                username xxxxx
+                password yyyyy
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        jcenter()
+        mavenCentral()
+    }
+
+    if (JavaVersion.current().isJava8Compatible()) {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+
+    sourceCompatibility = 8
+    targetCompatibility = 8
+
+    tasks.withType(JavaCompile) {
+        options.incremental = true
+    }
+
+    //// Ref: http://blog.freeside.co/2014/06/24/gradle-and-groovys-invoke-dynamic-support/
+    //configurations.all {
+    //    resolutionStrategy {
+    //        force group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.0', ext: 'pom'
+    //    }
+    //}
+
+    dependencies {
+        testCompile('org.spockframework:spock-core:1.1-groovy-2.4') {
+            // Ref: http://blog.freeside.co/2014/06/24/gradle-and-groovys-invoke-dynamic-support/
+            exclude module: "groovy-all"
+        }
+
+        // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+        implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.0'
+
+        //logback
+        implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+        //slf4j
+        implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+    }
+
+    clean {
+        delete 'out'     // interpreted relative to the project directory
+    }
+}
+
+// Ref: https://stackoverflow.com/questions/23340946/gradle-global-build-directory
+//
+// Build a 128MB RAM Disk on macOS:
+//
+// diskutil erasevolume HFS+ "ramdisk" `hdiutil attach -nomount ram://262114`
+//
+// To setup global build directory you need to add these lines to ~/.gradle/init.gradle:
+//
+// gradle.projectsLoaded {
+//    rootProject.allprojects {
+//        buildDir = "/Volumes/ramdisk/${rootProject.name}/${project.name}"
+//    }
+//}
+//
+
+task clearOldVersionFiles(type: Delete) {
+    delete fileTree('updateVersion').matching {
+        include '**/*.jar'
+    }
+}
+
+task createDevJars() {
+    dependsOn rootProject.getTasksByName('deploy', true)
+}
+
+
+task buildFatPosJar(type: Jar) {
+    archiveBaseName = 'pos-lawson'
+    from(project.zipTree('updateVersion/pos/libs/pos-busi.jar'))
+    from(project.zipTree('updateVersion/pos/libs/pos-common.jar'))
+    from(project.zipTree('updateVersion/pos/libs/pos-lawson.jar'))
+    from(project.zipTree('updateVersion/pos/libs/pos-model.jar'))
+    destinationDirectory = file('updateVersion/pos/fat')
+}
+
+task buildFatInlineJar(type: Jar) {
+    archiveBaseName = 'pos-inline'
+    from(project.zipTree('updateVersion/server/libs/pos-busi.jar'))
+    from(project.zipTree('updateVersion/server/libs/pos-common.jar'))
+    from(project.zipTree('updateVersion/server/libs/pos-lawson.jar'))
+    from(project.zipTree('updateVersion/server/libs/pos-model.jar'))
+    from(project.zipTree('updateVersion/server/libs/pos-checkserver.jar'))
+    from(project.zipTree('updateVersion/server/libs/pos-inline.jar'))
+    destinationDirectory = file('updateVersion/server/fat')
+}
+

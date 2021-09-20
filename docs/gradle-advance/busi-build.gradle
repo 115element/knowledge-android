@@ -1,0 +1,46 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'hyi.posfx'
+
+archivesBaseName = 'pos-busi'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile group: 'log4j', name: 'log4j', version: '1.2.14'
+    // ORMLite
+    compile 'com.j256.ormlite:ormlite-core:5.1'
+    compile 'com.j256.ormlite:ormlite-jdbc:5.1'
+    compile 'com.alibaba:fastjson:1.2.68'
+//    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.0'
+
+    implementation project(':model')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task sourcesJar(type: Jar, dependsOn: jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allSource
+    exclude '*.properties'
+}
+
+task deploy(type: Copy, dependsOn: sourcesJar) {
+    copy {
+        from jar.archiveFile
+        into '../updateVersion/pos/libs/'
+    }
+    copy {
+        from jar.archiveFile
+        into '../updateVersion/server/libs/'
+    }
+    copy {
+        from(jar.destinationDirectory) {
+            include '*.jar'
+        }
+        into '../updateVersion/androidlibs'
+    }
+}

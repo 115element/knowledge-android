@@ -1,0 +1,1 @@
+taskKill /F /IM lawson_device_server.exe

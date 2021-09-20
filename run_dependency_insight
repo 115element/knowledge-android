@@ -1,0 +1,1 @@
+./gradlew :pos:dependencyInsight --dependency groovy-all

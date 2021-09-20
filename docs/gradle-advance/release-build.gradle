@@ -1,0 +1,34 @@
+group 'hyi.pos'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+archivesBaseName = 'pos-release'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    implementation project(':pos')
+
+    // Sqlite JDBC
+    compile 'org.xerial:sqlite-jdbc:3.32.3.2'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task makeJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Pos Release from Hongyuan Software',
+                'Implementation-Version': '1.0',
+                'Main-Class': 'hyi.pos.release.ReleaseUI'
+    }
+    with jar
+}
+
+task deploy(type: Copy) {
+    from file("build/libs/pos-release.jar")
+    into '../updateVersion/pos/releaselibs/'
+}
