@@ -10,7 +10,6 @@ import java.io.FileOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-//import hyi.mobilepos.POSTerminalApplication;
 
 public class ZipUtil {
     /**

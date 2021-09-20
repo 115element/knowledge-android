@@ -14,3 +14,4 @@ include ':app'
 
 //关联另一个Module
 include ':linkage-recyclerview'
+include ':labels-view'

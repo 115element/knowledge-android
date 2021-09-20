@@ -15,10 +15,15 @@
  */
 package com.example.knowledge_android.comparator.json;
 
+import static com.example.knowledge_android.comparator.json.JsonTokenType.FALSE;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.NULL;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.NUMBER;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.STRING;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.TRUE;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import static hyi.cream.json.JsonTokenType.*;
 
 /**
  * A JSON token, with a type, line / column information, and the text of that token.

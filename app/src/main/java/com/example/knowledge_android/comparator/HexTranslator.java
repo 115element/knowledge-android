@@ -1,5 +1,7 @@
 package com.example.knowledge_android.comparator;
 
+import org.bouncycastle.util.encoders.Translator;
+
 /**
  * Created by IntelliJ IDEA.
  * User: admin

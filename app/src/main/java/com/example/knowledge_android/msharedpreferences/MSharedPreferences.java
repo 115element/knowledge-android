@@ -59,7 +59,7 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
         }
     }
 
-    boolean isDevelopMode() {
+    public  boolean isDevelopMode() {
         return mDevelopMode;
     }
 
@@ -67,23 +67,23 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
     }
 
-    private String k(int resId) {
+    public  String k(int resId) {
         return mContext.getString(resId);
     }
 
-    String getStoreId() {
+    public String getStoreId() {
         return mSharedPrefs.getString(k(R.string.pref_key_store_id), "");
     }
 
-    void setStoreId(String storeId) {
+    public  void setStoreId(String storeId) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_store_id), storeId).apply();
     }
 
-    boolean isDeviceInitialized() {
+    public   boolean isDeviceInitialized() {
         return !getDeviceId().isEmpty() && !getStoreId().isEmpty();
     }
 
-    String getDeviceId() {
+    public String getDeviceId() {
         try {
             return mSharedPrefs.getString(k(R.string.pref_key_device_id), "");
         } catch (Exception ignored) {
@@ -91,155 +91,155 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
         }
     }
 
-    void setDeviceId(String tabletId) {
+    public void setDeviceId(String tabletId) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_device_id), tabletId).apply();
     }
 
-    int getServerPort() {
+    public  int getServerPort() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.pref_key_server_port), "3160"));
     }
 
-    void setShouQuanflag(String serverPort) {
+    public   void setShouQuanflag(String serverPort) {
         mSharedPrefs.edit().putString(k(R.string.pref_shouquan), serverPort + "").apply();
     }
 
-    String getShouQuanflag() {
+    public   String getShouQuanflag() {
         return mSharedPrefs.getString(k(R.string.pref_shouquan), "");
     }
 
-    void setServerPort(int serverPort) {
+    public  void setServerPort(int serverPort) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_server_port), serverPort + "").apply();
     }
 
-    void setShouQuanPort(int serverPort) {
+    public void setShouQuanPort(int serverPort) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_shouquan_port), serverPort + "").apply();
     }
 
-    int getShouQuanPort() {
+    public int getShouQuanPort() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.pref_key_shouquan_port), "3168"));
     }
 
-    int getConnectTimeout() {
+    public int getConnectTimeout() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.pref_key_server_connect_timeout), "5000"));
     }
 
-    void setConnectTimeout(int connectTimeout) {
+    public void setConnectTimeout(int connectTimeout) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_server_connect_timeout), connectTimeout + "").apply();
     }
 
-    int getReadTimeout() {
+    public  int getReadTimeout() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.pref_key_server_read_timeout), "20000"));
     }
 
-    void setReadTimeout(int readTimeout) {
+    public void setReadTimeout(int readTimeout) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_server_read_timeout), readTimeout + "").apply();
     }
 
-    String getServerIpAddress() {
+    public String getServerIpAddress() {
         return mSharedPrefs.getString(k(R.string.pref_key_server_ip_addr), "");
     }
 
-    void setServerIpAddress(String serverIpAddress) {
+    public void setServerIpAddress(String serverIpAddress) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_server_ip_addr), serverIpAddress + "").apply();
     }
 
-    String getShouquanIpAddress() {
+    public String getShouquanIpAddress() {
         return mSharedPrefs.getString(k(R.string.pref_key_shouquan_ip_addr), "218.22.45.76");
     }
 
-    void setShouquanIpAddress(String serverIpAddress) {
+    public void setShouquanIpAddress(String serverIpAddress) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_shouquan_ip_addr), serverIpAddress + "").apply();
     }
 
-    String getSntpServer() {
+    public String getSntpServer() {
         return mSharedPrefs.getString(k(R.string.pref_key_sntp_server), "asia.pool.ntp.org");
     }
 
-    int getRebootTimeHour() {
+    public int getRebootTimeHour() {
         return mSharedPrefs.getInt(k(R.string.pref_key_reboot_time_hour), 6);
     }
 
-    int getRebootTimeMinute() {
+    public int getRebootTimeMinute() {
         return mSharedPrefs.getInt(k(R.string.pref_key_reboot_time_minute), 0);
     }
 
-    void setRebootTime(int hour, int minute) {
+    public void setRebootTime(int hour, int minute) {
         SharedPreferences.Editor editor = mSharedPrefs.edit();
         editor.putInt(k(R.string.pref_key_reboot_time_hour), hour);
         editor.putInt(k(R.string.pref_key_reboot_time_minute), minute);
         editor.apply();
     }
 
-    boolean isMasterDownloadEnabled() {
+    public boolean isMasterDownloadEnabled() {
         return mSharedPrefs.getBoolean(k(R.string.pref_key_master_dl_enabled), true);
     }
 
-    void setMasterDownloadEnabled(boolean b) {
+    public void setMasterDownloadEnabled(boolean b) {
         mSharedPrefs.edit().putBoolean(k(R.string.pref_key_master_dl_enabled), b).apply();
     }
 
-    boolean isShowItemImage() {
+    public  boolean isShowItemImage() {
         return mSharedPrefs.getBoolean(k(R.string.pref_key_show_item_image), false);
     }
 
-    boolean isTransactionPrint() {
+    public  boolean isTransactionPrint() {
         return mSharedPrefs.getBoolean(k(R.string.pref_key_transaction_print), false);
     }
 
-    void setShowItemImage(boolean b) {
+    public void setShowItemImage(boolean b) {
         mSharedPrefs.edit().putBoolean(k(R.string.pref_key_show_item_image), b).apply();
     }
 
-    boolean getAppDownloadEnabled() {
+    public  boolean getAppDownloadEnabled() {
         return mSharedPrefs.getBoolean(k(R.string.pref_key_app_dl_enabled), false);
     }
 
-    void setAppDownloadEnabled(boolean b) {
+    public void setAppDownloadEnabled(boolean b) {
         mSharedPrefs.edit().putBoolean(k(R.string.pref_key_app_dl_enabled), b).apply();
     }
 
-    String getMasterVersion() {
+    public String getMasterVersion() {
         return mSharedPrefs.getString(k(R.string.pref_key_master_ver), "");
     }
 
-    void setMasterVersion(String masterVersion) {
+    public void setMasterVersion(String masterVersion) {
         Log.i(TAG, "Write preference MasterVersion=" + masterVersion);
         mSharedPrefs.edit().putString(k(R.string.pref_key_master_ver), masterVersion).apply();
     }
 
-    String getAppVersion() {
+    public String getAppVersion() {
         return mSharedPrefs.getString(k(R.string.pref_key_app_ver), "");
     }
 
-    void setAppVersion(String appVersion) {
+    public void setAppVersion(String appVersion) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_app_ver), appVersion).apply();
     }
 
-    String getMasterDownloadTime() {
+    public  String getMasterDownloadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_master_dl_time), "");
     }
 
-    void setMasterDownloadTime(String masterDownloadTime) {
+    public  void setMasterDownloadTime(String masterDownloadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_master_dl_time), masterDownloadTime).apply();
     }
 
-    String getLastTransUploadTime() {
+    public String getLastTransUploadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_last_trans_upload_time), "");
     }
 
-    void setLastTransUploadTime(String lastTransUploadTime) {
+    public void setLastTransUploadTime(String lastTransUploadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_last_trans_upload_time), lastTransUploadTime).apply();
     }
 
-    String getAppDownloadTime() {
+    public  String getAppDownloadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_app_dl_time), "");
     }
 
-    Calendar getMasterDownloadDatetime() {
+    public  Calendar getMasterDownloadDatetime() {
         return toDate(getMasterDownloadTime());
     }
 
-    void setAppDownloadTime(String appDownloadTime) {
+    public void setAppDownloadTime(String appDownloadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_app_dl_time), appDownloadTime).apply();
     }
 
@@ -251,93 +251,93 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
 //        mSharedPrefs.edit().putInt(k(R.string.pref_key_current_transaction_number), currentTransactionNumber).apply()
 //    }
 
-    String getInvUploadTime() {
+    public  String getInvUploadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_inv_ul_time), "");
     }
 
-    Calendar getInvUploadDatetime() {
+    public Calendar getInvUploadDatetime() {
         return toDate(getInvUploadTime());
     }
 
-    void setInvUploadTime(String invUploadTime) {
+    public void setInvUploadTime(String invUploadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_inv_ul_time), invUploadTime).apply();
     }
 
-    String getOrderUploadTime() {
+    public String getOrderUploadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_ord_ul_time), "");
     }
 
-    String getSalePriceCheckUploadTime() {
+    public  String getSalePriceCheckUploadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_sale_price_check_ul_time), "");
     }
 
-    String getShelfUploadTime() {
+    public  String getShelfUploadTime() {
         return mSharedPrefs.getString(k(R.string.pref_key_shelf_ul_time), "");
     }
 
-    Calendar getOrderUploadDatetime() {
+    public Calendar getOrderUploadDatetime() {
         return toDate(getOrderUploadTime());
     }
 
-    Calendar getSalePriceCheckUploadDatetime() {
+    public  Calendar getSalePriceCheckUploadDatetime() {
         return toDate(getSalePriceCheckUploadTime());
     }
 
-    Calendar getShelfUploadDatetime() {
+    public Calendar getShelfUploadDatetime() {
         return toDate(getShelfUploadTime());
     }
 
-    void setSalePriceCheckUploadTime(String orderUploadTime) {
+    public  void setSalePriceCheckUploadTime(String orderUploadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_sale_price_check_ul_time), orderUploadTime).apply();
     }
 
-    void setOrderUploadTime(String orderUploadTime) {
+    public void setOrderUploadTime(String orderUploadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_ord_ul_time), orderUploadTime).apply();
     }
 
-    void setShelfUploadTime(String orderUploadTime) {
+    public void setShelfUploadTime(String orderUploadTime) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_shelf_ul_time), orderUploadTime).apply();
     }
 
-    boolean isLeftHandedMode() {
+    public boolean isLeftHandedMode() {
         return mSharedPrefs.getBoolean(k(R.string.pref_key_lefthanded_mode), false);
     }
 
-    void setLeftHandedMode(boolean b) {
+    public void setLeftHandedMode(boolean b) {
         mSharedPrefs.edit().putBoolean(k(R.string.pref_key_lefthanded_mode), b).apply();
     }
 
-    String getUseTabOrDropdown() {
+    public String getUseTabOrDropdown() {
         return mSharedPrefs.getString(k(R.string.pref_key_menu_style), "2");
     }
 
-    boolean isUseTabInsteadOfDropdown() {
+    public boolean isUseTabInsteadOfDropdown() {
         return "1" == getUseTabOrDropdown();
     }
 
     /** 1: 桌次管理, 2: 先点先结 */
-    String getBusinessType() {
+    public String getBusinessType() {
         return mSharedPrefs.getString(k(R.string.pref_key_business_type), "1");
     }
 
     /** 金额小数位数 */
-    int getDecimalDigits() {
+    public int getDecimalDigits() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.pref_key_decimal_digits), "0"));
     }
 
-    int getIndexs() {
+    public int getIndexs() {
         return Integer.parseInt(mSharedPrefs.getString(k(R.string.indexs), "0"));
     }
 
-    void setIndexs(String indexs) {
+    public void setIndexs(String indexs) {
         mSharedPrefs.edit().putString(k(R.string.indexs), indexs).apply();
     }
 
-    boolean isDiningTableManagement() {
+    public boolean isDiningTableManagement() {
         return ("1" == getBusinessType() || "3" == getBusinessType());
     }
 
-    String getScreenOrientation() {
+    public String getScreenOrientation() {
         return mSharedPrefs.getString(k(R.string.pref_key_screen_orientation), "1");
     }
 
@@ -345,24 +345,24 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
         return "1" == getScreenOrientation();
     }
 
-    void setScreenOrientation(String orientation) {
+    public void setScreenOrientation(String orientation) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_screen_orientation), orientation).commit();
     }
 
-    void setScreenOrientationPortrait() {
+    public void setScreenOrientationPortrait() {
         setScreenOrientation("2");
     }
 
-    void setScreenOrientationLandscape() {
+    public void setScreenOrientationLandscape() {
         setScreenOrientation("1");
     }
 
-    void setCurrentCashier(String cashierNumber) {
+    public void setCurrentCashier(String cashierNumber) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_current_cashier_no), cashierNumber).apply();
     }
 
 
-    void setCurrentShift(String shiftNumber) {
+    public void setCurrentShift(String shiftNumber) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_current_shift_number), shiftNumber).commit();
     }
 
@@ -376,15 +376,15 @@ public class MSharedPreferences implements SharedPreferences.OnSharedPreferenceC
 ////        }
 //    }
 
-    void setLicenseCode(String licenseCode) {
+    public void setLicenseCode(String licenseCode) {
         mSharedPrefs.edit().putString(k(R.string.pref_key_license_code), licenseCode).commit();
     }
 
-    String getLicenseCode() {
+    public String getLicenseCode() {
         return mSharedPrefs.getString(k(R.string.pref_key_license_code), "");
     }
 
-    String getWxFacePayAutoInfo() {
+    public String getWxFacePayAutoInfo() {
         return mSharedPrefs.getString("WxFacePayAutoInfo", "");
     }
 

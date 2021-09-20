@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center" />
 
-        <com.example.knowledge_android.pos.zxing.view.ViewfinderView
+        <com.example.knowledge_android.comparator.pos.zxing.view.ViewfinderView
             android:id="@+id/viewfinder_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

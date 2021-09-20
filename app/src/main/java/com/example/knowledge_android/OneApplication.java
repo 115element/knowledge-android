@@ -11,7 +11,8 @@ import androidx.multidex.MultiDexApplication;
 import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
-import com.example.knowledge_android.drawscreen.PosScreen;
+import com.example.knowledge_android.fragment.pos_screen.PosScreenMainActivity;
+import com.example.knowledge_android.fragment.pos_screen.posmainfragment.IPosScreen;
 import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;
 
@@ -40,7 +41,8 @@ public class OneApplication extends MultiDexApplication {
 
     private MSharedPreferences mSettings;
 
-    private PosScreen posScreen;
+    private IPosScreen posScreen;
+    private PosScreenMainActivity mainActivity;
 
 
     //定时任务工具类
@@ -139,11 +141,35 @@ public class OneApplication extends MultiDexApplication {
         return mUserFont;
     }
 
-    public PosScreen getPosScreen() {
+    public IPosScreen getPosScreen() {
         return posScreen;
     }
 
-    public void setPosScreen(PosScreen posScreen) {
+    public void setPosScreen(IPosScreen posScreen) {
         this.posScreen = posScreen;
+    }
+
+    public PosScreenMainActivity getMainActivity() {
+        return mainActivity;
+    }
+
+    public void setMainActivity(PosScreenMainActivity mainActivity) {
+        this.mainActivity = mainActivity;
+    }
+
+    public MSharedPreferences getmSettings() {
+        return mSettings;
+    }
+
+    public void setmSettings(MSharedPreferences mSettings) {
+        this.mSettings = mSettings;
+    }
+
+    public IDatabasePlusHelper getiDatabasePlusHelper() {
+        return iDatabasePlusHelper;
+    }
+
+    public void setiDatabasePlusHelper(IDatabasePlusHelper iDatabasePlusHelper) {
+        this.iDatabasePlusHelper = iDatabasePlusHelper;
     }
 }

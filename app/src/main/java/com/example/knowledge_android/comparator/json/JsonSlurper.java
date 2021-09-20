@@ -15,9 +15,9 @@
  */
 package com.example.knowledge_android.comparator.json;
 
-import static hyi.cream.json.JsonTokenType.*;
 
-import hyi.cream.json.LineColumnReader;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.*;
+import static com.example.knowledge_android.comparator.json.JsonTokenType.OPEN_CURLY;
 
 import java.io.Reader;
 import java.io.StringReader;
