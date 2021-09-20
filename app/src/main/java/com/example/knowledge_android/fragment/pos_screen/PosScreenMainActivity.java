@@ -132,6 +132,8 @@ public class PosScreenMainActivity extends AppCompatActivity implements View.OnC
 
         //WxFacePayApi.instance.initWxPay();
         Log.i("TA","Out of onCreate");
+
+        OneApplication.getInstance().openApkDownload();
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.comparator.release;
+package com.example.knowledge_android.comparator.i18n;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
