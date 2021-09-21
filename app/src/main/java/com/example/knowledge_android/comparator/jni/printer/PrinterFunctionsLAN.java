@@ -1,4 +1,4 @@
-//package com.example.knowledge_android.comparator.pos.printer;
+//package com.example.knowledge_android.comparator.jni.printer;
 //
 //import com.pos.printer.LanPP;
 //

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.comparator.pos.setdatetime;
+package com.example.knowledge_android.comparator.jni;
 
 import android.content.Context;
 import android.content.Intent;
