@@ -39,8 +39,8 @@
         </encoder>
     </appender>
 
-    <appender name="state" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${logPath}/hyi.state.log</file>
+    <appender name="stateX" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/hyi.stateX.log</file>
 
         <!--初始化的时候是否创建文件,是否在第一次使用的时候创建文件-->
         <lazy>false</lazy>
@@ -49,7 +49,7 @@
 
         <!-- each file should be at most 30MB, keep 60 days worth of history, but at most 1GB -->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/hyi.state-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${logPath}/hyi.stateX-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>30MB</maxFileSize>
             <maxHistory>11</maxHistory>
             <totalSizeCap>300MB</totalSizeCap>
@@ -76,8 +76,8 @@
         <appender-ref ref="file" />
     </logger>
 
-    <logger name="hyi.cream.state" level="DEBUG">
-        <appender-ref ref="state" />
+    <logger name="hyi.cream.stateX" level="DEBUG">
+        <appender-ref ref="stateX" />
     </logger>
 
     <!--SqlLite输出日志控制,additivity[控制是否在root的logger中输出] -->

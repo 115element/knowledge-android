@@ -48,6 +48,7 @@ public class PluPlusDao {
         return pluPluses;
     }
 
+    //List<Plu> pluList = pluDao.queryBuilder().orderBy('microCatNo', true).where().in('microCatNo', cats).query() as List<Plu>
 
 //    GenericRawResults<String[]> rawResults = dao.queryRaw(
 //            "select d.detailCode as type, d.pluNo as no, d.pluName as name, sum(d.afterAmount) as anmount, count(*) as count from trandetail d" +

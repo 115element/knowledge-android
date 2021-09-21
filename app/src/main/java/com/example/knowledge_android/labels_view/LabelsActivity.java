@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.donkingliang.labels.LabelsView;
 import com.example.knowledge_android.R;
+import com.example.knowledge_android.widget.view.MarqueeText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +22,17 @@ public class LabelsActivity extends AppCompatActivity {
     List<Taste> stringList2;
     LabelsView labelsView1;
     LabelsView labelsView2;
+    MarqueeText marqueeText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.labels_view);
+
+        marqueeText = findViewById(R.id.marqueeText2);
+        marqueeText.setText("傻蛋");
+        marqueeText.setSpeed(10);
+        marqueeText.setTextSize(100);
 
         labelsView1 = findViewById(R.id.labelsview1);
         labelsView1.setMaxLines(20);

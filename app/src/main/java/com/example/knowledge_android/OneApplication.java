@@ -1,22 +1,36 @@
 package com.example.knowledge_android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.ServiceConnection;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.PowerManager;
+import android.text.Html;
 import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 import androidx.multidex.MultiDexApplication;
 
 import com.blankj.utilcode.util.CrashUtils;
+import com.blankj.utilcode.util.IntentUtils;
+import com.blankj.utilcode.util.ShellUtils;
+import com.blankj.utilcode.util.Utils;
 import com.example.knowledge_android.apkdownload.ApkDownloader;
 import com.example.knowledge_android.apkdownload.NetworkResultCode;
 import com.example.knowledge_android.apkdownload.TransferProgressListener;
+import com.example.knowledge_android.comparator.PosConstants;
 import com.example.knowledge_android.comparator.i18n.I18n;
 import com.example.knowledge_android.comparator.i18n.I18n_MobileResource_zh_CN;
 import com.example.knowledge_android.comparator.i18n.I18n_MobileResource_zh_TW;
@@ -30,11 +44,24 @@ import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePl
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
 import com.example.knowledge_android.fragment.pos_screen.PosScreenMainActivity;
 import com.example.knowledge_android.fragment.pos_screen.posmainfragment.IPosScreen;
+import com.example.knowledge_android.knowledge.DevAddrUtil;
 import com.example.knowledge_android.knowledge.RunTimer;
+import com.example.knowledge_android.mqttforandroid.AndroidMqttService;
 import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;
+import com.j256.ormlite.android.apptools.OpenHelperManager;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -210,7 +237,7 @@ public class OneApplication extends MultiDexApplication {
             } catch (Exception ex) {
                 Log.e("TAG", "scheduleGetDate", ex);
             }
-        }, 0, 5, TimeUnit.MINUTES);
+        }, 1, 5, TimeUnit.MINUTES);
     }
 
 
@@ -261,6 +288,211 @@ public class OneApplication extends MultiDexApplication {
         });
     }
 
+    private void openMqtt() throws Exception{
+        String storeId = "208888";
+        //mqtt调用(进行主题订阅)
+        Log.i("TAG","start Android Mqtt");
+        AndroidMqttService androidMqttService = new AndroidMqttService();
+        String clientId = "pos_" + storeId + "_" + DevAddrUtil.getLocalMacIdFromIp();//规则:
+        List<String> topicList = new ArrayList<>();
+        topicList.add("pos_sale_status_" + storeId);//菜单更新mqtt
+        topicList.add("pos_log_upload_" + storeId);//菜单更新mqtt
+        androidMqttService.connectMqttService(mainActivity, topicList, "ssl://123.6.65.230:8888", clientId, "");
+    }
+
+
+    private boolean isActivityActive() {
+        return mainActivity != null && mainActivity.hasWindowFocus();
+    }
+
+    public String getResourcePath() {
+        return Environment.getExternalStorageDirectory().getAbsolutePath();
+    }
+
+
+    int screenWidth; //屏幕宽
+    int screenHeight;//屏幕高
+    public int getScreenWidth() {
+        return screenWidth;
+    }
+
+    public void setScreenWidth(int screenWidth) {
+        this.screenWidth = screenWidth;
+    }
+
+    public int getScreenHeight() {
+        return screenHeight;
+    }
+
+    public void setScreenHeight(int screenHeight) {
+        this.screenHeight = screenHeight;
+    }
+
+
+    private void uploadLog() {
+        try {
+            String fileName = "/data/data/hyi.mobilepos/logfiles/hyi.mobilepos.log";
+            if (new File(fileName).exists()) {
+                //Log.info("begin Upload logFile");
+                //LogFileUploader.runSynchronized(fileName);
+                //Log.info("Upload logFile succeed");
+            }
+        } catch (Exception e) {
+            //PosLog.error("Upload logFile fail", e);
+        }
+        try {
+            String fileName = "/data/data/hyi.mobilepos/logfiles/hyi.state.log";
+            if (new File(fileName).exists()) {
+                //PosLog.info("begin Upload logFile");
+                //LogFileUploader.runSynchronized(fileName);
+                //PosLog.info("Upload logFile succeed");
+            }
+        } catch (Exception e) {
+            //PosLog.error("Upload logFile fail", e);
+        }
+        try {
+            String fileName = "/data/data/hyi.mobilepos/logfiles/" + new SimpleDateFormat("yyyy-MM-dd").format(new Date()) + ".log";
+            if (new File(fileName).exists()) {
+                //PosLog.info("begin Upload  logFile");
+                //LogFileUploader.runSynchronized(fileName);
+                //PosLog.info("Upload  logFile succeed");
+            }
+        } catch (Exception e) {
+            //PosLog.error("Upload  logFile fail", e);
+        }
+        try {
+            File path = new File("/data/data/hyi.mobilepos/logfiles");
+            File[] crashFiles = path.listFiles(new FilenameFilter() {
+                @Override
+                public boolean accept(File dir, String name) {
+                    return name.endsWith(".txt");
+                }
+            });
+            for (File file : crashFiles) {
+                if (PosConstants.SUCCESSFUL == 1 /*LogFileUploader.runSynchronized(file.getAbsolutePath())*/) {
+                    file.renameTo(new File(file.getAbsolutePath() + ".sent"));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }
+
+
+    /**
+     * 因为onTerminate()会在Android的模拟器上触发回调。
+     * 说它不是这样，是因为onTerminate()不会在Android真实的机器设备上触发。
+     */
+//    private ServiceConnection mStartupServiceConnection;
+//    @Override
+//    public void onTerminate() {
+//        super.onTerminate();
+//        if (iDatabasePlusHelper.getMasterDatabaseHelper() != null) {
+//            OpenHelperManager.releaseHelper();
+//            mobileDatabaseHelper.setMasterDatabaseHelper(null);
+//        }
+//        if (mobileDatabaseHelper.getTransDatabaseHelper() != null) {
+//            mobileDatabaseHelper.getTransDatabaseHelper().close();
+//            mobileDatabaseHelper.setTransDatabaseHelper(null);
+//        }
+//
+//        if (mStartupServiceConnection != null) {
+//            unbindService(mStartupServiceConnection);
+//            mStartupServiceConnection = null;
+//        }
+//        //DaoLocator.setPosTerminalApplication(null);
+//    }
+
+
+    public void playNotificationSound() {
+        try {
+            //1.获取铃声类型
+            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            //2.获取铃声
+            Ringtone r = RingtoneManager.getRingtone(this, notification);
+            //3.播放铃声
+            r.play();
+        } catch (Exception ignore) {
+        }
+    }
+
+    public AlertDialog.Builder getOkCancelDialogBuilder(Context context, int title, int message) {
+        //AlertDialog.Builder builder = new AlertDialog.Builder(context, android.R.style.Theme_Holo_Dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+        builder.setTitle(title);
+        builder.setMessage(Html.fromHtml(getResources().getString(message)));
+        builder.setCancelable(false);
+        builder.setIcon(android.R.drawable.ic_dialog_info);
+        builder.setNegativeButton(android.R.string.no, (dialog, which) -> {
+            // default do nothing
+        });
+        return builder;
+    }
+
+
+    //获取app目录下，build.gradle里边配置的，defaultConfig{ versionName }
+    String appVer;
+    public String getAppVersion() {
+        try {
+            if (appVer != null) {
+                return appVer;
+            } else {
+                appVer = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.i("TAG",e.getMessage());
+        }
+        return appVer;
+    }
+
+
+    //获取app目录下，build.gradle里边配置的，defaultConfig{ versionName }
+    String appVerCode;
+    public String getAppVersionCode() {
+        try {
+            if (appVerCode != null) {
+                return appVerCode;
+            } else {
+                appVerCode = Integer.valueOf(getPackageManager().getPackageInfo(getPackageName(), 0).versionCode).toString();
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.i("TAg",e.getMessage());
+            return "";
+        }
+        return appVerCode;
+    }
+
+
+    /**
+     * 获取WiFi是否打开了！
+     */
+    public boolean isWiFiON() {
+        WifiManager wifiMan = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiMan.getConnectionInfo();
+        return wifiInfo != null && wifiInfo.getIpAddress() != 0;
+    }
+
+
+    public void reboot() {
+        this.iDatabasePlusHelper.close();
+        //重启到fastboot模式
+        PowerManager pManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        pManager.reboot("重启");
+    }
+
+    public boolean shutdown() {
+        this.iDatabasePlusHelper.close();
+        try {
+            ShellUtils.CommandResult result = ShellUtils.execCmd("reboot -p", true);
+            if (result.result == 0) {
+                return true;
+            }
+            Utils.getApp().startActivity(IntentUtils.getShutdownIntent());
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
     private void loadApplicationInfo(Context context) {
         try {
@@ -289,6 +521,86 @@ public class OneApplication extends MultiDexApplication {
         map.put(Locale.TAIWAN.getCountry(), taiwanList);
         return map;
     }
+
+
+    /**
+     * 获取设备IP地址
+     **/
+    public String getDeviceIpAddressString() {
+        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+        if (wifiInfo != null && wifiInfo.getIpAddress() != 0) {
+            int ip = wifiInfo.getIpAddress();
+            String ipString = String.format("%d.%d.%d.%d",
+                    (ip & 0xff),
+                    (ip >> 8 & 0xff),
+                    (ip >> 16 & 0xff),
+                    (ip >> 24 & 0xff));
+            return ipString;
+        } else {
+            return "";
+        }
+    }
+
+    public boolean pingOuterNet() {
+        boolean result;
+        try {
+            String ip = "www.baidu.com"; // ping的地址，可以换成任何一种可靠的外网
+            Process p = Runtime.getRuntime().exec("ping -c 3 -w 100 " + ip);// ping网址3次
+
+            // 读取ping的内容,可以不加
+            InputStream input = p.getInputStream();
+            BufferedReader in = new BufferedReader(new InputStreamReader(input));
+            StringBuffer stringBuffer = new StringBuffer();
+
+            String content = "";
+            while ((content = in.readLine()) != null) {
+                stringBuffer.append(content);
+            }
+            //PosLog.info("------ping-----result content : " + stringBuffer.toString());
+
+            final int status = p.waitFor();
+            if (status == 0) {
+                //PosLog.info("morse -> ping onSuccess!");
+                result = true;
+            } else {
+                //PosLog.info("morse -> ping onFailure!");
+                result = false;
+            }
+        } catch (IOException e) {
+            //PosLog.info("morse -> ping onFailure!");
+            result = false;
+        } catch (InterruptedException e) {
+            //PosLog.info("morse -> ping onFailure!");
+            result = false;
+        } finally {
+        }
+        return result;
+    }
+
+    private boolean sotPingServer(String domain) {
+        try {
+            URL posHubDomain = new URL(domain);
+            HttpURLConnection http = (HttpURLConnection) posHubDomain.openConnection();
+            return http.getResponseCode() == HttpURLConnection.HTTP_OK;
+        } catch (Exception ex) {
+            Log.e("TAG","无法连接poshub服务器{}"+domain);
+        }
+        return false;
+    }
+
+    public static boolean isNetworkOnline() {
+        Runtime runtime = Runtime.getRuntime();
+        try {
+            Process ipProcess = runtime.exec("ping -c 3 114.114.114.114");
+            int exitValue = ipProcess.waitFor();
+            return (exitValue == 0);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
     public Typeface getUserFont() {
         this.mUserFont = Typeface.createFromAsset(getResources().getAssets(), USER_FONT);

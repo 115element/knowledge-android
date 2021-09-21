@@ -3,7 +3,6 @@ plugins {
 }
 
 
-
 android {
     compileSdk 31
 
@@ -20,12 +19,12 @@ android {
 
     //版本发布设置
     signingConfigs {
-        //debug {
-        //    storeFile file("debug_keystore")  //指定KeyStore文件的位置
-        //    storePassword "wwwkeystore"       //指定密码
-        //    keyAlias "main_key"               //指定别名
-        //    keyPassword "wwwkeystore"         //指定别名密码
-        //}
+        debug {
+            storeFile file("debug_keystore")  //指定KeyStore文件的位置
+            storePassword "wwwkeystore"       //指定密码
+            keyAlias "main_key"               //指定别名
+            keyPassword "wwwkeystore"         //指定别名密码
+        }
         release {
             storeFile file("www_keystore")
             storePassword "wwwkeystore"
@@ -61,7 +60,7 @@ android {
         abortOnError false
     }
 
-
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -184,6 +183,5 @@ dependencies {
 
     //安卓程序崩溃日志记载
     implementation 'com.blankj:utilcode:1.29.0'
-
 }
 

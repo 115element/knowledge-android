@@ -127,13 +127,28 @@ public class PosScreenMainActivity extends AppCompatActivity implements View.OnC
         Log.i("TAG","Screen Width Pixel = " + getScreenWidthPixels());
         Log.i("TAG","Screen Height Pixel = " + getScreenHeightPixels());
 
-        //app.setScreenWidth(getScreenWidthPixels())
-        //app.setScreenHeight(getScreenHeightPixels())
+        OneApplication.getInstance().setScreenWidth(getScreenWidthPixels());
+        OneApplication.getInstance().setScreenHeight(getScreenHeightPixels());
 
         //WxFacePayApi.instance.initWxPay();
         Log.i("TA","Out of onCreate");
 
         OneApplication.getInstance().openApkDownload();
+
+
+        // https://docs.sunmi.com/others/scan-code-driver/
+//        Intent intent = new Intent("com.summi.scan");
+//        intent.setPackage("com.sunmi.sunmiqrcodescanner");
+//        // // 识别反色二维码，默认true
+//        intent.putExtra("IDENTIFY_INVERSE_QR_CODE", true);
+//        // // 识别画面中多个二维码，默认false
+//        intent.putExtra("IDENTIFY_MORE_CODE", false);
+//        intent.putExtra("SOURCE_STATE", "SummaryState");
+//        PosScreenMainActivity mainActivity1 = OneApplication.getInstance().getMainActivity();
+//        mainActivity1.startActivityForResult(intent,2);
+//        为了降低开发难度，商米在最新的SUNMI OS(V1固件版本187，M1固件版本37)系统中内置了一个扫码的模块，
+//        开发者在项目需要调用扫码的地方通过startActivityForResult()调用商米的扫码模块，
+//        然后在onActivityResult()方法中接受扫码结果返回值。
     }
 
 

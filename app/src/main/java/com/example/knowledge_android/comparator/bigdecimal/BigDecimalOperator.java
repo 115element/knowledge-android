@@ -1,6 +1,6 @@
-package com.example.knowledge_android.bigdecimal;
+package com.example.knowledge_android.comparator.bigdecimal;
 
-import static com.example.knowledge_android.bigdecimal.BigDecimalConstructors.bd;
+import static com.example.knowledge_android.comparator.bigdecimal.BigDecimalConstructors.bd;
 
 import java.math.BigDecimal;
 import java.math.MathContext;

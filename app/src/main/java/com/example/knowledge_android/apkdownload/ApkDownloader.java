@@ -15,8 +15,6 @@ import com.example.knowledge_android.R;
 import com.example.knowledge_android.knowledge.DevAddrUtil;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.apache.tools.ant.types.resources.comparators.Content;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,13 +23,48 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
+/*
+doInBackground 的返回值就是 onPostExecute 的参数啊!
+onPostExecute方法用于通知UI进行更改
+
+
+doInBackground 必须重写,异步执行后台线程将要完成的任务
+onPreExecute 执行后台耗时操作前被调用，通常用户完成一些初始化操作
+onPostExecute 当doInBackground完成后，系统会自动调用
+onPostExecute()方法,并将doInBackground方法返回的值传给该方法
+onProgressUpdate 在doInBackground方法中调用publishProgress()方法
+*/
+
+/*
+AsyncTask介绍:
+作用:
+1.实现多线程：在工作线程中执行任务，如 耗时任务
+2.异步通信、消息传递：实现工作线程 & 主线程（UI线程）之间的通信，即：将工作线程的执行结果传递给主线程，从而在主线程中执行相关的UI操作，保证线程安全。
+
+优点:
+1.方便实现异步通信
+不需使用 “任务线程（如继承Thread类） + Handler”的复杂组合
+2.节省资源
+采用线程池的缓存线程 + 复用线程，避免了频繁创建 & 销毁线程所带来的系统资源开销
+
+public abstract class AsyncTask<Params, Progress, Result>
+// 类中参数为3种泛型类型
+// 整体作用：控制AsyncTask子类执行线程任务时各个阶段的返回类型
+// 具体说明：
+    // a. Params：开始异步任务执行时传入的参数类型，对应execute()中传递的参数
+    // b. Progress：异步任务执行过程中，返回下载进度值的类型
+    // c. Result：异步任务执行完成后，返回的结果类型，与doInBackground()的返回值类型保持一致
+// 注：
+    // a. 使用时并不是所有类型都被使用
+    // b. 若无被使用，可用java.lang.Void类型代替
+    // c. 若有不同业务，需额外再写1个AsyncTask的子类
+
+*/
 public class ApkDownloader extends AsyncTask<String, Integer, Integer> {
 
     private static final String Tag = "ApkDownloader";
 
     TransferProgressListener transferProgressListener;
-
-    int i;
 
     public ApkDownloader() {
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.knowledge_android.astuetz;
+package com.example.knowledge_android.comparator.astuetz;
 
 import android.annotation.TargetApi;
 import android.content.Context;

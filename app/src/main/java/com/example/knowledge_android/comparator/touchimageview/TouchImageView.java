@@ -10,7 +10,7 @@
  * Extends Android ImageView to include pinch zooming, panning, fling and double tap zoom.
  */
 
-package com.example.knowledge_android.touchimageview;
+package com.example.knowledge_android.comparator.touchimageview;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -61,8 +61,10 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     //
 	private Matrix matrix, prevMatrix;
 
-    private static enum State { NONE, DRAG, ZOOM, FLING, ANIMATE_ZOOM };
-    private State state;
+    public static enum StateX {
+        NONE, DRAG, ZOOM, FLING, ANIMATE_ZOOM;
+    };
+    public StateX stateX;
 
     private float minScale;
     private float maxScale;
@@ -129,7 +131,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         superMaxScale = SUPER_MAX_MULTIPLIER * maxScale;
         setImageMatrix(matrix);
         setScaleType(ScaleType.MATRIX);
-        setState(State.NONE);
+        setState(StateX.NONE);
         onDrawReady = false;
         super.setOnTouchListener(new PrivateOnTouchListener());
     }
@@ -714,8 +716,8 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         }
     }
     
-    private void setState(State state) {
-    	this.state = state;
+    public void setState(StateX stateX) {
+    	this.stateX = stateX;
     }
     
     public boolean canScrollHorizontallyFroyo(int direction) {
@@ -746,7 +748,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
      * @author Ortiz
      *
      */
-    private class GestureListener extends GestureDetector.SimpleOnGestureListener {
+    public class GestureListener extends GestureDetector.SimpleOnGestureListener {
     	
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e)
@@ -784,7 +786,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
             if(doubleTapListener != null) {
             	consumed = doubleTapListener.onDoubleTap(e);
             }
-        	if (state == State.NONE) {
+        	if (stateX == StateX.NONE) {
 	        	float targetZoom = (normalizedScale == minScale) ? maxScale : minScale;
 	        	DoubleTapZoom doubleTap = new DoubleTapZoom(targetZoom, e.getX(), e.getY(), false);
 	        	compatPostOnAnimation(doubleTap);
@@ -825,17 +827,17 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
             mGestureDetector.onTouchEvent(event);
             PointF curr = new PointF(event.getX(), event.getY());
             
-            if (state == State.NONE || state == State.DRAG || state == State.FLING) {
+            if (stateX == StateX.NONE || stateX == StateX.DRAG || stateX == StateX.FLING) {
 	            switch (event.getAction()) {
 	                case MotionEvent.ACTION_DOWN:
 	                	last.set(curr);
 	                    if (fling != null)
 	                    	fling.cancelFling();
-	                    setState(State.DRAG);
+	                    setState(StateX.DRAG);
 	                    break;
 	                    
 	                case MotionEvent.ACTION_MOVE:
-	                    if (state == State.DRAG) {
+	                    if (stateX == StateX.DRAG) {
 	                        float deltaX = curr.x - last.x;
 	                        float deltaY = curr.y - last.y;
 	                        float fixTransX = getFixDragTrans(deltaX, viewWidth, getImageWidth());
@@ -848,7 +850,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
 	
 	                case MotionEvent.ACTION_UP:
 	                case MotionEvent.ACTION_POINTER_UP:
-	                    setState(State.NONE);
+	                    setState(StateX.NONE);
 	                    break;
 	            }
             }
@@ -884,7 +886,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
         public boolean onScaleBegin(ScaleGestureDetector detector) {
-            setState(State.ZOOM);
+            setState(StateX.ZOOM);
             return true;
         }
 
@@ -904,7 +906,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
         @Override
         public void onScaleEnd(ScaleGestureDetector detector) {
         	super.onScaleEnd(detector);
-        	setState(State.NONE);
+        	setState(StateX.NONE);
         	boolean animateToZoomBoundary = false;
         	float targetZoom = normalizedScale;
         	if (normalizedScale > maxScale) {
@@ -967,7 +969,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     	private PointF endTouch;
 
     	DoubleTapZoom(float targetZoom, float focusX, float focusY, boolean stretchImageToSuper) {
-    		setState(State.ANIMATE_ZOOM);
+    		setState(StateX.ANIMATE_ZOOM);
     		startTime = System.currentTimeMillis();
     		this.startZoom = normalizedScale;
     		this.targetZoom = targetZoom;
@@ -1010,7 +1012,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
 				//
 				// Finished zooming
 				//
-				setState(State.NONE);
+				setState(StateX.NONE);
 			}
 		}
 		
@@ -1107,7 +1109,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     	int currX, currY;
     	
     	Fling(int velocityX, int velocityY) {
-    		setState(State.FLING);
+    		setState(StateX.FLING);
     		scroller = new CompatScroller(context);
     		matrix.getValues(m);
     		
@@ -1139,7 +1141,7 @@ public class TouchImageView extends androidx.appcompat.widget.AppCompatImageView
     	
     	public void cancelFling() {
     		if (scroller != null) {
-    			setState(State.NONE);
+    			setState(StateX.NONE);
     			scroller.forceFinished(true);
     		}
     	}

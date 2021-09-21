@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
  */
 public class ThreadUtils {
 
+    //主线程通讯桥梁
     private static Handler sHandler = new Handler(Looper.getMainLooper());
 
     private static ExecutorService sExecutors = Executors.newSingleThreadExecutor();

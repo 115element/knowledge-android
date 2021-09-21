@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <com.example.knowledge_android.listview.ItemListView
+        android:id="@+id/itemListView"
+        android:layout_width="264dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/circleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <com.example.knowledge_android.widget.view.CircleButton
+        android:id="@+id/circleButton"
+        android:layout_width="163dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/circleProgressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemListView" />
+
+    <com.example.knowledge_android.widget.view.CircleProgressBar
+        android:id="@+id/circleProgressBar"
+        android:layout_width="263dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="114dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

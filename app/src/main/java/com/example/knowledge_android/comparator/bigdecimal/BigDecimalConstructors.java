@@ -1,4 +1,4 @@
-package com.example.knowledge_android.bigdecimal;
+package com.example.knowledge_android.comparator.bigdecimal;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
