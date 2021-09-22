@@ -26,6 +26,8 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/toggle_button_selector.xml" value="0.15885416666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/username_selector.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/view_border.xml" value="0.15885416666666666" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-coupon/activity_main_hyi_coupon.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-coupon/activity_main_shopping_cart.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-land/category_form.xml" value="0.19135802469135801" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-land/license_code_input.xml" value="0.19135802469135801" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout-land/sign_on.xml" value="0.19135802469135801" />
@@ -53,9 +55,11 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_8.xml" value="0.2838541666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_9.xml" value="0.27440633245382584" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_eleme.xml" value="0.35778985507246375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_hyi_coupon.xml" value="0.3515625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_plu.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_second2.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_second_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_shop_cart.xml" value="0.3515625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_main_shopping_cart.xml" value="0.1" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/activity_scrollgrid.xml" value="0.221875" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/adapter_eleme_secondary_grid.xml" value="0.35778985507246375" />
@@ -125,6 +129,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/viewpager_layout3.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/xinxiang_normal_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/xinxiang_normal_single_dialog.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout_coupon/layout/item_coupon_show.xml" value="0.5" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/menu/main.xml" value="0.22604166666666667" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/menu/menu_exit.xml" value="0.2598958333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/xml/preferences.xml" value="0.36614583333333334" />
@@ -139,6 +144,9 @@
         <entry key="..\:/WorkStation/knowledge-android/myapplication/src/main/res/layout/activity_main.xml" value="0.3515625" />
       </map>
     </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://schemas.android.com/apk/res/android" location="$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

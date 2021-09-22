@@ -140,7 +140,7 @@ public class ShopMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_shopping_cart);
+        setContentView(R.layout.activity_main_shop_cart);
         ButterKnife.bind(this);
         context = this;
 

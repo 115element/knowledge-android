@@ -75,6 +75,14 @@ android {
             //在选择 Android 的选项下面显示的jniLibs 目录和选择 Project 选项下面的libs 其实是一个
             //但是在Android选项下面的jniLibs不是自动生成的   需要在module的build.gradle里面的android下面配置sourceSets
             jniLibs.srcDirs = ['src/main/jniLibs'] //就是你存放so文件夹的不同cup目录地址
+
+
+            //安卓指定多个layout目录的方法
+            res.srcDirs=[
+                    'src/main/res/layout_coupon', //你自己建立的layout目录
+                    'src/main/res/layout',//必须要有
+                    'src/main/res',//必须要有，倒数两个顺序必须是这样子，不能乱
+            ]
         }
     }
 

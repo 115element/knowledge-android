@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/coupon_recommend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="340dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:src="@drawable/face"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_title"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/coupon_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="48dp"
+        android:ellipsize="end"
+        android:text="贝瑞咖啡30元代金券(满128元可用)"
+        android:textColor="#333333"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_minus"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coupon_surplus"
+        android:layout_width="57dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="9dp"
+        android:ellipsize="end"
+        android:text="剩余：8张"
+        android:textColor="#808080"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_startEndTime"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_title" />
+
+    <TextView
+        android:id="@+id/coupon_startEndTime"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:text="有效期：2021-08-19 00:00:00  2021-08-19 10:00:00"
+        android:textColor="#808080"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_desc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_surplus" />
+
+    <TextView
+        android:id="@+id/coupon_amount"
+        android:layout_width="40dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:text="￥30元"
+        android:textColor="#ee1d23"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coupon_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coupon_desc"
+        android:layout_width="57dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="32dp"
+        android:ellipsize="end"
+        android:text="满99可用"
+        android:textColor="#808080"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coupon_surplus"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_amount" />
+
+    <ImageView
+        android:id="@+id/coupon_plus"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="89dp"
+        android:src="@mipmap/iv_edit_add"
+        app:layout_constraintBottom_toBottomOf="@+id/coupon_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coupon_num"
+        app:layout_constraintTop_toTopOf="@+id/coupon_minus"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/coupon_num"
+        android:layout_width="28dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
+        android:gravity="center"
+        android:minEms="1"
+        android:text="1"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_plus"
+        app:layout_constraintStart_toEndOf="@+id/coupon_minus"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_desc"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/coupon_minus"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/iv_edit_subtract"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coupon_num"
+        app:layout_constraintStart_toEndOf="@+id/coupon_startEndTime"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_title"
+        tools:ignore="DuplicateIds" />
+
+    <ImageView
+        android:id="@+id/coupon_select"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="35dp"
+        android:padding="5dp"
+        android:src="@mipmap/unselect"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coupon_recommend"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
