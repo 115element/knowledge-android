@@ -10,7 +10,7 @@ import android.util.Log;
 
 import com.example.knowledge_android.R;
 import com.example.knowledge_android.daosupport.bean.tran.TranDetail;
-import com.example.knowledge_android.fragment.pos_screen.PosScreenMainActivity;
+import com.example.knowledge_android.widget.fragment.pos_screen.PosScreenMainActivity;
 import com.example.knowledge_android.knowledge.DevAddrUtil;
 import com.example.knowledge_android.knowledge.ZipUtil;
 import com.example.knowledge_android.mqttforandroid.okhttp.PostWithFromDataUtil;
@@ -33,7 +33,6 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.security.KeyPair;
 import java.security.KeyStore;
 import java.security.Security;

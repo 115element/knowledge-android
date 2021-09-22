@@ -1,4 +1,4 @@
-package com.example.knowledge_android.fragment.pos_screen.fragment;
+package com.example.knowledge_android.widget.fragment.pos_screen.fragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

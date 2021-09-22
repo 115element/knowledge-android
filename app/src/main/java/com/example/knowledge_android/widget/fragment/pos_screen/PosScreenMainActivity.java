@@ -1,4 +1,4 @@
-package com.example.knowledge_android.fragment.pos_screen;
+package com.example.knowledge_android.widget.fragment.pos_screen;
 
 import android.Manifest;
 import android.app.Activity;
@@ -36,12 +36,12 @@ import com.arasthel.swissknife.annotations.OnUIThread;
 import com.example.knowledge_android.OneApplication;
 import com.example.knowledge_android.R;
 import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
-import com.example.knowledge_android.fragment.pos_screen.fragment.MessageDialog;
-import com.example.knowledge_android.fragment.pos_screen.posmainfragment.IPosScreen;
-import com.example.knowledge_android.fragment.pos_screen.posmainfragment.PosScreen1;
-import com.example.knowledge_android.fragment.pos_screen.fragment.ProtectorFragment;
-import com.example.knowledge_android.fragment.pos_screen.fragment.SignOnFragment;
-import com.example.knowledge_android.fragment.pos_screen.posmainfragment.PosScreen2;
+import com.example.knowledge_android.widget.fragment.pos_screen.fragment.MessageDialog;
+import com.example.knowledge_android.widget.fragment.pos_screen.posmainfragment.IPosScreen;
+import com.example.knowledge_android.widget.fragment.pos_screen.posmainfragment.PosScreen1;
+import com.example.knowledge_android.widget.fragment.pos_screen.fragment.ProtectorFragment;
+import com.example.knowledge_android.widget.fragment.pos_screen.fragment.SignOnFragment;
+import com.example.knowledge_android.widget.fragment.pos_screen.posmainfragment.PosScreen2;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -118,7 +118,7 @@ public class PosScreenMainActivity extends AppCompatActivity implements View.OnC
 
         //将当前Fragment替换为另外一个Fragment
         FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, fragment, "currentFragment");
+        fragmentTransaction.replace(R.id.container, fragment, "currentFragment"); //
         fragmentTransaction.commit();
 
         // 进入初始界面
@@ -133,6 +133,7 @@ public class PosScreenMainActivity extends AppCompatActivity implements View.OnC
         //WxFacePayApi.instance.initWxPay();
         Log.i("TA","Out of onCreate");
 
+        //打开新版本APK下载。
         OneApplication.getInstance().openApkDownload();
 
 

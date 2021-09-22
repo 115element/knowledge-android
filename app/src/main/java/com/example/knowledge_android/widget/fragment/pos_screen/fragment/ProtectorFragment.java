@@ -1,4 +1,4 @@
-package com.example.knowledge_android.fragment.pos_screen.fragment;
+package com.example.knowledge_android.widget.fragment.pos_screen.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ import com.arasthel.swissknife.annotations.InjectView;
 import com.arasthel.swissknife.annotations.OnClick;
 import com.example.knowledge_android.OneApplication;
 import com.example.knowledge_android.R;
-import com.example.knowledge_android.fragment.pos_screen.PosScreenMainActivity;
+import com.example.knowledge_android.widget.fragment.pos_screen.PosScreenMainActivity;
 import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
 
 import java.security.MessageDigest;

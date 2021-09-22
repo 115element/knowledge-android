@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import com.example.knowledge_android.OneApplication;
 import com.example.knowledge_android.R;
 import com.example.knowledge_android.daosupport.bean.tran.TranHead;
-import com.example.knowledge_android.fragment.pos_screen.PosScreenMainActivity;
+import com.example.knowledge_android.widget.fragment.pos_screen.PosScreenMainActivity;
 import com.example.knowledge_android.knowledge.ThreadUtils;
 import com.example.knowledge_android.msharedpreferences.MSharedPreferences;
 import com.example.knowledge_android.statemachine.StateMachine;

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.fragment.pos_screen.posmainfragment;
+package com.example.knowledge_android.widget.fragment.pos_screen.posmainfragment;
 
 
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.knowledge_android.R;
 
-public class PosScreen1 extends Fragment implements IPosScreen{
+public class PosScreen2 extends Fragment implements IPosScreen{
 
 
     // onSaveInstanceState()方法解释:
