@@ -97,6 +97,13 @@ android {
 
 
 dependencies {
+    //此种方式简单粗暴,但是不允许同时出现同一模块不同编译类型的jar(或aar),
+    //例如,如果libs同时存在test-release.aar和test-debug.aar,他们都是来自同一个module的打包,但是只是编译类型不一样,如果同时存在的话,会编译不过.
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+
 
     //implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
@@ -185,5 +192,13 @@ dependencies {
     //安卓程序崩溃日志记载
     implementation 'com.blankj:utilcode:1.29.0'
 
+    //@BindView注解支持
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+
+//    configurations {
+//        all*.exclude group: 'com.google.code.gson'
+//    }
 }
 
