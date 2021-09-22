@@ -170,12 +170,12 @@ public class MyExpandableListViewAdapter implements ExpandableListAdapter {
         return 0;
     }
 
-    class GroupViewHolder {
+    public static class GroupViewHolder {
         ImageView img;
         TextView tv_name, tv_num;
     }
 
-    class ChildViewHolder {
+    public static class ChildViewHolder {
         ImageView img;
         TextView tv_name, tv_content;
     }
