@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_classify.xml" value="0.18704710144927536" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_drag_recyclerview.xml" value="0.18704710144927536" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/activity_main_hyi_coupon.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/item_coupon_show.xml" value="0.4" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tab.xml" value="0.36770833333333336" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/background_tabs.xml" value="0.2015625" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/below_line.xml" value="0.38229166666666664" />

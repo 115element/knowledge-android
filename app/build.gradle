@@ -205,6 +205,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
 
+    //官方比例布局
+    implementation 'com.android.support:percent:22.2.0'
+
 //    configurations {
 //        all*.exclude group: 'com.google.code.gson'
 //    }

@@ -23,12 +23,11 @@ public class HyiCouponActivity extends AppCompatActivity {
         List<HyiCoupon> hyiCouponList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             HyiCoupon hyiCoupon = new HyiCoupon();
+            hyiCoupon.setId(i);
             if (i % 2 == 0) {
                 hyiCoupon.setRecommend(true);
-                hyiCouponList.add(hyiCoupon);
             } else {
                 hyiCoupon.setRecommend(false);
-                hyiCouponList.add(hyiCoupon);
             }
             hyiCouponList.add(hyiCoupon);
         }
