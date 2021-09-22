@@ -120,6 +120,7 @@ public class ElasticGridLayout extends ViewGroup {
         return p instanceof GridLayoutParams;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         //measureChildren(widthMeasureSpec, heightMeasureSpec)
