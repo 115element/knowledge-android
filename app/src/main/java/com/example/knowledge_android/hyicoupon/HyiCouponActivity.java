@@ -2,6 +2,7 @@ package com.example.knowledge_android.hyicoupon;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -11,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.PagerTabStrip;
 import androidx.viewpager.widget.PagerTitleStrip;
 import androidx.viewpager.widget.ViewPager;
@@ -32,7 +34,7 @@ public class HyiCouponActivity extends AppCompatActivity {
     TabLayout tabLayout;
 
     private List<Fragment> fragments = new ArrayList<>();
-    private List<String> tabs = new ArrayList<>();
+    private static List<String> tabs = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -127,6 +129,7 @@ public class HyiCouponActivity extends AppCompatActivity {
 
 
 
+    //ViewPager-可以选择使用Fragment
     public class TabAdapter extends FragmentPagerAdapter {
 
         public TabAdapter(FragmentManager fm) {
@@ -143,6 +146,44 @@ public class HyiCouponActivity extends AppCompatActivity {
             return fragments.size();
         }
         //显示标签上的文字
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabs.get(position);
+        }
+    }
+
+
+
+    //ViewPager-可以选择使用View
+    public static class Diy1PagerAdapter extends PagerAdapter {
+
+        private final List<View> viewList; //view数组
+
+        public Diy1PagerAdapter(List<View> viewList) {
+            this.viewList = viewList;
+        }
+
+        @Override
+        public int getCount() {
+            return viewList.size();
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view == object;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            container.removeView(viewList.get(position));
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            container.addView(viewList.get(position));
+            return viewList.get(position);
+        }
+
         @Override
         public CharSequence getPageTitle(int position) {
             return tabs.get(position);
