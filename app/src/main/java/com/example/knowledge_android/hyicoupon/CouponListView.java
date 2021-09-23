@@ -55,18 +55,22 @@ public class CouponListView<T> extends ListView {
 
         @Override
         public long getItemId(int position) {
-            HyiCoupon t = (HyiCoupon) model.get(position);
-            return t.getId();
+            return position;
         }
 
-        private final Map<Integer, View> map = new HashMap<>();
 
+        /**
+         * @param position      当前item的位置，对应List数据
+         * @param convertView   初始化时，它为空，如果之前已经创建可以显示一满屏幕的itemView,后边滑动时就会复用之前的itemView,那么这个参数就是划出屏幕的那个itemView.
+         * @param parent        ListView的父布局组件
+         * @return
+         */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             HyiCoupon itemData = (HyiCoupon) get(position);
             CouponViewHolder couponViewHolder = null;
             if (convertView == null) {
-                convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_coupon_show, parent, false);
+                convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_coupon_show2, parent, false);
                 couponViewHolder = new CouponViewHolder();
                 ImageView coupon_recommend;
                 if (itemData.isRecommend()) {
@@ -97,95 +101,72 @@ public class CouponListView<T> extends ListView {
                 couponViewHolder.coupon_minus = coupon_minus;
                 couponViewHolder.coupon_select = coupon_select;
                 convertView.setTag(couponViewHolder);
-                map.put(position, convertView);
-            }
-            if (map.get(position) == null) {
-                convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_coupon_show, parent, false);
-                couponViewHolder = new CouponViewHolder();
-                ImageView coupon_recommend;
-                if (itemData.isRecommend()) {
-                    coupon_recommend = convertView.findViewById(R.id.coupon_recommend);
-                    coupon_recommend.setVisibility(View.VISIBLE);
-                } else {
-                    coupon_recommend = convertView.findViewById(R.id.coupon_recommend);
-                    coupon_recommend.setVisibility(View.INVISIBLE);
-                }
-                TextView couponTitle = convertView.findViewById(R.id.coupon_title);
-                TextView coupon_surplus = convertView.findViewById(R.id.coupon_surplus);
-                TextView coupon_startEndTime = convertView.findViewById(R.id.coupon_startEndTime);
-                TextView coupon_amount = convertView.findViewById(R.id.coupon_amount);
-                TextView coupon_desc = convertView.findViewById(R.id.coupon_desc);
-                ImageView coupon_plus = convertView.findViewById(R.id.coupon_plus);
-                TextView coupon_num = convertView.findViewById(R.id.coupon_num);
-                ImageView coupon_minus = convertView.findViewById(R.id.coupon_minus);
-                ImageView coupon_select = convertView.findViewById(R.id.coupon_select);
-                couponViewHolder.position = position;
-                couponViewHolder.couponTitle = couponTitle;
-                couponViewHolder.coupon_recommend = coupon_recommend;
-                couponViewHolder.coupon_surplus = coupon_surplus;
-                couponViewHolder.coupon_startEndTime = coupon_startEndTime;
-                couponViewHolder.coupon_amount = coupon_amount;
-                couponViewHolder.coupon_desc = coupon_desc;
-                couponViewHolder.coupon_plus = coupon_plus;
-                couponViewHolder.coupon_num = coupon_num;
-                couponViewHolder.coupon_minus = coupon_minus;
-                couponViewHolder.coupon_select = coupon_select;
-                convertView.setTag(couponViewHolder);
-                map.put(position, convertView);
-            }
-            View convertViewSave = map.get(position);
-            convertViewSave.setBackgroundResource(R.drawable.c);
-            couponViewHolder = (CouponViewHolder) convertViewSave.getTag();
-            CouponViewHolder finalCouponViewHolder = couponViewHolder;
-            if (!finalCouponViewHolder.coupon_select.hasOnClickListeners()) {
-                finalCouponViewHolder.coupon_select.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Log.i("TA", "点击优惠券");
-                        HyiCoupon t = (HyiCoupon) get(position);
-                        Log.i("TAG", "点击的交易数据" + t.toString());
-                        if (t.isSelected()) {
-                            t.setSelected(false);
-                            finalCouponViewHolder.coupon_select.setImageResource(R.mipmap.unselect);
-                        } else {
-                            t.setSelected(true);
-                            finalCouponViewHolder.coupon_select.setImageResource(R.mipmap.select);
-                        }
-                        finalCouponViewHolder.coupon_select.postInvalidate();
-                    }
-                });
             } else {
-                Log.i("TAG", "已经配置了舰艇");
+                couponViewHolder = (CouponViewHolder) convertView.getTag();
             }
+            convertView.setBackgroundResource(R.mipmap.coupon_bg);
+
+
+            //TODO 注意(这是一个重点知识-使用时一定会遇到)：由于ListView会复用之前的View，那么就会导致之前的View的状态消失。
+            //TODO 所以我们使用数据，来保存或者还原之前View的状态。这是最好的办法。
+            //TODO B哥也是这么做的，在它的商品明细列表中。
+            boolean selected = itemData.isSelected();
+            int couponUsed = itemData.getCouponUsed();
+            if (selected) {
+                couponViewHolder.coupon_select.setImageResource(R.mipmap.coupon_select);
+            } else {
+                couponViewHolder.coupon_select.setImageResource(R.mipmap.unselect);
+            }
+            couponViewHolder.coupon_num.setText(String.valueOf(couponUsed));
+            ////////////////以上是还原View状态/////////////////////////////////
+
+
+            CouponViewHolder finalCouponViewHolder = couponViewHolder;
+            couponViewHolder.coupon_select.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //监听器中的ItemData是变化的，它指向当前方法的ItemData。因为当前ItemData也随着position变化而变化。
+                    Log.i("TAG", "点击的交易数据" + itemData.toString());
+                    if (itemData.isSelected()) {
+                        itemData.setSelected(false);
+                        finalCouponViewHolder.coupon_select.setImageResource(R.mipmap.unselect);
+                    } else {
+                        itemData.setSelected(true);
+                        finalCouponViewHolder.coupon_select.setImageResource(R.mipmap.select);
+                    }
+                    finalCouponViewHolder.coupon_select.postInvalidate();
+                }
+            });
             finalCouponViewHolder.coupon_plus.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    CharSequence text = finalCouponViewHolder.coupon_num.getText();
-                    int i = Integer.parseInt((String) text);
-                    i += 1;
+                    //监听器中的ItemData是变化的，它指向当前方法的ItemData。因为当前ItemData也随着position变化而变化。
+                    Log.i("TAG", "+++点击的交易数据" + itemData.toString());
+                    int couponUsed1 = itemData.getCouponUsed();
+                    couponUsed1 += 1;
                     int couponTotalAmount = itemData.getCouponTotalAmount();
-                    if (i >= couponTotalAmount) {
-                        i = couponTotalAmount;
+                    if (couponUsed1 >= couponTotalAmount) {
+                        couponUsed1 = couponTotalAmount;
                     }
-                    finalCouponViewHolder.coupon_num.setText(String.valueOf(i));
-                    itemData.setCouponUsed(i);
+                    finalCouponViewHolder.coupon_num.setText(String.valueOf(couponUsed1));
+                    itemData.setCouponUsed(couponUsed1);
                 }
             });
-
             finalCouponViewHolder.coupon_minus.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    CharSequence text = finalCouponViewHolder.coupon_num.getText();
-                    int i = Integer.parseInt((String) text);
-                    i -= 1;
-                    if (i == 0) {
-                        i = 1;
+                    //监听器中的ItemData是变化的，它指向当前方法的ItemData。因为当前ItemData也随着position变化而变化。
+                    Log.i("TAG", "---点击的交易数据" + itemData.toString());
+                    int couponUsed1 = itemData.getCouponUsed();
+                    couponUsed1 -= 1;
+                    if (couponUsed1 == 0) {
+                        couponUsed1 = 1;
                     }
-                    finalCouponViewHolder.coupon_num.setText(String.valueOf(i));
-                    itemData.setCouponUsed(i);
+                    finalCouponViewHolder.coupon_num.setText(String.valueOf(couponUsed1));
+                    itemData.setCouponUsed(couponUsed1);
                 }
             });
-            return convertViewSave;
+            return convertView;
         }
 
         @Override
