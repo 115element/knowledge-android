@@ -41,6 +41,10 @@ import com.example.knowledge_android.comparator.i18n2.I18n_CommonResource_zh_TW;
 import com.example.knowledge_android.daosupport_annotation.base.IDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.base.MobileDatabasePlusHelper;
 import com.example.knowledge_android.daosupport_annotation.daohelp.DaoLocatorPlus;
+import com.example.knowledge_android.eventlistener.MyEvent;
+import com.example.knowledge_android.eventlistener.MyListener;
+import com.example.knowledge_android.eventlistener.use.AA;
+import com.example.knowledge_android.eventlistener.use.BB;
 import com.example.knowledge_android.widget.fragment.pos_screen.PosScreenMainActivity;
 import com.example.knowledge_android.widget.fragment.pos_screen.posmainfragment.IPosScreen;
 import com.example.knowledge_android.knowledge.DevAddrUtil;
@@ -60,7 +64,9 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.EventObject;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -109,6 +115,30 @@ public class OneApplication extends MultiDexApplication {
     private String bridgeType;
     private String deviceType;
     private String screenType;
+
+
+    //******************学习设计思想，监听器**********************************
+    public static List<MyListener> myListeners = new ArrayList<>();
+
+    static {
+        myListeners.add(new AA());
+        myListeners.add(new BB());
+
+        fireTransactionEvent(new MyEvent(new Object(), "请接收我传播的信息"));
+    }
+
+    //**所有我们管控的监听器都会收到该事件，也就是AA和BB**********************************
+    public static void fireTransactionEvent(EventObject eventObject) {
+        MyEvent myEvent = (MyEvent) eventObject;
+        if (myListeners.size() != 0) {
+            Iterator<MyListener> iterator = myListeners.iterator();
+            while (iterator.hasNext()) {
+                MyListener next = iterator.next();
+                next.transactionChanged(myEvent);
+            }
+        }
+    }
+    //******************学习设计思想，监听器**********************************
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -190,7 +220,7 @@ public class OneApplication extends MultiDexApplication {
     }
 
 
-    public void openApkDownload(){
+    public void openApkDownload() {
         ApkDownloader pvd = new ApkDownloader();
         pvd.setTransferProgressListener(new TransferProgressListener() {
             @Override
@@ -286,10 +316,10 @@ public class OneApplication extends MultiDexApplication {
         });
     }
 
-    private void openMqtt() throws Exception{
+    private void openMqtt() throws Exception {
         String storeId = "208888";
         //mqtt调用(进行主题订阅)
-        Log.i("TAG","start Android Mqtt");
+        Log.i("TAG", "start Android Mqtt");
         AndroidMqttService androidMqttService = new AndroidMqttService();
         String clientId = "pos_" + storeId + "_" + DevAddrUtil.getLocalMacIdFromIp();//规则:
         List<String> topicList = new ArrayList<>();
@@ -310,6 +340,7 @@ public class OneApplication extends MultiDexApplication {
 
     int screenWidth; //屏幕宽
     int screenHeight;//屏幕高
+
     public int getScreenWidth() {
         return screenWidth;
     }
@@ -399,8 +430,6 @@ public class OneApplication extends MultiDexApplication {
 //        }
 //        //DaoLocator.setPosTerminalApplication(null);
 //    }
-
-
     public void playNotificationSound() {
         try {
             //1.获取铃声类型
@@ -429,6 +458,7 @@ public class OneApplication extends MultiDexApplication {
 
     //获取app目录下，build.gradle里边配置的，defaultConfig{ versionName }
     String appVer;
+
     public String getAppVersion() {
         try {
             if (appVer != null) {
@@ -437,7 +467,7 @@ public class OneApplication extends MultiDexApplication {
                 appVer = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
             }
         } catch (PackageManager.NameNotFoundException e) {
-            Log.i("TAG",e.getMessage());
+            Log.i("TAG", e.getMessage());
         }
         return appVer;
     }
@@ -445,6 +475,7 @@ public class OneApplication extends MultiDexApplication {
 
     //获取app目录下，build.gradle里边配置的，defaultConfig{ versionName }
     String appVerCode;
+
     public String getAppVersionCode() {
         try {
             if (appVerCode != null) {
@@ -453,7 +484,7 @@ public class OneApplication extends MultiDexApplication {
                 appVerCode = Integer.valueOf(getPackageManager().getPackageInfo(getPackageName(), 0).versionCode).toString();
             }
         } catch (PackageManager.NameNotFoundException e) {
-            Log.i("TAg",e.getMessage());
+            Log.i("TAg", e.getMessage());
             return "";
         }
         return appVerCode;
@@ -582,7 +613,7 @@ public class OneApplication extends MultiDexApplication {
             HttpURLConnection http = (HttpURLConnection) posHubDomain.openConnection();
             return http.getResponseCode() == HttpURLConnection.HTTP_OK;
         } catch (Exception ex) {
-            Log.e("TAG","无法连接poshub服务器{}"+domain);
+            Log.e("TAG", "无法连接poshub服务器{}" + domain);
         }
         return false;
     }
