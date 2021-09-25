@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/edit_text_border.xml" value="0.2529296875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_cancel.xml" value="0.20377604166666666" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/xxx.xml" value="0.2529296875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/yyy.xml" value="0.13802083333333334" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/zzz.xml" value="0.13802083333333334" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_classify.xml" value="0.18704710144927536" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_drag_recyclerview.xml" value="0.18704710144927536" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/item_plu_show.xml" value="0.20096153846153847" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_select_alertdialog.xml" value="0.20096153846153847" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/activity_main_hyi_coupon.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/item_coupon_show.xml" value="0.4" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/linkage-recyclerview/src/main/res/layout/default_adapter_linkage_secondary_linear.xml" value="0.20801282051282052" />
