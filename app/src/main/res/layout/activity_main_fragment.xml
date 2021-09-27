@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--静态加载Fragment-->
+    <fragment
+        android:id="@+id/left_fragment"
+        android:name="com.example.knowledge_android.fragment_use.fragment.LeftFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+
+    <!--
+    可以看到，现在将右侧碎片放在了一个FrameLayout中，这是Android中最简单的一种布局，它没有任何的定位方式，
+    所有的控件都会摆放在布局的左上角。由于这里仅需要在布局里放入一个碎片，因此非常适合使用FrameLayout。
+    之后我们将在代码中替换FrameLayout里的内容，从而实现动态添加碎片的功能。
+    -->
+
+    <FrameLayout
+        android:id="@+id/right_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!--可以在这个容器中动态加载Fragment-->
+        <fragment
+            android:id="@+id/right_fragment"
+            android:name="com.example.knowledge_android.fragment_use.fragment.RightFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

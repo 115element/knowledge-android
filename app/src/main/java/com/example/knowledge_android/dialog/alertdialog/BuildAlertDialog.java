@@ -30,7 +30,7 @@ public class BuildAlertDialog {
         Context context = OneApplication.getInstance().getBaseContext();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        View alertView = LayoutInflater.from(context).inflate(R.layout.plu_select_alertdialog, null);
+        View alertView = LayoutInflater.from(context).inflate(R.layout.plu_select_alertdialog,null);
         Button cancel = alertView.findViewById(R.id.plu_cancel);
         Button enter = alertView.findViewById(R.id.plu_enter);
         PluListView pluListView = alertView.findViewById(R.id.plu_list_view);
