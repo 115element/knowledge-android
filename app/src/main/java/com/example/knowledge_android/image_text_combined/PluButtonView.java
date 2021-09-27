@@ -1,5 +1,6 @@
 package com.example.knowledge_android.image_text_combined;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,6 +28,19 @@ import java.math.BigDecimal;
  * 实现一个自定义Button上半部分显示图片，下半部分显示文字描述，并且Button右上角绘制销售数量。
  */
 public class PluButtonView extends AppCompatButton {
+
+//   使用Glide怎么在非ImageView加载图片？
+//    pluButtonView.setGravity(Gravity.LEFT)
+//            Glide.with(context)
+//            .load(posButton.image_file)
+//                    .asBitmap()
+//                    .into(new SimpleTarget<Bitmap>() {
+//        @Override
+//        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+//            pluButtonView.setBitmap2(resource);
+//        }
+//    });
+
 
     /**
      * 关联商品。
@@ -84,10 +98,16 @@ public class PluButtonView extends AppCompatButton {
 
     private Bitmap bitmap;
 
+    void setBitmap2(Bitmap bitmap1) {
+        this.bitmap = bitmap1;
+        invalidate();
+    }
+
+
     void setBitmap(int resourceId) {
         this.bitmap = BitmapFactory.decodeResource(getResources(), resourceId);
         this.bitmap = resizeBitmap(210f, 100f, bitmap);
-        this.bitmap = toRoundCorner(bitmap,20,false,false,true,true);
+        this.bitmap = toRoundCorner(bitmap, 20, false, false, true, true);
         invalidate();
     }
 
@@ -118,16 +138,16 @@ public class PluButtonView extends AppCompatButton {
         paint.setColor(color);
         paint1.setColor(0xaaaaaaaa);
         canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
-        if(lt){
-            canvas.drawRect(0, 0, bitmap.getWidth()-pixels, bitmap.getHeight()-pixels, paint);
+        if (lt) {
+            canvas.drawRect(0, 0, bitmap.getWidth() - pixels, bitmap.getHeight() - pixels, paint);
         }
-        if(rt){
-            canvas.drawRect(pixels, 0, bitmap.getWidth(), bitmap.getHeight()-pixels, paint);
+        if (rt) {
+            canvas.drawRect(pixels, 0, bitmap.getWidth(), bitmap.getHeight() - pixels, paint);
         }
-        if(lb){
-            canvas.drawRect(0, pixels, bitmap.getWidth()-pixels, bitmap.getHeight(), paint);
+        if (lb) {
+            canvas.drawRect(0, pixels, bitmap.getWidth() - pixels, bitmap.getHeight(), paint);
         }
-        if(rb){
+        if (rb) {
             canvas.drawRect(pixels, pixels, bitmap.getWidth(), bitmap.getHeight(), paint);
         }
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
@@ -158,10 +178,8 @@ public class PluButtonView extends AppCompatButton {
     /**
      * 把图片变成圆角---方法2
      *
-     * @param bitmap
-     *            需要修改的图片
-     * @param pixels
-     *            圆角的弧度
+     * @param bitmap 需要修改的图片
+     * @param pixels 圆角的弧度
      * @return 圆角图片
      */
     public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {
@@ -187,7 +205,6 @@ public class PluButtonView extends AppCompatButton {
     }
 
 
-
     //将bitmap转换成任意大小
     public Bitmap resizeBitmap(float newWidth, float newHeight, Bitmap bitmap) {
         Matrix matrix = new Matrix();
@@ -200,25 +217,24 @@ public class PluButtonView extends AppCompatButton {
     /**
      * //BigDecimal比较大小   前提为a、b均不能为null
      * if(a.compareTo(b) == -1){
-     *     System.out.println("a小于b");
+     * System.out.println("a小于b");
      * }
-     *
+     * <p>
      * if(a.compareTo(b) == 0){
-     *     System.out.println("a等于b");
+     * System.out.println("a等于b");
      * }
-     *
+     * <p>
      * if(a.compareTo(b) == 1){
-     *     System.out.println("a大于b");
+     * System.out.println("a大于b");
      * }
-     *
+     * <p>
      * if(a.compareTo(b) > -1){
-     *     System.out.println("a大于等于b");
+     * System.out.println("a大于等于b");
      * }
-     *
+     * <p>
      * if(a.compareTo(b) < 1){
-     *     System.out.println("a小于等于b");
+     * System.out.println("a小于等于b");
      * }
-     *
      *
      * @param canvas
      */
@@ -267,6 +283,7 @@ public class PluButtonView extends AppCompatButton {
     }
 
 
+    @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {
         //getDrawingRect(rect)
@@ -276,6 +293,22 @@ public class PluButtonView extends AppCompatButton {
         //int x = (this.getMeasuredWidth() - bitmap.getWidth())/2 as int;
         //int x = (this.getMeasuredWidth() - 100)/2 as int;
         //int y = 100;
+
+        // 图片顶部居中显示
+        int width = this.getMeasuredWidth();   //获取当前组件的宽度
+        int height = this.getMeasuredHeight(); //获取当前组件的高度
+        //Rect src = new Rect(0, 0, 230, 140);
+
+        Rect src; // = new Rect(0, 0, width, height / 2);
+        @SuppressLint("DrawAllocation") Rect dst = new Rect(0, 0, width, height / 2);
+        if (bitmap != null) {
+            src = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+            canvas.drawBitmap(bitmap, src, dst, null);
+            //src: 取材位置的位置
+            //dst: 绘制的目标区域位置
+        }
+
+
         canvas.drawBitmap(bitmap, 0, 0, null);
 
         //canvas.save();//锁画布(为了保存之前的画布状态)
