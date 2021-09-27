@@ -183,7 +183,7 @@
 
     <!--Style for Splash Screen-->
     <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+        <item name="android:windowBackground">@drawable/appbar_background</item>
     </style>
 
     <style name="DrawerMenuTextAppearance">
@@ -283,7 +283,7 @@
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">2dp</item>
-        <item name="android:background">@drawable/view_border</item>
+        <!--<item name="android:background">@drawable/tejia</item>-->
         <item name="android:orientation">horizontal</item>
     </style>
 
@@ -303,7 +303,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:background">@null</item>
-        <item name="android:drawableRight">@drawable/toggle_button_selector</item>
+        <!--<item name="android:drawableRight">@drawable/toggle_button_selector</item>-->
         <item name="android:paddingRight">3dp</item>
         <item name="android:scaleType">fitCenter</item>
         <item name="android:checked">true</item>

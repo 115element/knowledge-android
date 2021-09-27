@@ -223,7 +223,7 @@
         android:layout_height="50dp"
         android:background="@drawable/shape_button"
         android:backgroundTint="@color/beirui_button_selector"
-        android:text="⃖"
+        android:text=""
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="#ff333333"
         android:textSize="50dp"

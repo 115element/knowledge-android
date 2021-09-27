@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.example.knowledge_android.left_fix_text.TextInputBox
+        android:layout_width="240dp"
+        android:layout_height="172dp"
+        android:background="@drawable/qy_sdk_edt_bg"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        app:leftText="原密码 | "
+        app:leftTextColor="@color/gray"
+        app:rightHint="左边"
+        app:rightTextColor="@color/gray"
+        app:rightTextSize="20dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
