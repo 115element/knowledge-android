@@ -1,4 +1,4 @@
-package com.example.knowledge_android.left_fix_text;
+package com.example.knowledge_android.left_fix_text.p1;
 
 import android.os.Bundle;
 

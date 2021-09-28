@@ -1,4 +1,4 @@
-package com.example.knowledge_android.left_fix_text;
+package com.example.knowledge_android.left_fix_text.p1;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -29,7 +29,7 @@ public class TextInputBox extends RelativeLayout {
 
     public TextInputBox(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        if (true) {
+        if (isApp) {
             LayoutInflater.from(getContext()).inflate(R.layout.text_input_box, this);
         } else {
             LayoutInflater.from(context).inflate(R.layout.text_input_box, this);

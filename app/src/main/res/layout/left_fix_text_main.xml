@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <com.example.knowledge_android.left_fix_text.TextInputBox
+    <com.example.knowledge_android.left_fix_text.p1.TextInputBox
         android:layout_width="240dp"
         android:layout_height="172dp"
         android:background="@drawable/qy_sdk_edt_bg"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义属性-->
+    <declare-styleable name="TextButtonBox">
+        <attr name="leftFixText" format="reference|string" />
+        <attr name="leftFixTextColor" format="reference|color" />
+        <attr name="leftFixTextSize" format="reference|dimension" />
+
+        <attr name="rightButtonBg" format="reference|color" />
+        <attr name="rightButtonText" format="reference|string" />
+        <attr name="rightButtonHint" format="reference|string" />
+        <attr name="rightButtonTextColor" format="reference|color" />
+        <attr name="rightButtonTextSize" format="reference|dimension" />
+    </declare-styleable>
+</resources>
