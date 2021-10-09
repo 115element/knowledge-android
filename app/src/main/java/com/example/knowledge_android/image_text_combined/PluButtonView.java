@@ -41,6 +41,26 @@ public class PluButtonView extends AppCompatButton {
 //        }
 //    });
 
+//    使用Glide在非ImageView加载图片时，如何设置图片加载失败的默认图片，如下：
+//     Glide.with(context)
+//            .load(posButton.image_file)
+//                    .asBitmap()
+//                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                    .into(new SimpleTarget<Bitmap>() {
+//        @Override
+//        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+//            if (resource == null) {
+//                pluButtonView.setBitmap2(BitmapFactory.decodeResource(getResources(), R.drawable.top));
+//            } else {
+//                pluButtonView.setBitmap2(resource);
+//            }
+//        }
+//        @Override
+//        void onLoadFailed(Exception e, Drawable errorDrawable) {
+//            pluButtonView.setBitmap2(BitmapFactory.decodeResource(getResources(), R.drawable.pro_default))
+//        }
+//    });
+
 
     /**
      * 关联商品。
