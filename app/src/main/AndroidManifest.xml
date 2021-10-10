@@ -47,7 +47,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的控件效果-->
         <activity
-            android:name=".flexbox_layout.FlexBoxActivity2"
+            android:name=".activity4.MainActivity4"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="unspecified"
             android:theme="@style/Theme.MaterialComponents"
