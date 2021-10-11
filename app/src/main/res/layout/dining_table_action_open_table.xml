@@ -24,7 +24,7 @@
         <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
-            <hyi.mobilepos.widget.PhonicButton
+            <com.example.knowledge_android.widget.view.PhonicButton
                     android:id="@+id/btn_open_table"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_marginTop="10dp">
-            <hyi.mobilepos.widget.PhonicButton
+            <com.example.knowledge_android.widget.view.PhonicButton
                     android:id="@+id/btn_change_customer_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_marginTop="10dp">
-            <hyi.mobilepos.widget.PhonicButton
+            <com.example.knowledge_android.widget.view.PhonicButton
                     android:id="@+id/btn_change_table"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

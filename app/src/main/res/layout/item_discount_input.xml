@@ -9,7 +9,7 @@
         android:focusableInTouchMode="true"
         android:background="@drawable/item_editor_bg">
 
-    <hyi.mobilepos.widget.PhonicButton
+    <com.example.knowledge_android.widget.view.PhonicButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                     android:layout_columnSpan="2"
                     android:columnCount="4">
 
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_7"
                         android:text="7"
                         style="@style/num_pad_big_button"
@@ -104,7 +104,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_8"
                         android:text="8"
                         style="@style/num_pad_big_button"
@@ -112,7 +112,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_9"
                         android:text="9"
                         style="@style/num_pad_big_button"
@@ -120,7 +120,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/discount_button"
                         android:text="@string/discount_percentage_portrait"
                         style="@style/num_pad_button"
@@ -128,7 +128,7 @@
                         android:layout_height="122dp"
                         android:layout_rowSpan="2"
                         />
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_4"
                         android:text="4"
                         style="@style/num_pad_big_button"
@@ -136,7 +136,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_5"
                         android:text="5"
                         style="@style/num_pad_big_button"
@@ -144,7 +144,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_6"
                         android:text="6"
                         style="@style/num_pad_big_button"
@@ -153,7 +153,7 @@
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
 
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_1"
                         android:text="1"
                         style="@style/num_pad_big_button"
@@ -161,7 +161,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_2"
                         android:text="2"
                         style="@style/num_pad_big_button"
@@ -169,7 +169,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_3"
                         android:text="3"
                         style="@style/num_pad_big_button"
@@ -177,7 +177,7 @@
                         android:layout_height="61dp"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/clear_button"
                         android:text="@string/clear_to_zero_portrait"
                         style="@style/num_pad_button"
@@ -185,7 +185,7 @@
                         android:layout_height="122dp"
                         android:layout_rowSpan="2"
                         />
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_0"
                         android:text="0"
                         style="@style/num_pad_big_button"
@@ -194,7 +194,7 @@
                         android:layout_columnSpan="2"
                         app:userFont="number"
                         app:buttonFontStyle="bold"/>
-                <hyi.mobilepos.widget.PhonicButton
+                <com.example.knowledge_android.widget.view.PhonicButton
                         android:id="@+id/num_period"
                         android:text="."
                         style="@style/num_pad_big_button"
@@ -235,7 +235,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
                 android:gravity="center">
-            <hyi.mobilepos.widget.PhonicButton
+            <com.example.knowledge_android.widget.view.PhonicButton
                     android:id="@+id/cancel_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -244,7 +244,7 @@
                     android:text="@android:string/cancel"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/ic_button_apple_white"/>
-            <hyi.mobilepos.widget.PhonicButton
+            <com.example.knowledge_android.widget.view.PhonicButton
                     android:id="@+id/ok_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

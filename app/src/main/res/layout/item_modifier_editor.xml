@@ -9,7 +9,7 @@
         android:focusableInTouchMode="true"
         android:background="@drawable/item_editor_bg">
 
-    <hyi.mobilepos.widget.PhonicButton
+    <com.example.knowledge_android.widget.view.PhonicButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

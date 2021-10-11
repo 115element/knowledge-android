@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:gravity="center_horizontal">
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
                 android:text="@android:string/cancel"
                 android:layout_gravity="left"
                 />
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/ok_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

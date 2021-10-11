@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal">
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/male_qty_minus_5"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:text="-5"
                 android:background="@drawable/ic_button_apple_white"
                 />
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/male_qty_minus_1"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 android:gravity="center"
                 android:layout_weight="1"
                 android:text="0"/>
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 style="@style/MediumTextViewStyle"
@@ -64,7 +64,7 @@
                 android:id="@+id/male_qty_plus_1"
                 android:background="@drawable/ic_button_apple_white"
                 />
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/male_qty_plus_5"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal">
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/female_qty_minus_5"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                 android:text="-5"
                 android:background="@drawable/ic_button_apple_white"
                 />
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/female_qty_minus_1"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                 android:gravity="center"
                 android:layout_weight="1"
                 android:text="0" android:singleLine="true"/>
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/female_qty_plus_1"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                 android:text="+1"
                 android:background="@drawable/ic_button_apple_white"
                 />
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/female_qty_plus_5"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:padding="10dp">
-        <!--<hyi.mobilepos.widget.PhonicButton-->
+        <!--<com.example.knowledge_android.widget.view.PhonicButton-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:minWidth="90dp"-->
@@ -149,7 +149,7 @@
                 <!--app:buttonColor="#ff888888"-->
                 <!--android:background="@drawable/ic_button_apple_white"-->
                 <!--android:id="@+id/cancel_button"/>-->
-        <hyi.mobilepos.widget.PhonicButton
+        <com.example.knowledge_android.widget.view.PhonicButton
                 android:id="@+id/ok_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
