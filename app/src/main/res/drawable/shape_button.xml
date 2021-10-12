@@ -84,6 +84,6 @@ gradientRadius只有在渐变类型为radial的时候才生效，用于控制渐
     <!--    <corners android:radius="30dip" />-->
     <!--边框的宽度及颜色-->
     <stroke
-        android:width="2px"
+        android:width="3px"
         android:color="#ffeeeeee" />
 </shape>
