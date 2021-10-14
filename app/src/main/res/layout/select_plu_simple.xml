@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
 
     <LinearLayout
@@ -58,72 +58,10 @@
                         android:gravity="center"
                         android:text="＋"
                         android:textStyle="bold" />
-=======
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="10"
-                android:layout_height="match_parent"
-                android:text="使用数量"
-                android:textColor="#c25348"/>
-
-
-            <LinearLayout
-                android:background="@drawable/rectangle_ellipse_black"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="30">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="match_parent"
-                    android:text="—"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:id="@+id/coupon_num"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:minEms="1"
-                    android:text="1"
-                    android:gravity="center"
-                    android:background="@drawable/shape_button1"
-
-                    android:textColor="#c25348"
-                    android:textStyle="bold"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="match_parent"
-                    android:text="＋"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="20sp"/>
->>>>>>> origin/master
 
             </LinearLayout>
 
 
-<<<<<<< HEAD
             <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -132,33 +70,18 @@
                     android:text="本活动只限制使用1张" />
 
             <TextView
+                    android:id="@+id/back_view"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="10"
                     android:gravity="center"
                     android:text="&lt; 返回"
                     android:textColor="#c25348" />
-=======
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="50"
-                android:layout_height="match_parent"
-                android:text="本活动只限制使用1张"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="10"
-                android:layout_height="match_parent"
-                android:textColor="#c25348"
-                android:text="&lt; 返回"/>
->>>>>>> origin/master
 
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-<<<<<<< HEAD
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="10">
@@ -191,14 +114,16 @@
             android:layout_weight="60">
 
         <LinearLayout
+                android:id="@+id/dynamic_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
             <TextView
+                    android:id="@+id/v1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="15"
+                    android:layout_weight="10"
                     android:gravity="bottom"
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/black"
@@ -209,12 +134,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_weight="15" />
+                    android:layout_weight="10" />
 
             <TextView
+                    android:id="@+id/v2"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="15"
+                    android:layout_weight="10"
                     android:gravity="bottom"
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/black"
@@ -225,12 +151,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_weight="15" />
+                    android:layout_weight="10" />
 
             <TextView
+                    android:id="@+id/v3"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="15"
+                    android:layout_weight="10"
                     android:gravity="bottom"
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/black"
@@ -241,117 +168,74 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_weight="15" />
+                    android:layout_weight="10" />
 
-            <Space
+            <TextView
+                    android:id="@+id/v4"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
+                    android:text="加冰" />
+
+            <com.donkingliang.labels.LabelsView
+                    android:id="@+id/labels4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_weight="10" />
-=======
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="10">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="饮料"
-            android:textColor="#c25348"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="10">
-
-        <com.donkingliang.labels.LabelsView
-            android:id="@+id/labels0"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/choice_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="60">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"
-                android:text="浓缩咖啡"
-                android:gravity="bottom"
-                />
-            <com.donkingliang.labels.LabelsView
-                android:id="@+id/labels1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"/>
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
+                    android:text="加冰" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"
-                android:text="加糖"
-                android:gravity="bottom"
-                />
             <com.donkingliang.labels.LabelsView
-                android:id="@+id/labels2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"
-                android:text="加冰"
-                android:gravity="bottom"
-                />
-            <com.donkingliang.labels.LabelsView
-                android:id="@+id/labels3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"/>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10"/>
->>>>>>> origin/master
+                    android:id="@+id/labels5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="10" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-<<<<<<< HEAD
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="15">
 
-        <Button
-                android:layout_width="match_parent"
+        <Space
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="确定"
-                android:textColor="#000" />
-=======
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10">
+                android:layout_weight="40"
+                />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="确定"
-            android:textColor="#000"/>
->>>>>>> origin/master
+                android:id="@+id/enter_button"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="match_parent"
+                android:text="确定"
+                android:background="@drawable/shape_button2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000" />
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                />
+
     </LinearLayout>
 
 </LinearLayout>
