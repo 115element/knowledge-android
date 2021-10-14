@@ -48,11 +48,11 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的控件效果-->
         <activity
-            android:name=".leftimage_righttext_button.LeftImageRightTextActivity"
+            android:name=".plu_selected.PluSelectedActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:screenOrientation="unspecified"
-            android:theme="@style/Theme.MaterialComponents">
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
