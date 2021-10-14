@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D7DFF0">
+
+    <!--<ImageView
+            android:id="@+id/expend"
+            android:layout_width="57dp"
+            android:layout_height="47dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/slide_up" />-->
+           <!-- android:src="@drawable/tree_right_arrows" />-->
+
+    <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+        <!--取餐码-->
+        <TextView
+                android:id="@+id/foodCode"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <!--渠道-->
+        <TextView
+                android:id="@+id/channel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <!--交易时间-->
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <!--手机号码-->
+        <TextView
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <!--金额-->
+        <TextView
+                android:id="@+id/amount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#BD0E0E"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <!--退货状态-->
+        <Button
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circular_shape"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/parent_dashed_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/parent_layout"
+            android:background="@drawable/dashed_style_view"
+            android:layerType="software" />
+
+</RelativeLayout>
