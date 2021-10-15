@@ -154,15 +154,22 @@
 
 
     <!--商品明细部分，这里有个特殊的设置，就是这里RecyclerView显示的区域，要占高度的比例尽可能大，才能把所有明细显示完，否则可能只显示一条明细-->
-    <LinearLayout
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="55">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/details"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--    </LinearLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/details"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="55">
+        android:layout_height="wrap_content" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 </LinearLayout>

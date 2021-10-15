@@ -12,6 +12,7 @@ import com.example.knowledge_android.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DetailViewAdapter extends RecyclerView.Adapter {
 
@@ -19,13 +20,20 @@ public class DetailViewAdapter extends RecyclerView.Adapter {
 
     public DetailViewAdapter() {
         ss.clear();
-        ss.add("1");
-        ss.add("2");
-        ss.add("3");
-        ss.add("4");
-        ss.add("5");
-        ss.add("5");
-        ss.add("5");
+        Random random = new Random();
+        int count = random.nextInt(10);
+        if (count == 0) {
+            count = 1;
+        }
+        for (int i = 0; i < count; i++) {
+            ss.add("1");
+        }
+//        ss.add("2");
+//        ss.add("3");
+//        ss.add("4");
+//        ss.add("5");
+//        ss.add("5");
+//        ss.add("5");
     }
 
     public static class DetailViewHolder extends RecyclerView.ViewHolder{
