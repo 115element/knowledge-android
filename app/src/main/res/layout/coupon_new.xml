@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <talon.com.underlineText.UnderLineTextView
+            android:id="@+id/plu_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="bottom"
+            android:text="商品券"
+            android:textColor="@color/black"
+            app:underlineColor="@color/red"
+            app:underlineWidth="7dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+
+        <talon.com.underlineText.UnderLineTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="bottom"
+            android:id="@+id/gold_view"
+            android:text="代金券"
+            android:textColor="@color/black"
+            app:underlineColor="@color/red"
+            app:underlineWidth="7dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/beiruired" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95">
+
+        <com.example.knowledge_android.hyicoupon.CouponListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.knowledge_android.hyicoupon.CouponListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -211,6 +211,10 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:percent:22.2.0'
 
+
+    //带下滑的TextView
+    implementation 'talon.com:underlineText:1.0.0'
+
 //    configurations {
 //        all*.exclude group: 'com.google.code.gson'
 //    }
