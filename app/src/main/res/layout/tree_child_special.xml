@@ -65,16 +65,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="20"
-                android:text="积分抵扣：￥30  现金支付：￥20"
                 android:gravity="center_vertical"
+                android:text="积分抵扣：￥30  现金支付：￥20"
                 tools:ignore="Suspicious0dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="20"
-                android:text="支付宝支付：￥30"
                 android:gravity="top"
+                android:text="支付宝支付：￥30"
                 tools:ignore="Suspicious0dp" />
 
         </LinearLayout>
@@ -153,18 +153,20 @@
     </LinearLayout>
 
 
-    <!--商品明细部分，这里有个特殊的设置，就是这里RecyclerView显示的区域，要占高度的比例尽可能大，才能把所有明细显示完，否则可能只显示一条明细-->
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="55">-->
+    <!--商品明细部分，这里有个特殊的设置，就是这里RecyclerView显示的区域，要占高度的比例尽可能大，才能把所有明细显示完，否则可能只显示一条明细
+    但是我又发现下面未注释的方式，可以完美解决根据Item数量自适应问题。
+    -->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="55">-->
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/details"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content" />-->
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/details"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
 
     <androidx.recyclerview.widget.RecyclerView
