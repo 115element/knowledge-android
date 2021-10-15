@@ -1,5 +1,6 @@
 package com.example.knowledge_android.recyclerview5.tree;
 
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,6 +38,7 @@ public class TwoTreeItemParent extends TreeItemGroup<TranDetail> {
 
         RecyclerView recyclerView = holder.getView(R.id.details);
         recyclerView.setLayoutManager(new LinearLayoutManager(OneApplication.getInstance().getBaseContext()));
+        //recyclerView.setLayoutManager(new GridLayoutManager(OneApplication.getInstance().getBaseContext(), 6));
         DetailViewAdapter detailViewAdapter = new DetailViewAdapter();
         recyclerView.setAdapter(detailViewAdapter);
 //        holder.setText(R.id.pluId, getData().getPluId());

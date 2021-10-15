@@ -15,7 +15,18 @@ import java.util.List;
 
 public class DetailViewAdapter extends RecyclerView.Adapter {
 
-    static List<String> ss = new ArrayList<>();
+    List<String> ss = new ArrayList<>();
+
+    public DetailViewAdapter() {
+        ss.clear();
+        ss.add("1");
+        ss.add("2");
+        ss.add("3");
+        ss.add("4");
+        ss.add("5");
+        ss.add("5");
+        ss.add("5");
+    }
 
     public static class DetailViewHolder extends RecyclerView.ViewHolder{
 
@@ -32,11 +43,6 @@ public class DetailViewAdapter extends RecyclerView.Adapter {
         }
     }
 
-    static {
-        ss.add("1");
-        ss.add("2");
-        ss.add("3");
-    }
 
     @NonNull
     @Override
