@@ -36,6 +36,8 @@ public class HyiCouponActivity extends AppCompatActivity {
     private List<Fragment> fragments = new ArrayList<>();
     private static List<String> tabs = new ArrayList<>();
 
+    private List<View> viewList;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,7 @@ public class HyiCouponActivity extends AppCompatActivity {
 //        pagerTabStrip.setPadding(0,0,0,0);
 //        pagerTabStrip.setTextSpacing(1);
 
-        List<View> viewList = new ArrayList<>();
+        viewList = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             CouponListView<Object> couponView = new CouponListView<>(getBaseContext());
@@ -96,24 +98,23 @@ public class HyiCouponActivity extends AppCompatActivity {
     }
 
 
-
     private void initData() {
         tabs.add("新消息");
         tabs.add("朋友圈");
         tabs.add("公众号");
-        fragments.add(new TabFrament(this,tabs.get(0)));
-        fragments.add(new TabFrament(this,tabs.get(1)));
-        fragments.add(new TabFrament(this,tabs.get(2)));
+        fragments.add(new TabFrament(this, tabs.get(0)));
+        fragments.add(new TabFrament(this, tabs.get(1)));
+        fragments.add(new TabFrament(this, tabs.get(2)));
 
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
-        viewPager = (ViewPager)findViewById(R.id.viewpager);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
         //设置TabLayout的模式
         tabLayout.setTabMode(TabLayout.MODE_AUTO);
         viewPager.setAdapter(new TabAdapter(getSupportFragmentManager()));
         //关联ViewPager和TabLayout
         tabLayout.setupWithViewPager(viewPager);
         //设置分割线
-        LinearLayout linear = (LinearLayout)tabLayout.getChildAt(0);
+        LinearLayout linear = (LinearLayout) tabLayout.getChildAt(0);
         linear.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         //设置分割图片
         //linear.setDividerDrawable(ContextCompat.getDrawable(this,R.drawable.f));
@@ -128,8 +129,7 @@ public class HyiCouponActivity extends AppCompatActivity {
     }
 
 
-
-    //ViewPager-可以选择使用Fragment
+    //ViewPager-可以选择使用Fragment,也可以使用View
     public class TabAdapter extends FragmentPagerAdapter {
 
         public TabAdapter(FragmentManager fm) {
@@ -145,13 +145,13 @@ public class HyiCouponActivity extends AppCompatActivity {
         public int getCount() {
             return fragments.size();
         }
+
         //显示标签上的文字
         @Override
         public CharSequence getPageTitle(int position) {
             return tabs.get(position);
         }
     }
-
 
 
     //ViewPager-可以选择使用View
