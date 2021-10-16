@@ -77,8 +77,15 @@ android {
             jniLibs.srcDirs = ['src/main/jniLibs'] //就是你存放so文件夹的不同cup目录地址
 
 
-            //安卓指定多个layout目录的方法
+            //安卓指定多个layout目录的方法,以及指定多个drawable目录问题
             res.srcDirs=[
+
+                    //指定多个Drawable目录的办法
+                    'src/main/res/drawable-v24', //你自己建立的drawable目录
+                    'src/main/res/drawable', //必须要有
+
+                    //指定多个Layout目录的办法
+                    'src/main/res/layout-land', //你自己建立的layout目录
                     'src/main/res/layout_coupon', //你自己建立的layout目录
                     'src/main/res/layout',//必须要有
                     'src/main/res',//必须要有，倒数两个顺序必须是这样子，不能乱
@@ -119,6 +126,7 @@ dependencies {
 
     //引入本地jar包
     implementation files('libs/LanPP.jar')
+    implementation files('libs/badgeview.jar')
 
     //数据绑定MVCC功能
     //implementation 'androidx.databinding:library:3.2.0-alpha11'

@@ -2,7 +2,13 @@ package com.example.knowledge_android.labels_view;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.SuperscriptSpan;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -11,10 +17,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.donkingliang.labels.LabelsView;
 import com.example.knowledge_android.R;
 import com.example.knowledge_android.widget.view.MarqueeText;
+import com.jauker.widget.BadgeView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import q.rorbin.badgeview.QBadgeView;
 
 public class LabelsActivity extends AppCompatActivity {
 
@@ -65,6 +74,8 @@ public class LabelsActivity extends AppCompatActivity {
             public CharSequence getLabelText(TextView label, int position, Taste data) {
                 // label就是标签项，在这里可以对标签项单独设置一些属性，比如文本样式等。
                 labelsView1.setLabelSelect(label, false);
+
+
                 if (data.isSelected) {
                     label.setTextColor(Color.BLUE);
                 }
@@ -72,7 +83,8 @@ public class LabelsActivity extends AppCompatActivity {
                 if (data.getAge().equals("1")) {
                     return data.getName();
                 }
-                return data.getNum() + ":::::";
+                return data.getNum() + ":";
+                //return htmlString;
             }
         });
 
@@ -93,6 +105,39 @@ public class LabelsActivity extends AppCompatActivity {
                 change2();
             }
         });
+
+        int childCount = labelsView1.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+
+            //+++++++++++++++++Use HTML String+++++
+            TextView childAt = (TextView) labelsView1.getChildAt(i);
+            String htmlString = "ssss<sup><small><font color='red'>+3</font></small></sup>";
+            childAt.setText(Html.fromHtml(htmlString));
+
+            //++++++++++++++++Use SuperscriptionSpan+++++++++++++++++++
+//            String baseString = "大";
+//            String extendString = "+3元";
+//            SpannableStringBuilder cs = new SpannableStringBuilder(baseString + extendString);
+//            int start = baseString.length();
+//            cs.setSpan(new SuperscriptSpan(), start, start + extendString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//
+//            cs.setSpan(new RelativeSizeSpan(0.75f),start,start+extendString.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//            childAt.setText(cs);
+
+////////////////////////以下方法经过测试，不能使用//////////////////////////////////////////////
+
+            //            viewList.add(childAt);
+//            BadgeView badgeView = new BadgeView(getBaseContext());
+//            badgeView.setTargetView(childAt);
+//            badgeView.setText("+3元");
+
+            //labelsView1.removeView(childAt);
+
+            //badgeView.setBadgeCount(3);
+//            QBadgeView qBadgeView = new QBadgeView(getBaseContext());
+//            qBadgeView.bindTarget(childAt);
+//            qBadgeView.setBadgeText("3元");
+        }
 
 
         labelsView2 = findViewById(R.id.labelsview2);
