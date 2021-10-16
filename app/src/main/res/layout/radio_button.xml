@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:tag="0"
+            android:text="AA"
+            android:textColor="@color/radiobutton_textcolor" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="1"
+            android:text="BB"
+            android:textColor="@color/radiobutton_textcolor" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="2"
+            android:text="CC"
+            android:textColor="#000" />
+    </RadioGroup>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_radio"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

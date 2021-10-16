@@ -15,6 +15,6 @@ Android Selector作用简单理解是在点击控件时，改变控件的状态�
         android:state_checked="false" />
 
     <!--选中时颜色-->
-    <item android:color="#F4F1F2"
+    <item android:color="#E91E63"
         android:state_checked="true" />
 </selector>

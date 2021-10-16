@@ -178,6 +178,7 @@ dependencies {
     //如何引入另外一个Module
     implementation project(':linkage-recyclerview')
     implementation project(':labels-view')
+    implementation project(':labels-view-improve')
 
     //安卓饿了么组件需要
     implementation 'com.github.bumptech.glide:glide:4.9.0'
