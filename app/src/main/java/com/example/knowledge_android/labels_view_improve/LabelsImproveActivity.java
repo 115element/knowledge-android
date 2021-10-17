@@ -205,6 +205,7 @@ public class LabelsImproveActivity extends AppCompatActivity {
             int width = childAt.getWidth();
             int height = childAt.getHeight();
 
+            childAt.setBadgeText("+¥3元");
 //            BadgeView badgeView = new BadgeView(getBaseContext());
 //            badgeView.setTargetView(childAt);
 //            badgeView.setText("+3");
@@ -217,11 +218,11 @@ public class LabelsImproveActivity extends AppCompatActivity {
 
 
 
-            QBadgeView qBadgeView = new QBadgeView(getBaseContext());
-            qBadgeView.setBadgeGravity(Gravity.TOP | Gravity.END);
-            qBadgeView.bindTarget(childAt);
-            qBadgeView.setBadgeText("+¥3");
-            TextViewImprove targetView = (TextViewImprove) qBadgeView.getTargetView();
+//            QBadgeView qBadgeView = new QBadgeView(getBaseContext());
+//            qBadgeView.setBadgeGravity(Gravity.TOP | Gravity.END);
+//            qBadgeView.bindTarget(childAt);
+//            qBadgeView.setBadgeText("+¥3");
+//            TextViewImprove targetView = (TextViewImprove) qBadgeView.getTargetView();
             //TODO 可以通过修改LabelsView源码，来处理转换问题
         }
     }
