@@ -1,5 +1,6 @@
 package com.example.knowledge_android;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -15,6 +16,8 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.os.PowerManager;
 import android.text.Html;
 import android.util.Log;
@@ -139,6 +142,22 @@ public class OneApplication extends MultiDexApplication {
         }
     }
     //******************学习设计思想，监听器**********************************
+
+
+    /** Handler是Android SDK来处理异步消息的核心类。
+     子线程与主线程通过Handler来进行通信。子线程可以通过Handler来通知主线程进行UI更新。**/
+    private Handler myTimeHandler = new Handler() {
+        @SuppressLint("HandlerLeak")
+        public void handleMessage(Message msg) {
+            if (msg.what == 0) {
+                //更新显示时间区域
+                //((AbstractAndriodPosScreen) app.posScreen)?.setupDateTimeBanner(getSystemDate(), getSystemTime())
+
+                //每隔一秒执行一次
+                sendEmptyMessageDelayed(0, 1000);
+            }
+        }
+    };
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
