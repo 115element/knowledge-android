@@ -153,8 +153,9 @@ public class TextViewImprove extends androidx.appcompat.widget.AppCompatTextView
 
 
     private void findBadgeCenter() {
-        float rectWidth = mBadgeTextRect.height() > mBadgeTextRect.width() ?
-                mBadgeTextRect.height() : mBadgeTextRect.width();
+//        float rectWidth = mBadgeTextRect.height() > mBadgeTextRect.width() ?
+//                mBadgeTextRect.height() : mBadgeTextRect.width();
+        float rectWidth = Math.max(mBadgeTextRect.height(), mBadgeTextRect.width());
         switch (mBadgeGravity) {
             case Gravity.START | Gravity.TOP:
                 mBadgeCenter.x = mGravityOffsetX + mBadgePadding + rectWidth / 2f;
