@@ -27,6 +27,10 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_text.xml" value="0.2529296875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border.xml" value="0.6" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border1.xml" value="0.4" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border2.xml" value="0.4046875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border2_circle.xml" value="0.4046875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border3.xml" value="0.4046875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/shape_three_border_circle.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/xxx.xml" value="0.2529296875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/yyy.xml" value="0.13802083333333334" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/zzz.xml" value="0.13802083333333334" />
@@ -48,6 +52,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/fold_layout.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/fruit_item.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/item_plu_show.xml" value="0.20096153846153847" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/l_border_layout.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/labels_view.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/labels_view_improve.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/parent_caption.xml" value="0.225" />

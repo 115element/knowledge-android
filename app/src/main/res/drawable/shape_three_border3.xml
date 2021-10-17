@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--三边形边框，无底部边框-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:top="-10dp"
+        android:left="-10dp"
+        android:right="-10dp"
+        >
+        <shape>
+            <stroke
+                android:width="10dp"
+                android:color="@color/beiruired" />
+        </shape>
+    </item>
+</layer-list>
