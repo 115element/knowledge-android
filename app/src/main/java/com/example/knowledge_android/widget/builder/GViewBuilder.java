@@ -42,18 +42,18 @@ public class GViewBuilder {
     /**
      * For recording view container for Closure.
      */
-    private Stack<ViewGroup> parents = new Stack<>();
+    private static Stack<ViewGroup> parents = new Stack<>();
 
-    private Stack<Runnable> closures = new Stack<>();
+    private static Stack<Runnable> closures = new Stack<>();
 
-    public Context getContext() {
+    public static Context getContext() {
         return OneApplication.getInstance().getMainActivity();
     }
 
     /**
      * Set closure's delegate to me, and make container to be the current parent View.
      */
-    private Runnable bind(Runnable closure, ViewGroup container) {
+    private static Runnable bind(Runnable closure, ViewGroup container) {
         parents.push(container);
         closures.push(closure);
         return closure;
@@ -62,7 +62,7 @@ public class GViewBuilder {
     /**
      * Trash the latest parent View.
      */
-    private void unbind(Runnable closure) {
+    private static void unbind(Runnable closure) {
         parents.pop();
         closures.pop();
     }
@@ -204,7 +204,7 @@ public class GViewBuilder {
     }
 
     /** CardLayout builder method. */
-    CardLayout cardLayout(Runnable subviewBuildingClosure) {
+    public static CardLayout cardLayout(Runnable subviewBuildingClosure) {
         CardLayout cardLayout = new CardLayout(getContext());
 
         bind(subviewBuildingClosure, cardLayout);
@@ -215,7 +215,7 @@ public class GViewBuilder {
 
     /** CardLayout builder method. */
     @RequiresApi(api = Build.VERSION_CODES.N)
-    CardLayout cardLayout(Map properties, Runnable subviewBuildingClosure) {
+    public CardLayout cardLayout(Map properties, Runnable subviewBuildingClosure) {
         Map<String,Object> givenProperties = null;
         if (MapUtils.isEmpty(properties)) {
             givenProperties = Collections.EMPTY_MAP;

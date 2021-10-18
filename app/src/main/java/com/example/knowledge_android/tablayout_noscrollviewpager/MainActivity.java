@@ -1,4 +1,4 @@
-package com.example.knowledge_android;
+package com.example.knowledge_android.tablayout_noscrollviewpager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +12,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 
+import com.example.knowledge_android.R;
 import com.example.knowledge_android.noscrollviewpager.NoScrollViewPager;
 import com.google.android.material.tabs.TabLayout;
 

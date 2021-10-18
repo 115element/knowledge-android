@@ -6,7 +6,7 @@
 //import android.os.Build;
 //import android.util.Log;
 //
-//import com.example.knowledge_android.MainActivity;
+//import com.example.knowledge_android.tablayout_noscrollviewpager.MainActivity;
 //import com.example.knowledge_android.R;
 //import com.example.knowledge_android.other.utils.LogUtil;
 //import com.google.gson.Gson;

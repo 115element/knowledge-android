@@ -5,7 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.knowledge_android.MainActivity;
+import com.example.knowledge_android.tablayout_noscrollviewpager.MainActivity;
 
 public class BootBroadCastReceiver extends BroadcastReceiver {
     private final String ACTION_BOOT = "android.intent.action.BOOT_COMPLETED";
