@@ -46,6 +46,17 @@
        <!-- 解决版本更新图标变形问题，在BeiruiPosScreen的createUpperLeftPanelLandscape版本更新出修改，图片占用布局为以下
         //vb.gridLayout(row: 6, column: 2, rows: [1], columns: ['20dp', 1, '20dp']) {-->
 
+
+<!--        解决时间显示区域问题：-->
+
+<!--        SpannableString spanString = new SpannableString("星期四 "+time);-->
+<!--        //再构造一个改变字体颜色的Span-->
+<!--        ForegroundColorSpan span = new ForegroundColorSpan(Color.RED);-->
+<!--        //将这个Span应用于指定范围的字体 (包含头不包含尾部)-->
+<!--        spanString.setSpan(span, 0, 3, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);-->
+<!--        //设置给EditText显示出来-->
+<!--        timeBanner?.setText(spanString);-->
+
         <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

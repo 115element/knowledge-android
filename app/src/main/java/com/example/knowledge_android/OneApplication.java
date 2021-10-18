@@ -66,6 +66,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.EventObject;
 import java.util.HashMap;
@@ -144,8 +145,10 @@ public class OneApplication extends MultiDexApplication {
     //******************学习设计思想，监听器**********************************
 
 
-    /** Handler是Android SDK来处理异步消息的核心类。
-     子线程与主线程通过Handler来进行通信。子线程可以通过Handler来通知主线程进行UI更新。**/
+    /**
+     * Handler是Android SDK来处理异步消息的核心类。
+     * 子线程与主线程通过Handler来进行通信。子线程可以通过Handler来通知主线程进行UI更新。
+     **/
     private Handler myTimeHandler = new Handler() {
         @SuppressLint("HandlerLeak")
         public void handleMessage(Message msg) {
@@ -710,4 +713,15 @@ public class OneApplication extends MultiDexApplication {
     public void setScreenType(String screenType) {
         this.screenType = screenType;
     }
+
+
+    //获取今天星期几
+    private final static String[] weekNames = new String[]{"日", "一", "二", "三", "四", "五", "六"};
+
+    public void getWeek() {
+        Calendar now = Calendar.getInstance();
+        String wk = weekNames[(now.get(Calendar.DAY_OF_WEEK) - Calendar.SUNDAY)];
+        System.out.println("今天星期几：" + wk);
+    }
+
 }
