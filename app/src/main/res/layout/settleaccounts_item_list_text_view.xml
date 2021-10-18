@@ -35,6 +35,12 @@
                 android:textColor="#ff333333"
                 android:textSize="20sp"
         />
+
+        <!--销售购物车，和结账画面购物车不一致问题解决办法，
+        将上面id为(settleaccounts_plu_name)的TextView的textSize修改下面值，就解决了。
+        android:textSize="18sp"-->
+
+
         <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
