@@ -421,11 +421,20 @@ public class TextViewImprove extends androidx.appcompat.widget.AppCompatTextView
         } else {
             mBadgeTextPaint.setTextSize(mBadgeTextSize);
             mBadgeTextRect.right = mBadgeTextPaint.measureText(mBadgeText);
+            /**
+             * measureText实际上是字体整体宽度，即左右带有一定的宽度。
+             * getTextBounds获得的是字符串的最小矩形区域。
+             *
+             * 所以在计算字体宽度的时候，通常使用measureText计算字体所占的宽度。
+             * 而getTextBounds通常用作计算高度(宽度也行，看具体需求)，这种计算方式可以避免跟ui设计图的距离差。
+             */
             mBadgeTextFontMetrics = mBadgeTextPaint.getFontMetrics();
             mBadgeTextRect.bottom = mBadgeTextFontMetrics.descent - mBadgeTextFontMetrics.ascent;
         }
         createClipLayer();
     }
+
+
     private void drawBadge(Canvas canvas, PointF center, float radius) {
         if (center.x == -1000 && center.y == -1000) {
             return;
