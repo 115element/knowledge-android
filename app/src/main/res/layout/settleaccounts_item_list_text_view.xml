@@ -40,6 +40,9 @@
         将上面id为(settleaccounts_plu_name)的TextView的textSize修改下面值，就解决了。
         android:textSize="18sp"-->
 
+        <!--在BeiruiPosScreen的createUpperRightButtonPanelLandscape()方法修改代码为以下，解决5个跑马灯变形问题。
+        columns: ['20dp', 0.2, '20dp', 0.2, '20dp', 0.2, '20dp', 0.2, '20dp', 0.2, '20dp'],-->
+
 
         <LinearLayout
                 android:layout_width="0dp"
