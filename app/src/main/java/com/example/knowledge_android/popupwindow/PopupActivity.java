@@ -19,6 +19,10 @@ import com.example.knowledge_android.statemachine.myevent.PosButtonEvent;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * PopupWindow为非模态，可以继续操作弹出界面之下的控件；
+ * Dialog为模态，必须先取消Dialog才能操作Dialog之下的控件；
+ */
 public class PopupActivity extends AppCompatActivity implements CustomPopupWindow.OnItemClickListener {
 
     private CustomPopupWindow mPop;

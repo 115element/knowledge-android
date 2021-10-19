@@ -1,4 +1,4 @@
-package com.example.knowledge_android.dialog.alertdialog;
+package com.example.knowledge_android.dialog.alertdialog_listview;
 
 import android.content.Context;
 import android.graphics.Color;
