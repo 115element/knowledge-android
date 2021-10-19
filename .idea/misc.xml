@@ -78,6 +78,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/delete_line.xml" value="0.15885416666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/ic______.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/ic_baseline_fingerprint_24.xml" value="0.38229166666666664" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/labelsview_label0_spe.xml" value="0.5" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/password_selector.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/radio_button_bg.xml" value="0.36770833333333336" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/rectangle_dialog_grey.xml" value="0.38229166666666664" />
@@ -90,10 +91,17 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/select_channel_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/select_time_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_alert_radius.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_border_one.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_border_two.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_button.xml" value="0.22083333333333333" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_button1.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_button2.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_circle.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border1.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border2.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border2_circle.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border3.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/splash_screen_background.xml" value="0.15885416666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/text_item_bg.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/text_item_top_bg.xml" value="0.38229166666666664" />
