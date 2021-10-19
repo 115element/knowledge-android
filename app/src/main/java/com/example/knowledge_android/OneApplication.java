@@ -103,8 +103,8 @@ public class OneApplication extends MultiDexApplication {
     private PosScreenMainActivity mainActivity;
 
 
-    //定时任务工具类
-    private ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
+    //定时任务工具类(线程池)
+    private final ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
 
     /**
      * 数据工具类

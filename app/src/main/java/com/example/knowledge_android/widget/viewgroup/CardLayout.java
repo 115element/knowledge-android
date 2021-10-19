@@ -10,15 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardLayout extends ElasticGridLayout{
+
     int visibleChildIndex;
 
     private List<View> children = new ArrayList<>();
 
     public CardLayout(Context context) {
         super(context);
-        this.rows = new ArrayList();
+        this.rows = new ArrayList<>();
         this.rows.add(1);
-        this.columns = new ArrayList();
+        this.columns = new ArrayList<>();
         this.columns.add(1);
     }
 
