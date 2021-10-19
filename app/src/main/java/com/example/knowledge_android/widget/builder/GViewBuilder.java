@@ -42,9 +42,9 @@ public class GViewBuilder {
     /**
      * For recording view container for Closure.
      */
-    private static Stack<ViewGroup> parents = new Stack<>();
+    private static final Stack<ViewGroup> parents = new Stack<>();
 
-    private static Stack<Runnable> closures = new Stack<>();
+    private static final Stack<Runnable> closures = new Stack<>();
 
     public static Context getContext() {
         return OneApplication.getInstance().getMainActivity();
