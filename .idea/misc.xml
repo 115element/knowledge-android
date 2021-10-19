@@ -92,6 +92,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/select_channel_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/select_time_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_alert_radius.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_beautiful_border.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_border_one.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_border_two.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_button.xml" value="0.22083333333333333" />
@@ -104,6 +105,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border2.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border2_circle.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_three_border3.xml" value="0.5734375" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/shape_within_border.xml" value="0.5734375" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/splash_screen_background.xml" value="0.15885416666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/text_item_bg.xml" value="0.38229166666666664" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/drawable/text_item_top_bg.xml" value="0.38229166666666664" />
@@ -225,6 +227,7 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/province_grid_view_item_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/recycler_view_1.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/refund_dialog.xml" value="0.36614583333333334" />
+        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/remind_1x.xml" value="0.5072815533980582" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/right_fragment.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/scanner_toolbar.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/select_plu_simple.xml" value="0.29754601226993865" />
