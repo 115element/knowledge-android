@@ -145,7 +145,9 @@ public class SignOnFragment extends Fragment {
 
     }
 
-
+    /**
+     * Suppress the soft keyboard if it is on.
+     */
     public void hideSoftKeyboard() {
         View view = getActivity().getCurrentFocus();
         if (view != null) {
