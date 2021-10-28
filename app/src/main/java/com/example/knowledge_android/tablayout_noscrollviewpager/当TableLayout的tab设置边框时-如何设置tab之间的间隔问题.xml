@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--设置tab的背景为以下xml,那么就可以解决间隔问题-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+            <item android:left="5dp" android:right="5dp">
+                <shape>
+                    <solid android:color="@color/beirui_red"/>
+                    <corners android:radius="40dp"/>
+                    <stroke android:width="3dp" android:color="@color/beirui_red"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_selected="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+            <item android:left="5dp" android:right="5dp">
+                <shape>
+                    <solid android:color="#FFFFFF"/>
+                    <corners android:radius="40dp" />
+                    <stroke android:width="3dp" android:color="@color/beirui_red"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
