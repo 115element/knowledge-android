@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
-        android:background="@drawable/item_editor_bg">
+        android:background="@drawable/time_limit_job_bg">
 
     <com.example.knowledge_android.widget.view.PhonicButton
             android:id="@+id/back_button"

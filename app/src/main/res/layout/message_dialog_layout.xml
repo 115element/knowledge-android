@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@drawable/item_editor_bg"
+            android:background="@drawable/time_limit_job_bg"
             android:orientation="vertical"
             android:padding="16dp">
 
