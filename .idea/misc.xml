@@ -43,6 +43,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_drag_recyclerview.xml" value="0.18704710144927536" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_empty_show_two.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_1.xml" value="0.14358974358974358" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_16.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_7.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/child_caption.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/dining_table.xml" value="0.1" />
@@ -62,6 +63,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/spannable_layout.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/special_border.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/text_view.xml" value="0.22788461538461538" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/time_limit_job_xml.xml" value="0.4" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/activity_main_hyi_coupon.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/activity_main_hyi_coupon2.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout_coupon/layout/item_coupon_show.xml" value="0.4" />
@@ -224,7 +226,6 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/num_pad_big.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/parent_caption.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/plu_select_alertdialog.xml" value="0.1796875" />
-        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/popup_window_1.xml" value="0.4981796116504854" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/pos_terminal.xml" value="0.24479166666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/province_grid_view_item_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/recycler_view_1.xml" value="0.36614583333333334" />
@@ -240,7 +241,6 @@
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/sign_on.xml" value="0.24479166666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tender_view.xml" value="0.24479166666666666" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/text_input_box.xml" value="0.36614583333333334" />
-        <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/time_limit_job_xml.xml" value="0.14925373134328357" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tool_bar.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/translucent_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/WorkStation/knowledge-android/app/src/main/res/layout/tree_activity_order.xml" value="0.36614583333333334" />
