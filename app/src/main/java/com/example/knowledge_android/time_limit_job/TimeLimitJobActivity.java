@@ -1,14 +1,17 @@
 package com.example.knowledge_android.time_limit_job;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,6 +48,22 @@ public class TimeLimitJobActivity extends AppCompatActivity {
                 }
             }
         };
+
+
+        Handler handler = new Handler(Looper.getMainLooper()){ // 解决以上无参数构造方法废弃问题
+            @SuppressLint("HandlerLeak")
+            @Override
+            public void handleMessage(@NonNull Message msg) {
+                super.handleMessage(msg);
+                if (msg.what == 0x111) {
+                    progressBar.setProgress(mProcessStatus);//更新进度
+                } else {
+                    Toast.makeText(TimeLimitJobActivity.this, "耗时操作已经完成", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                }
+            }
+        };
+
 
 
         //开个线程用语模拟耗时操作
