@@ -229,5 +229,10 @@ dependencies {
 //    }
 
 
+    //Google提供的一个网络客户端
+    // https://mvnrepository.com/artifact/com.android.volley/volley
+    implementation group: 'com.android.volley', name: 'volley', version: '1.2.1'
+
+
 }
 
