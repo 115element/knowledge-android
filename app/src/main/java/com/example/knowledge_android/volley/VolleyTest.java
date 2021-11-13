@@ -14,6 +14,13 @@ import com.example.knowledge_android.OneApplication;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+框架：Volley/Xutils(异步网络请求)
+a.不需要我们启动分线程，框架内部接收到请求自动会在分线程
+b.如何返回给你结果数据？切换到主线程调用监听器的回调方法。
+ */
+
+
 //StringRequest:获取字符串结果的请求
 //JsonRequest:获取Json数据结果的请求
 //ImageRequest:获取图片结果的请求

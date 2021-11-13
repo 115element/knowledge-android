@@ -12,6 +12,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/labelsview_label_bg.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/labelsview_label_bg_improve.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/labelsview_label_bg_improve1.xml" value="0.4046875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_option_border_unselect.xml" value="0.19114583333333332" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_cancel.xml" value="0.20377604166666666" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_shape.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_state.xml" value="0.4046875" />
@@ -61,6 +62,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/parent_caption1.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_info_item_recycler_view_item.xml" value="1.0" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_info_recycler_view.xml" value="0.4" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_option.xml" value="0.20104166666666667" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_select_alertdialog.xml" value="0.20096153846153847" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/radio_button.xml" value="0.4" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/spannable_layout.xml" value="0.38046875" />

@@ -167,7 +167,17 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
+        <!--为了安卓可以直接运行Main方法-->
+        <!--添加AndroidTestCase的权限-->
+        <uses-library android:name="android.test.runner" />
 
     </application>
 
+    <!--为了可以运行main方法-->
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <!-- 记住这个一要放在application外面，不然会出现配置错误 信息 -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.knowledge_android.handler_message.json"/>
+    
 </manifest>

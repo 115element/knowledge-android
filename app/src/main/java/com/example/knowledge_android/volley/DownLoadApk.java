@@ -3,6 +3,7 @@ package com.example.knowledge_android.volley;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.SystemClock;
+import android.view.View;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -81,6 +82,7 @@ public class DownLoadApk extends AppCompatActivity {
                         @Override
                         public void run() {
                             // 关闭progressBar
+                            progressBar.setVisibility(View.INVISIBLE);
                             installApk();
                         }
                     });
