@@ -14,22 +14,26 @@ import com.sunmi.extprinterservice.ExtPrinterService;
 import com.sunmi.printerhelper.bean.TableItem;
 
 
-public class SunmiK1PrinterUtil {
+/**
+ * Aidl客户端用法实例
+ */
+
+public class SunmiK1PrinterServiceUtil {
     private static final String SERVICE_PACKAGE = "com.sunmi.extprinterservice";
     private static final String SERVICE_ACTION = "com.sunmi.extprinterservice.PrinterService";
     private static final String TAG = "SunmiK1PrinterUtil";
 
-    private static SunmiK1PrinterUtil instance = new SunmiK1PrinterUtil();
+    private static SunmiK1PrinterServiceUtil instance = new SunmiK1PrinterServiceUtil();
 
     private ExtPrinterService extPrinterService = null;//k1 打印服务
     private Context context;
 
     private ServiceConnection connService;
 
-    private SunmiK1PrinterUtil() {
+    private SunmiK1PrinterServiceUtil() {
     }
 
-    public static SunmiK1PrinterUtil getInstance() {
+    public static SunmiK1PrinterServiceUtil getInstance() {
         return instance;
     }
 

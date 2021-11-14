@@ -22,22 +22,25 @@ import java.util.List;
 import woyou.aidlservice.jiuiv5.ICallback;
 import woyou.aidlservice.jiuiv5.IWoyouService;
 
-public class SunmiPrinterUtil {
+/**
+ * Aidl客户端用法实例
+ */
+public class SunmiPrinterServiceUtil {
     private static final String SERVICE_PACKAGE = "woyou.aidlservice.jiuiv5";
     private static final String SERVICE_ACTION = "woyou.aidlservice.jiuiv5.IWoyouService";
     private static final String TAG = "SunmiPrinterUtil";
 
-    private static SunmiPrinterUtil instance = new SunmiPrinterUtil();
+    private static SunmiPrinterServiceUtil instance = new SunmiPrinterServiceUtil();
 
     private IWoyouService woyouService;
     private Context context;
 
     private Runnable printerReadyCallback;
 
-    private SunmiPrinterUtil() {
+    private SunmiPrinterServiceUtil() {
     }
 
-    public static SunmiPrinterUtil getInstance() {
+    public static SunmiPrinterServiceUtil getInstance() {
         return instance;
     }
 

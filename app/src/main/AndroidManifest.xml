@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.knowledge_android">
 
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <!--  权限配置  -->
     <uses-permission android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -155,6 +157,21 @@
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
 
+        <!--注册自己写的Service-->
+        <service android:name=".android_service.localservice.LocalService"/>
+        <service android:name=".android_service.music.MusicService"/>
+
+
+        <!--注册自己写的Provider，
+        authorities一般就写全类名小写
+        exported表示别的应用是否可以访问
+        -->
+        <provider
+            android:exported="true"
+            android:authorities="com.example.knowledge_android.android_content_provider.personprovider"
+            android:name="com.example.knowledge_android.android_content_provider.PersonProvider"/>
+
+
         <!--
          android:required
          (默认值是true。这个属性在API Level 7中被引入)
@@ -172,6 +189,8 @@
         <uses-library android:name="android.test.runner" />
 
     </application>
+
+
 
     <!--为了可以运行main方法-->
     <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />

@@ -46,6 +46,8 @@ public class TransBean implements Parcelable {
 	}
 
 	public TransBean(Parcel source){
+		//TODO：注意，读取包中的数据和打包是存入的数据格式顺序，是一致的，否则不能正确读取数据
+
 		this.type = source.readByte();
 		this.datalength = source.readInt();
 		this.text = source.readString();
@@ -70,6 +72,7 @@ public class TransBean implements Parcelable {
 		return 0;
 	}
 
+	//将当前对象的属性打包，写到包对象中
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeByte(type);
@@ -79,14 +82,18 @@ public class TransBean implements Parcelable {
 			dest.writeByteArray(data);
 		}
 	}
-	
+
+	//这种写法是ADIL的规范，必须这么写
+	// 添加一个静态成员，名为CREATOR，该对象实现了Parcelable.Creator接口
 	public static Creator<TransBean> CREATOR = new Creator<TransBean>(){
 
+		//解包：读取包中的数据并封装成对象
 		@Override
 		public TransBean createFromParcel(Parcel source) {
 			return new TransBean(source);
 		}
 
+		//返回一个指定大小的对象容器
 		@Override
 		public TransBean[] newArray(int size) {
 			return new TransBean[size];
