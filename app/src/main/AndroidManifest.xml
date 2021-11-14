@@ -178,6 +178,6 @@
     <!-- 记住这个一要放在application外面，不然会出现配置错误 信息 -->
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
-        android:targetPackage="com.example.knowledge_android.handler_message.json"/>
+        android:targetPackage="com.example.knowledge_android"/>
     
 </manifest>
