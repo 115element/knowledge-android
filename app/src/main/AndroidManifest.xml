@@ -168,8 +168,8 @@
         -->
         <provider
             android:exported="true"
-            android:authorities="com.example.knowledge_android.android_content_provider.personprovider"
-            android:name="com.example.knowledge_android.android_content_provider.PersonProvider"/>
+            android:authorities="com.example.knowledge_android.android_content_provider_resolver.personprovider"
+            android:name="com.example.knowledge_android.android_content_provider_resolver.PersonProvider"/>
 
 
         <!--

@@ -1,4 +1,4 @@
-package com.example.knowledge_android.android_content_provider;
+package com.example.knowledge_android.android_content_provider_resolver;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
