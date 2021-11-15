@@ -28,6 +28,14 @@ public class AnimationActivity extends AppCompatActivity {
         setContentView(R.layout.running_animation_xml);
 
         running = findViewById(R.id.running);
+
+
+        running.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCodeAlpha((ImageView) view);
+            }
+        });
     }
 
     /////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +96,10 @@ public class AnimationActivity extends AppCompatActivity {
         //从完全透明到完全不透明，持续2秒
         AlphaAnimation animation = new AlphaAnimation(0, 1);
         animation.setDuration(2000);
+
+        //设置动画播放次数
+        animation.setRepeatCount(Animation.INFINITE);
+
         view.startAnimation(animation);
     }
 
