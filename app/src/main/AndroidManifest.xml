@@ -50,7 +50,7 @@
 
         <!--通过切换不同的主启动Activity,注意包路径,来查看不同的控件效果-->
         <activity
-            android:name=".qbadgeview.choice_option.MainActivity7"
+            android:name=".android_animation.diy_progressbar_back.DiyProgressBarBackground"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:screenOrientation="unspecified"

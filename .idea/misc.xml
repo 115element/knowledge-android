@@ -16,6 +16,7 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_cancel.xml" value="0.20377604166666666" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_shape.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/plu_select_state.xml" value="0.4046875" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/progress_background.xml" value="0.19375" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/rectangle_ellipse_button_full_red.xml" value="0.31979166666666664" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/rectangle_ellipse_red.xml" value="0.4046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/drawable/select_channel_shape.xml" value="0.4046875" />
@@ -49,15 +50,18 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/activity_main_7.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/child_caption.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/dining_table.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/diy_progress_bar_back.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/flex_box_layout1.xml" value="0.536" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/flex_box_layout_test.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/fo_layout.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/fold_layout.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/fruit_item.xml" value="0.225" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/image_rotate_xml.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/item_plu_show.xml" value="0.20096153846153847" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/l_border_layout.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/labels_view.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/labels_view_improve.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/main_animation.xml" value="0.20729166666666668" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/parent_caption.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/parent_caption1.xml" value="0.225" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_info_item_recycler_view_item.xml" value="1.0" />
@@ -66,6 +70,9 @@
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/plu_select_alertdialog.xml" value="0.20096153846153847" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/radio_button.xml" value="0.4" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/running_animation_xml.xml" value="0.1" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/setup_guide1_xml.xml" value="0.20729166666666668" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/setup_guide2_xml.xml" value="0.20729166666666668" />
+        <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/shake_main.xml" value="0.20729166666666668" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/spannable_layout.xml" value="0.38046875" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/special_border.xml" value="0.1" />
         <entry key="..\:/Development/androidWorkSpace/knowledge-android/app/src/main/res/layout/text_view.xml" value="0.22788461538461538" />
