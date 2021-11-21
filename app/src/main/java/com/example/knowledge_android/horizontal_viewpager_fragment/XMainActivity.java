@@ -42,7 +42,7 @@ public class XMainActivity extends AppCompatActivity {
 
     private List<Integer> mDatas = new ArrayList<Integer>(Arrays.asList(
             R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,
-            R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.g,
+            R.drawable.eeee, R.drawable.f, R.drawable.g, R.drawable.g,
             R.drawable.g, R.drawable.g));
 
     private List<Fragment> frags;    //存放每一个Fragment

@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.knowledge_android.R;
+import com.j256.ormlite.stmt.query.In;
 
 public class DiyProgressBarBackground extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class DiyProgressBarBackground extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     public void start(){
         //AsyncTask<Params, Progress, Result>
-        new AsyncTask<Void,Void,Void>(){
+        new AsyncTask<Void, Integer,Void>(){
 
             //1.在主线程执行,该方法用于更新UI
             @Override
@@ -45,7 +46,7 @@ public class DiyProgressBarBackground extends AppCompatActivity {
                 for (int i = 0; i < 10; i++) {
                     SystemClock.sleep(1000);
                     //TODO 用于更新进度，也就是会调用下方的，onProgressUpdate方法。
-                    publishProgress(null);
+                    publishProgress(1);
                 }
 
 
@@ -53,7 +54,7 @@ public class DiyProgressBarBackground extends AppCompatActivity {
             }
 
             @Override
-            protected void onProgressUpdate(Void... values) {
+            protected void onProgressUpdate(Integer... values) {
                 progressBar.setProgress(progressBar.getProgress() + 100);
                 super.onProgressUpdate(values);
             }

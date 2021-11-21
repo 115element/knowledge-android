@@ -27,7 +27,7 @@ public class MainActivity10 extends AppCompatActivity {
     private ImageView mImage;
     private List<Integer> mDatas = new ArrayList<Integer>(Arrays.asList(
             R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,
-            R.drawable.e, R.drawable.f, R.drawable.g));
+            R.drawable.eeee, R.drawable.f, R.drawable.g));
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override

@@ -34,6 +34,15 @@ public class WelcomeActivity extends AppCompatActivity {
     };
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //移除未处理的消息
+        handler.removeMessages(1);
+        //移除所有未处理的消息
+        handler.removeCallbacksAndMessages(null);
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_animation);
