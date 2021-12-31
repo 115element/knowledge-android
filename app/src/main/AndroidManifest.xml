@@ -136,6 +136,12 @@
             android:value="sot" />
 
 
+        <!--在AndroidManifest.xml里设置动态渠道变量(制作渠道包)-->
+<!--        <meta-data-->
+<!--            android:name="CHANNEL"-->
+<!--            android:value="${CHANNEL_VALUE}" />-->
+
+
         <!--
           这个元素用于声明一个广播接收器（一个BroadcastReceiver 子类），作为应用程序的组件之一。
           广播接收器能够让应用程序接收那些由系统或其他应用程序发出的广播Intent对象，即使是在该应用程序的其他组件没有运行的时候，也能够接收来自系统或其他应用程序的广播消息。

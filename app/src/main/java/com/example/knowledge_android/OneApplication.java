@@ -573,6 +573,16 @@ public class OneApplication extends MultiDexApplication {
         return map;
     }
 
+    /**
+     * 获取APP渠道
+     */
+    public String getChannel(Context context) throws PackageManager.NameNotFoundException {
+        PackageManager pm = context.getPackageManager();
+        ApplicationInfo info = pm.getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+        Bundle metaData = info.metaData;
+        return  (String) metaData.get("channel");
+    }
+
 
     /**
      * 获取设备IP地址

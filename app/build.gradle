@@ -15,6 +15,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //用于制作多渠道包配置
+        //flavorDimensions "company"
     }
 
 
@@ -36,7 +39,6 @@ android {
         //2.有利于程序的模块化设计和开发：Android系统允许拥有同一个数字签名的程序运行在一个进程中，Android程序会将他们视为同一个程序。所以开发者可以将自己的程序分模块开发，而用户只需要在需要的时候下载适当的模块。
         //3.可以通过权限(permission)的方式在多个程序间共享数据和代码：Android提供了基于数字证书的权限赋予机制，应用程序可以和其他的程序共享概功能或者数据给那那些与自己拥有相同数字证书的程序。如果某个权限(permission)的protectionLevel是signature，则这个权限就只能授予那些跟该权限所在的包拥有同一个数字证书的程序。
     }
-
 
 
     //代码编译设置
@@ -93,8 +95,8 @@ android {
         }
     }
 
-    //*************************************安卓饿了么组件需要*************************************
-    dataBinding{
+    //*************************************安卓饿了么组件需要,数据绑定功能*************************************
+    dataBinding {
         enabled true
     }
     //*************************************生成ActivityMainDataBind类，重要*********************
@@ -106,9 +108,43 @@ android {
         exclude 'META-INF/DEPENDENCIES'
     }
     //*************************************
+
+
+    //渠道包设置，假设我们打包的渠道为：小米商店，百度，豌豆荚
+    // 所谓ProductFlavors其实就是可定义的产品特性，配合 manifest merger 使用的时候就可以达成在一次编译过程中产生多个具有自己特性配置的版本。
+    // 上面这个配置的作用就是，为每个渠道包产生不同的 CHANNEL_VALUE 的值。
+//    productFlavors {
+//        xiaomi {
+//            dimension "company"
+//            manifestPlaceholders = [CHANNEL_VALUE: "xiaomi"]
+//        }
+//        baidu {
+//            dimension "company"
+//            manifestPlaceholders = [CHANNEL_VALUE: "baidu"]
+//        }
+//        wandoujia {
+//            dimension "company"
+//            manifestPlaceholders = [CHANNEL_VALUE: "wandoujia"]
+//        }
+//    }
+//    //安卓多渠道包配置
+//    applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileName
+//                if (variant.buildType.name != "release") {
+//                    // 输出apk名称为
+//                    fileName = "Xxx_v${variant.versionName}_${variant.productFlavors[0].name}.apk"
+//                } else {
+//                    fileName = "Xxx_v${variant.versionName}_${"Test"}_debug.apk"
+//                }
+//                outputFileName = fileName
+//            }
+//        }
+//    }
+
 }
-
-
 
 
 dependencies {
